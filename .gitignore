@@ -34,3 +34,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Reference files and temp documents
+*.mhtml
+*.docx
+*.pdf
+~$*.docx
+
+# Image source files (originals before optimization)
+/*.jpeg
+/*.jpg
+/*.png
+/*.webp
+/*.avif
