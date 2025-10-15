@@ -1,0 +1,105 @@
+# Contact Information
+# Professional contact details and inquiry form
+
+headline: "Get in Touch"
+subheadline: "Board Opportunities, Speaking Engagements & Advisory Roles"
+introduction: >
+  Open to board positions with technology oversight and digital transformation focus,
+  speaking engagements at premier conferences, and selective advisory opportunities
+  for technology startups and enterprise transformation initiatives.
+
+# Contact Methods
+contact_methods:
+  - type: "LinkedIn"
+    label: "Professional Profile"
+    value: "linkedin.com/in/chinardeshpande"
+    url: "https://www.linkedin.com/in/chinardeshpande/"
+    icon: "linkedin"
+    preferred: true
+
+  - type: "Email"
+    label: "Professional Inquiries"
+    value: "Available upon request"
+    url: "#"
+    icon: "email"
+    preferred: true
+
+  - type: "Location"
+    label: "Based in"
+    value: "United Kingdom"
+    url: "#"
+    icon: "location"
+    preferred: false
+
+# Inquiry Types
+inquiry_types:
+  - type: "Board Opportunities"
+    description: "Independent Non-Executive Director positions with technology oversight focus"
+    icon: "briefcase"
+
+  - type: "Speaking Engagements"
+    description: "Keynotes, panels, and workshops on technology leadership and digital transformation"
+    icon: "microphone"
+
+  - type: "Advisory Roles"
+    description: "Selective advisory opportunities for technology startups and enterprise initiatives"
+    icon: "lightbulb"
+
+  - type: "Media & Press"
+    description: "Article collaborations, interviews, and thought leadership contributions"
+    icon: "newspaper"
+
+# Areas of Expertise for Engagement
+expertise_areas:
+  strategic:
+    - "Digital Transformation Strategy"
+    - "Technology Roadmap & Architecture"
+    - "Board Technology Oversight"
+    - "Cybersecurity Governance"
+
+  operational:
+    - "Warehouse Automation & Robotics"
+    - "Global ERP Implementation"
+    - "Supply Chain Optimization"
+    - "Change Management at Scale"
+
+  innovation:
+    - "Innovation Culture Building"
+    - "AI/ML Applications in Operations"
+    - "Sustainability & Green Technology"
+    - "Omnichannel Retail Technology"
+
+  leadership:
+    - "CIO/CTO Leadership"
+    - "Technology Team Building"
+    - "Vendor Management & Partnerships"
+    - "Technology ROI & Business Cases"
+
+# Ideal Board Roles
+ideal_board_roles:
+  - role: "Technology Committee Chair/Member"
+    focus: "Digital transformation, cybersecurity, IT governance, technology investments"
+
+  - role: "Audit & Risk Committee Member"
+    focus: "Technology risk oversight, data privacy, business continuity, compliance"
+
+  - role: "Strategy Committee Member"
+    focus: "Digital strategy, innovation roadmap, competitive positioning, M&A due diligence"
+
+# Speaking Topics (Top Picks)
+speaking_topics_featured:
+  - "The Future of Warehouse Automation: Robotics, AI & Autonomous Operations"
+  - "Digital Transformation Playbook for Traditional Industries"
+  - "Technology Governance for Board Directors: What You Need to Know"
+  - "Building Innovation Culture in Large Organizations"
+  - "Sustainability Meets Technology: Business Case for Green Logistics"
+
+# Response Time
+response_commitment: >
+  Professional inquiries receive response within 48 hours. Board opportunities and
+  speaking engagements are reviewed carefully and responded to within one week.
+
+# Privacy Note
+privacy_note: >
+  Your information is kept confidential and used solely for responding to your inquiry.
+  We do not share contact information with third parties.

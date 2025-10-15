@@ -1,0 +1,73 @@
+# LinkedIn Posts for Carousel
+# Source: User-provided LinkedIn post URLs
+
+posts:
+  - id: "automation-arne"
+    url: "https://www.linkedin.com/posts/thg-fulfil_retailfulfillment-arne-ecommersesolutions-ugcPost-7381341112784916480-oeMY"
+    title: "Retail Fulfillment with Arne"
+    excerpt: "Exploring cutting-edge retail fulfillment and e-commerce solutions at THG Fulfil."
+    tags: ["Retail", "Fulfillment", "E-commerce"]
+    date: "2025"
+
+  - id: "warehouse-automation"
+    url: "https://www.linkedin.com/posts/thg-fulfil_automation-fulfilment-warehouseautomation-activity-7380866145072914432-BR6y"
+    title: "Warehouse Automation Strategy"
+    excerpt: "Driving automation and warehouse optimization at scale."
+    tags: ["Automation", "Fulfillment", "Warehouse"]
+    date: "2025"
+
+  - id: "innovation-ecommerce"
+    url: "https://www.linkedin.com/posts/chinardeshpande_automation-innovation-ecommerce-activity-7378661348508860416-b0pE"
+    title: "Innovation in E-commerce"
+    excerpt: "Leveraging automation and innovation to transform e-commerce operations."
+    tags: ["Automation", "Innovation", "E-commerce"]
+    date: "2025"
+
+  - id: "bumblebee-automation"
+    url: "https://www.linkedin.com/posts/chinardeshpande_bumblebee-automation-operationsmanagement-activity-7378617506887966720-cfWW"
+    title: "Bumblebee Automation Platform"
+    excerpt: "Implementing next-generation automation for operations management."
+    tags: ["Bumblebee", "Automation", "Operations"]
+    date: "2025"
+
+  - id: "checkout-fulfil"
+    url: "https://www.linkedin.com/posts/natashia-redfern_ecommerce-fulfilment-checkout-activity-7377965660150108160-QFh6"
+    title: "E-commerce Fulfillment & Checkout"
+    excerpt: "Enhancing e-commerce fulfillment with seamless checkout experiences."
+    tags: ["E-commerce", "Fulfillment", "Checkout"]
+    date: "2025"
+
+  - id: "thg-checkout-launch"
+    url: "https://www.linkedin.com/posts/chinardeshpande_introducing-checkout-by-thg-fulfil-activity-7374069485680406529-be8b"
+    title: "Introducing Checkout by THG Fulfil"
+    excerpt: "Launching THG Fulfil's innovative checkout solution for global e-commerce."
+    tags: ["THG", "Checkout", "Launch"]
+    date: "2025"
+
+  - id: "libiao-robotics"
+    url: "https://www.linkedin.com/posts/chinardeshpande_automation-libiaorobotics-fulfilment-activity-7371770082290589696-ySOf"
+    title: "Libiao Robotics Implementation"
+    excerpt: "Deploying advanced robotics for automated fulfillment operations."
+    tags: ["Automation", "Robotics", "Fulfillment"]
+    date: "2025"
+
+  - id: "global-fulfillment"
+    url: "https://www.linkedin.com/posts/thg-fulfil_globalfulfilment-ecommerce-logistics-activity-7368541970706771968-nrMM"
+    title: "Global Fulfillment Excellence"
+    excerpt: "Scaling global fulfillment operations across e-commerce and logistics networks."
+    tags: ["Global", "E-commerce", "Logistics"]
+    date: "2025"
+
+  - id: "automation-strategy"
+    url: "https://www.linkedin.com/posts/thg-fulfil_warehouseautomation-automationstrategy-thgfulfil-activity-7363470665053519874-tZoD"
+    title: "Warehouse Automation Strategy at THG"
+    excerpt: "Strategic approach to warehouse automation at THG Fulfil."
+    tags: ["Warehouse", "Automation", "Strategy"]
+    date: "2025"
+
+  - id: "autostore-3pl"
+    url: "https://www.linkedin.com/posts/chinardeshpande_fulfilment-3pl-autostore-activity-7349447999049166850-2HEA"
+    title: "Autostore for 3PL Fulfillment"
+    excerpt: "Implementing Autostore robotics for third-party logistics fulfillment."
+    tags: ["Fulfillment", "3PL", "Autostore"]
+    date: "2025"

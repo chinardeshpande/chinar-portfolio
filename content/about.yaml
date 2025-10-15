@@ -1,0 +1,83 @@
+# About Page Content - Compact & Visual
+# Positioning for 5 key roles: INED, Advisory Board, Startup Mentor, Strategic Advisor, AI Evangelist
+
+# Hero positioning
+board_positioning:
+  headline: "Independent Non-Executive Director | CTO | AI Transformation Strategist"
+  tagline: "Guiding Enterprises Through Intelligent Transformation"
+  summary: >
+    Global technology leader with 30+ years driving large-scale digital transformation across logistics, e-commerce, and enterprise technology.
+    Strategic technology leadership for boards navigating digital disruption and AI-driven change—where technology, governance, and human insight create lasting value.
+
+# 5 Key Role Positions
+role_positions:
+  - role: "Independent Non-Executive Director"
+    icon: "briefcase"
+    tagline: "Board Governance • Digital Growth • Automation Oversight"
+    value: "Bring strategic foresight, digital fluency, and operational depth to boards navigating disruption. Expert in technology governance, AI ethics, cybersecurity oversight, and M&A tech due diligence. Champion responsible AI adoption and value creation through technology with purpose."
+
+  - role: "Advisory Board Member"
+    icon: "users"
+    tagline: "Strategic Technology Counsel for Growth"
+    value: "Work with global boards and investors to accelerate intelligent transformation—anchored in clarity, ethics, and measurable outcomes. Bridge technology and strategy with innovation, governance, and execution discipline across e-commerce, logistics, and enterprise tech."
+
+  - role: "Startup Mentor"
+    icon: "rocket"
+    tagline: "Tech-Led Enterprises & Scale-Up Strategy"
+    value: "Mentor entrepreneurs on technology-driven growth, AI-first product development, and building scalable engineering teams. Guide tech founders through intelligent transformation with hands-on expertise in automation, AI tools (ChatGPT, Claude, Gemini), and global operations."
+
+  - role: "Strategic Advisor"
+    icon: "compass"
+    tagline: "AI Transformation Partnerships"
+    value: "Available for strategic AI transformation partnerships and advisory mandates. Translate emerging technologies into sustainable business impact through scalable solutions for productivity, research, analytics, and enterprise automation."
+
+  - role: "AI Transformation Strategist"
+    icon: "brain"
+    tagline: "Building Intelligent, Ethical, Scalable Organizations"
+    value: "Deep hands-on expertise in AI, automation, and intelligent systems. Extensively use ChatGPT Codex, Claude CLI, Google Gemini (AI Studio), VS Code, n8n, and NotebookLM to design and deploy enterprise-grade AI solutions with ethical governance frameworks."
+
+# AI & Technology Expertise - Hands-On Tools & Platforms
+ai_expertise:
+  title: "Hands-On AI & Automation Expertise"
+  subtitle: "Technical fluency that translates emerging technologies into sustainable business impact"
+  areas:
+    - name: "AI Development Stack"
+      details: "ChatGPT Codex, Claude CLI, Google Gemini (AI Studio), VS Code, n8n, NotebookLM for enterprise automation, analytics, and scalable AI solutions"
+    - name: "Intelligent Systems"
+      details: "Predictive analytics, computer vision, NLP, AI-driven warehouse optimization, machine learning operations with ethical AI governance frameworks"
+    - name: "Robotics & Automation"
+      details: "Autostore, Geek+, T-sorter systems across 18 warehouses; Warehouse Control System integration; led modernization of global logistics and automation systems"
+    - name: "Enterprise Innovation"
+      details: "Building AI-focused Global Tech Centers from ground up; design and deploy scalable solutions for productivity, research, and enterprise transformation"
+
+# Current role - compact
+current_role:
+  company: "THG - The Hut Group"
+  title: "CTO Global Logistics & Finance"
+  location: "UK | Global"
+  period: "2022 - Present"
+  highlight: "Led modernization of global logistics, automation, and finance systems for 300+ e-commerce brands across 198 countries. Built THG's India Technology Center from the ground up. Leadership bridges technology and strategy—balancing innovation, governance, and execution discipline."
+
+# Key metrics - visual stats
+key_metrics:
+  - number: "30+"
+    label: "Years C-Suite Experience"
+  - number: "14"
+    label: "Countries Operated"
+  - number: "8"
+    label: "Industries Transformed"
+  - number: "2,500+"
+    label: "Professionals Led"
+  - number: "6"
+    label: "ERP Implementations"
+  - number: "300+"
+    label: "Brands Managed"
+
+# Compact differentiators
+differentiators:
+  - "Hands-On AI Expertise: ChatGPT, Claude CLI, Gemini, n8n, NotebookLM—technical fluency that translates AI into business impact"
+  - "Board-Ready Governance: Strategic foresight + digital fluency + operational depth for organizations navigating disruption"
+  - "Built From Ground Up: THG India Technology Center, AI-focused innovation labs, global engineering teams"
+  - "Execution Discipline: Bridges technology and strategy—balancing innovation, governance, and measurable outcomes"
+  - "Thought Leadership: Editorial Board CIO Magazine | Speaker: SAP Sapphire, CTO Forum | CIO 100 Award"
+  - "Global Operations: Led 2,500+ professionals across US, Europe, India, Middle East | Multilingual | Cross-cultural leadership"

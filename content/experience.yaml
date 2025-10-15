@@ -1,0 +1,170 @@
+# Professional Experience
+# Source: Resume (chinar-summary.txt)
+
+timeline:
+  - company: "THG - The Hut Group"
+    title: "CTO Global Logistics & Finance"
+    location: "United Kingdom"
+    start_date: "2022"
+    end_date: "Present"
+    duration: "3+ years"
+    type: "Executive Leadership"
+    logo: "/images/companies/thg.png"
+    highlights:
+      - "Leading digital transformation of worldwide supply chain for 300+ e-commerce brands across 18 warehouses shipping to 198 destinations globally"
+      - "Driving robotics automation (Autostore, Geek+, T-sorter) with in-house Warehouse Control System software"
+      - "Building commercial platform for end-to-end fulfillment services using internal technology stack"
+      - "Establishing Global Tech Development Center in India with focus on AI-driven innovation"
+      - "Managing multi-currency payments, procure-to-pay, and order-to-cash cycles globally"
+    achievements:
+      - "Successfully deployed multiple robotic automation technologies across global warehouse network"
+      - "Built in-house Warehouse Control System serving 18 modern fulfillment centers"
+      - "Launched commercial fulfillment platform using proprietary technology"
+
+  - company: "Ampersand Group"
+    title: "Group CTO"
+    location: "India"
+    start_date: "Jun 2021"
+    end_date: "Aug 2022"
+    duration: "1 year 3 months"
+    type: "Executive Leadership"
+    logo: "/images/companies/ampersand.png"
+    highlights:
+      - "Spearheaded digital transformation of multi-business conglomerate pioneering Indian education industry"
+      - "Drove technology vision across schools chain, EPC business, multi-channel retail, health-tech, and hospitality"
+      - "Set up connected ecosystem with live feeds of all school operations in control room"
+      - "Deployed eLMS for delivery of digital content for pre-primary students across India"
+      - "Implemented group-level ERP consolidating financial management with integrated procure-to-pay and order-to-cash"
+    achievements:
+      - "Digitized entire business verticals with real-time operational visibility"
+      - "Implemented school bus GPS tracking with optimal route planning and parent communication app"
+      - "Led digital transformation project with Deloitte as strategic partner"
+
+  - company: "Stellar Value Chain"
+    title: "CTO and Head of Innovation & Incubation Cell"
+    location: "India"
+    start_date: "Sep 2016"
+    end_date: "Jun 2021"
+    duration: "4 years 10 months"
+    type: "Executive Leadership"
+    logo: "/images/companies/stellar.png"
+    highlights:
+      - "Led technology initiatives for Pan-India supply chain company funded by Warburg Pincus"
+      - "Managed 50 million sq. ft. highly automated warehousing infrastructure across 21 cities"
+      - "Built state-of-the-art logistics infrastructure with industrial automation, robotics, and IoT platforms"
+      - "Established long-term relationships with Oracle and Infor, implementing Oracle Fusion Cloud and Infor WMS"
+      - "Led operations for 6 million sq. ft. of modern warehousing serving Tata Motors, Reliance, VIP, Kohler, Amazon, Flipkart"
+    achievements:
+      - "As Group HR Head, managed 1,500 on-roll employees and 4,000+ contract workers across 52 vendors"
+      - "Implemented ZingHR (cloud-based SaaS HRMS) for digital transformation of HR function"
+      - "Established Innovation and Incubation Cell driving solar power, electric mobility, and BI platforms"
+      - "Built Customer Experience Centers across 4 major cities (first-of-its-kind in 3PL industry)"
+
+  - company: "Millennium Sports Management"
+    title: "Co-Founder and CTO"
+    location: "Mumbai Area, India"
+    start_date: "Oct 2013"
+    end_date: "Sep 2016"
+    duration: "3 years"
+    type: "Entrepreneurship & Innovation"
+    logo: "/images/companies/millennium-sports.png"
+    highlights:
+      - "Co-founded innovation-led sports management company operating across 6 pillars: Sports Infrastructure, Events Management, Coaching & Talent Management, Sports Retail, Sports Education, and Corporate Wellness"
+      - "Spearheaded development of state-of-the-art SPORTS TECHNOLOGY PLATFORM for complete life-cycle management of sportsmen and sports enthusiasts"
+      - "Built cloud-based ERP enabling entire operations of sports clubs including membership management, fee collection, facility booking, and events management"
+      - "Drove digital strategy to promote club memberships, events and players through social media collaboration, mobile apps and cloud-hosted technology platform"
+      - "Led 5 large infrastructure projects including world-class sports complex and international sports school"
+    achievements:
+      - "Organized national-level events in Table Tennis, Cricket, Football and Skating"
+      - "Established wide array of alliance partners including AXIS Bank Premier League and Celebrity Cricket League"
+      - "Successfully launched sports club at CP Goenka International School"
+      - "Set up chain of exclusive sports retail outlets after tie-ups with sportswear manufacturers and sports equipment vendors"
+      - "Built coaching centers at multiple locations with high-skilled, certified coaches for all age groups"
+
+  - company: "CITI, USA"
+    title: "CEO (India & Europe)"
+    location: "Virginia, United States"
+    start_date: "Dec 2007"
+    end_date: "Oct 2013"
+    duration: "5 years 11 months"
+    type: "Executive Leadership"
+    logo: "/images/companies/citi-usa.png"
+    highlights:
+      - "CEO of multi-national IT company providing Technology & Business Transformation services, responsible for INR 1 Billion business development & delivery"
+      - "Built and ran Global IT Delivery Centre across 20,000 sq. ft. housing 150 IT professionals serving customers in US, Europe and India"
+      - "Built innovative products in Retail, Healthcare & Biometrics verticals - 'Spectrum' retail product running across 4 European countries"
+      - "Revamped e-commerce solution for European retailer Prememan - integrated business model for online and offline customers across 40 countries with 350+ stores"
+      - "Forged long-term relationships with IBM, SAP, Microsoft and Fujitsu with aggressive joint-go-to-market strategies"
+    achievements:
+      - "Successfully launched 'Spectrum' retail product at NRF 2011 (US) and IRF (India)"
+      - "Implemented Microsoft Navision - LS Retail ERP for MyDollarStore"
+      - "Led IT Strategy Development for US's largest Pharma integrator ChainDrugStore.net"
+      - "Company appraised at CMMI Level 3 through KPMG in 2013"
+      - "Built strong collaboration with management and technology institutes for talent acquisition and retention"
+
+  - company: "Pantaloon Retail (Future Group)"
+    title: "Group CIO"
+    location: "India"
+    start_date: "Apr 2004"
+    end_date: "Oct 2007"
+    duration: "3 years 7 months"
+    type: "Executive Leadership"
+    logo: "/images/companies/future-group.png"
+    highlights:
+      - "Managed technology budget of INR 3 Billion for India's largest retailer"
+      - "Implemented SAP IS Retail for 3,200 users across 900+ stores, 35 warehouses, and 4 branch offices"
+      - "Featured as center-fold story in SAP Annual Report 2005-06"
+      - "Launched e-commerce initiative (futurebazaar.com) complementing brick-and-mortar business"
+      - "Connected 1,000+ locations on high-bandwidth private network with 32,000+ Microsoft Exchange mailboxes"
+    achievements:
+      - "Designed and deployed business Data Warehouse and Analytics solution"
+      - "Implemented online real-time management dashboards for executive board"
+      - "Deployed Point-of-Sale and Loyalty Program for 900 stores serving 300M+ customers with 3.5M SKUs"
+      - "Received CIO 100 Award (2006)"
+
+  - company: "Hindustan Unilever Ltd (HUL)"
+    title: "IT Manager / Project Lead"
+    location: "India"
+    start_date: "1997"
+    end_date: "2004"
+    duration: "7 years"
+    type: "Enterprise Technology"
+    logo: "/images/companies/hul.png"
+    highlights:
+      - "Managed company-wide ERP solution (Mfg-Pro) encompassing entire supply chain"
+      - "Implemented PeopleSoft HRMS for 120 countries covering 10,000+ managers globally"
+      - "Key team member of Project Garuda (Worldwide PeopleSoft implementation for Unilever)"
+      - "Designed Common Core Data Architecture for Unilever and set up central Data Consolidation Unit in Rotterdam"
+      - "Instrumental in setting up PeopleSoft Excellence Center in Unilever US (Lipton House, New Jersey)"
+    achievements:
+      - "Successfully managed Y2K compliance projects for 64+ systems"
+      - "Implemented Citrix Solution connecting 2,000+ users for remote PeopleSoft access"
+      - "Implemented TATA Honeywell Security System with 3D facility view"
+
+  - company: "Mercer (William M. Mercer)"
+    title: "Senior Software Engineer"
+    location: "USA"
+    start_date: "1993"
+    end_date: "1997"
+    duration: "4 years"
+    type: "Software Development"
+    logo: "/images/companies/mercer.png"
+    highlights:
+      - "Developed compensation management software solutions in Visual C++"
+      - "Designed complex spreadsheet application MeritLink™ in MS Excel with VB front-end"
+      - "Product used by large organizations for budgeting, merit modeling, bonus modeling, and performance evaluation"
+      - "Designed Data Export and Report Writer tools for MercerPRISM compensation software"
+    achievements:
+      - "Built enterprise-grade compensation management tools"
+      - "Delivered solutions adopted by Fortune 500 companies"
+
+# Summary statistics
+career_stats:
+  total_years: "30+"
+  countries: 14
+  industries: 8
+  professionals_led: "2,500+"
+  erps_implemented: 6
+  products_designed: 15
+  technology_budget: "INR 3B"
+  warehouse_sqft: "60+ Million"

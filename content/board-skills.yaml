@@ -1,0 +1,210 @@
+# Board Skills Matrix
+# Source: Resume analysis + INED best practices
+
+introduction:
+  title: "Board Skills Matrix"
+  description: >
+    Comprehensive skill assessment across strategic, operational, financial, and governance dimensions
+    essential for effective board service. Self-assessed proficiency levels based on 30+ years of
+    executive leadership experience.
+
+# Proficiency levels: Expert (5), Advanced (4), Proficient (3), Developing (2), Basic (1)
+
+skills_categories:
+  strategic:
+    title: "Strategic Competencies"
+    description: "Long-term vision, strategy formulation, and competitive positioning"
+    skills:
+      - skill: "Technology Strategy & Digital Transformation"
+        level: 5
+        description: "30+ years leading enterprise-wide digital transformations across 14 countries"
+
+      - skill: "Innovation & R&D Management"
+        level: 5
+        description: "Designed 15 products, established Innovation & Incubation Cells, drove robotics adoption"
+
+      - skill: "M&A Technology Due Diligence"
+        level: 4
+        description: "Evaluated technology stacks and integration strategies for acquisitions"
+
+      - skill: "Corporate Strategy & Business Planning"
+        level: 5
+        description: "Member of executive boards driving multi-billion dollar business strategies"
+
+      - skill: "Competitive Intelligence & Market Analysis"
+        level: 4
+        description: "Analyzed technology trends to inform strategic positioning"
+
+  operational:
+    title: "Operational Competencies"
+    description: "Day-to-day business management and process excellence"
+    skills:
+      - skill: "Global Operations Management"
+        level: 5
+        description: "Led 2,500+ professionals across 14 countries, managed 60M sq ft warehouses"
+
+      - skill: "Supply Chain & Logistics"
+        level: 5
+        description: "CTO of global logistics managing 300+ brands, 18 warehouses, 198 destinations"
+
+      - skill: "Change Management at Scale"
+        level: 5
+        description: "Led enterprise transformations affecting 10,000+ users across 120 countries"
+
+      - skill: "Process Optimization & Automation"
+        level: 5
+        description: "Implemented robotics (Autostore, Geek+), built Warehouse Control Systems"
+
+      - skill: "Vendor & Partner Ecosystem Management"
+        level: 5
+        description: "Established strategic partnerships with Oracle, Infor, SAP, Microsoft"
+
+      - skill: "Project & Program Management"
+        level: 5
+        description: "Led INR 3B technology portfolio, implemented 6 world-class ERPs"
+
+  financial:
+    title: "Financial Competencies"
+    description: "Financial acumen and resource stewardship"
+    skills:
+      - skill: "Technology Budget Management"
+        level: 5
+        description: "Managed budgets up to INR 3 Billion with consistent ROI delivery"
+
+      - skill: "ROI Analysis & Business Case Development"
+        level: 5
+        description: "Built business cases for major technology investments, tracked performance"
+
+      - skill: "CapEx/OpEx Planning & Optimization"
+        level: 5
+        description: "Balanced capital and operational expenses for optimal TCO"
+
+      - skill: "Financial Reporting & Analytics"
+        level: 4
+        description: "Implemented Data Warehouses, real-time dashboards for executive boards"
+
+      - skill: "Cost-Benefit Analysis"
+        level: 5
+        description: "Evaluated technology options for cost-effectiveness and strategic value"
+
+  governance:
+    title: "Governance & Risk Competencies"
+    description: "Oversight, compliance, and risk management"
+    skills:
+      - skill: "Corporate Governance & Board Processes"
+        level: 4
+        description: "Executive board member experience, familiar with fiduciary responsibilities"
+
+      - skill: "Risk Management & Cybersecurity"
+        level: 5
+        description: "Implemented security systems, managed enterprise risk across global operations"
+
+      - skill: "Regulatory Compliance (GDPR, SOC2, ISO)"
+        level: 4
+        description: "Ensured compliance across international operations"
+
+      - skill: "Data Privacy & Protection"
+        level: 4
+        description: "Managed data governance for 300M+ customers, global e-commerce"
+
+      - skill: "Audit & Controls"
+        level: 4
+        description: "Implemented internal controls, supported audit processes"
+
+      - skill: "Ethics & Corporate Social Responsibility"
+        level: 4
+        description: "Champion of diversity, equity, inclusion; sustainable technology practices"
+
+  people:
+    title: "People & Culture Competencies"
+    description: "Talent management and organizational development"
+    skills:
+      - skill: "Executive Leadership"
+        level: 5
+        description: "C-suite executive across 6 organizations, led teams of 2,500+"
+
+      - skill: "Talent Acquisition & Development"
+        level: 5
+        description: "Built global delivery centers, managed complex hiring across 52 vendors"
+
+      - skill: "Succession Planning"
+        level: 4
+        description: "Developed leadership pipelines, mentored future executives"
+
+      - skill: "Diversity, Equity & Inclusion"
+        level: 5
+        description: "Led diverse teams across cultures, geographies, languages"
+
+      - skill: "Organizational Change Management"
+        level: 5
+        description: "Drove cultural transformations alongside technology implementations"
+
+      - skill: "Board-Level Communication"
+        level: 5
+        description: "Presented to boards, keynote speaker at industry conferences"
+
+  industry:
+    title: "Industry Expertise"
+    description: "Deep domain knowledge across sectors"
+    skills:
+      - skill: "E-commerce & Retail Technology"
+        level: 5
+        description: "12 years as Group CIO of India's largest retailer, THG e-commerce"
+
+      - skill: "Supply Chain & Logistics"
+        level: 5
+        description: "CTO of 3PL, managed 60M sq ft, global fulfillment operations"
+
+      - skill: "FMCG & Consumer Goods"
+        level: 5
+        description: "7 years at Hindustan Unilever, global ERP implementations"
+
+      - skill: "Education Technology"
+        level: 4
+        description: "Group CTO transforming education conglomerate, eLMS deployment"
+
+      - skill: "Healthcare & Biometrics"
+        level: 3
+        description: "Built products in healthcare vertical"
+
+      - skill: "Financial Services & Fintech"
+        level: 3
+        description: "Experience with payment systems, financial tech platforms"
+
+# Overall board readiness score
+overall_assessment:
+  readiness_score: 95
+  summary: >
+    Exceptional board readiness with deep expertise across strategic, operational, financial, and
+    governance dimensions. 30+ years of C-suite experience, proven track record of driving digital
+    transformation at scale, and strong financial acumen make Chinar an ideal INED candidate for
+    technology-intensive, global organizations.
+
+  strengths:
+    - "Technology strategy and digital transformation leadership"
+    - "Global operations management at massive scale"
+    - "Financial stewardship of multi-billion dollar budgets"
+    - "Change management and cultural transformation"
+    - "Cross-industry and cross-geography experience"
+
+  development_areas:
+    - "Formal board certification programs (IDP, INSEAD)"
+    - "Additional M&A transaction experience"
+    - "Deepen financial services/fintech expertise"
+
+# Board roles best suited
+ideal_board_roles:
+  - "Technology Committee Chair"
+  - "Audit Committee Member"
+  - "Risk Committee Member"
+  - "Innovation & Digital Transformation Advisor"
+  - "Independent Non-Executive Director"
+
+# Industry sectors best aligned
+target_industries:
+  - "E-commerce & Retail"
+  - "Logistics & Supply Chain"
+  - "Technology Services"
+  - "FMCG & Consumer Goods"
+  - "Education Technology"
+  - "SaaS & Enterprise Software"

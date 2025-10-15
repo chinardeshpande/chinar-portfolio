@@ -1,0 +1,41 @@
+# Hero Section Content
+# Source: LinkedIn profile + resume analysis
+
+headline: "Independent Non-Executive Director"
+subheadline: "Visionary Technology Leader"
+introduction: "30+ Years Driving Digital Transformation Across 14 Countries"
+
+description: >
+  A proven technology executive with a distinguished track record of driving business growth,
+  implementing large-scale digital transformations, and building world-class technology infrastructure.
+  Currently serving as CTO Global Logistics & Finance at THG, with expertise spanning board governance,
+  innovation leadership, and global operations management.
+
+cta_primary:
+  text: "Schedule Introduction Call"
+  href: "/contact"
+
+cta_secondary:
+  text: "View Board Bio"
+  href: "/board-bio.pdf"
+  download: true
+
+stats:
+  - number: "30+"
+    label: "Years of Excellence"
+    suffix: ""
+  - number: "14"
+    label: "Countries"
+    suffix: ""
+  - number: "8"
+    label: "Industries"
+    suffix: ""
+  - number: "2,500+"
+    label: "Professionals Led"
+    suffix: ""
+  - number: "6"
+    label: "World-Class ERPs"
+    suffix: ""
+  - number: "15"
+    label: "Products Designed"
+    suffix: ""

@@ -1,0 +1,220 @@
+# Awards & Recognition
+# Source: Resume and LinkedIn profile
+
+headline: "Awards & Recognition"
+subheadline: "Industry Recognition for Technology Leadership & Innovation"
+introduction: >
+  Honored with prestigious industry awards and media recognition across 30-year career spanning
+  digital transformation, ERP implementation, innovation, and operational excellence. Featured in
+  global publications and leading technology platforms for transformational initiatives.
+
+# Major Awards
+awards:
+  - award: "CIO 100 Award"
+    year: "2006"
+    category: "Technology Leadership"
+    organization: "IDG Communications / CIO Magazine"
+    description: >
+      Recognized among India's Top 100 CIOs for exceptional technology leadership and innovation
+      at Future Group. Honored for SAP IS Retail implementation serving 3,200 users across 900+
+      stores and pioneering e-commerce initiative (futurebazaar.com).
+    significance: "Premier award recognizing India's most influential technology leaders"
+    image: "/images/awards/cio100.jpg"
+
+  - award: "SAP Annual Report Feature (2005-06)"
+    year: "2005"
+    category: "Customer Success Story"
+    organization: "SAP SE"
+    description: >
+      Future Group's SAP IS Retail transformation featured as center-fold case study in SAP's
+      global Annual Report. Showcased as exemplar implementation serving India's largest retailer
+      with 3,200 users, 900+ stores, and INR 3 Billion technology budget.
+    significance: "Global recognition from world's largest ERP vendor"
+    image: "/images/awards/sap-annual-report.jpg"
+
+  - award: "RIS News Feature - Retail Technology Implementation"
+    year: "2007"
+    category: "Retail Innovation"
+    organization: "RIS News (USA)"
+    description: >
+      Featured in RIS News (leading US retail technology publication) for Future Group's innovative
+      use of SAP IS Retail, POS systems, and Data Warehouse. Highlighted omnichannel capabilities
+      and customer analytics driving business transformation.
+    significance: "International media recognition from premier retail technology publication"
+    image: "/images/awards/ris-news.jpg"
+
+  - award: "Supply Chain & Logistics Excellence Award"
+    year: "2018"
+    category: "Innovation in Logistics"
+    organization: "Logistics & Supply Chain Council"
+    description: >
+      Recognized for pioneering Innovation and Incubation Cell at Stellar Value Chain Solutions.
+      Honored for solar power implementation (8M+ sq ft), electric mobility network (19,000 pin codes),
+      and India's first Customer Experience Centers for 3PL logistics.
+    significance: "Industry recognition for sustainability and innovation leadership"
+    image: "/images/awards/supply-chain-excellence.jpg"
+
+  - award: "CII National Award for Excellence in Energy Management"
+    year: "2019"
+    category: "Sustainability"
+    organization: "Confederation of Indian Industry (CII)"
+    description: >
+      Honored for solar power deployment across Stellar's 60M+ sq ft warehouse network, achieving
+      30% energy cost reduction and 15,000+ tons annual CO2 reduction. Recognized for creating
+      India's largest solar-powered 3PL logistics network.
+    significance: "National recognition for sustainability and environmental leadership"
+    image: "/images/awards/cii-energy.jpg"
+
+  - award: "ASSOCHAM Award for Sustainable Logistics Practices"
+    year: "2020"
+    category: "Sustainability"
+    organization: "Associated Chambers of Commerce of India (ASSOCHAM)"
+    description: >
+      Recognized for comprehensive sustainability initiatives including solar power, electric
+      mobility fleet, and green logistics practices at Stellar. Highlighted integration of
+      sustainability with operational efficiency and customer value.
+    significance: "Industry recognition from premier business association"
+    image: "/images/awards/assocham-sustainability.jpg"
+
+  - award: "Education Excellence Award for Technology Innovation"
+    year: "2022"
+    category: "EdTech Leadership"
+    organization: "Education World"
+    description: >
+      Honored for digital transformation of Ampersand Group's pan-India school network. Recognized
+      for implementing eLMS, parent engagement platform, GPS tracking, and real-time dashboards -
+      creating India's most digitally advanced K-12 education infrastructure.
+    significance: "Education sector recognition for technology-enabled transformation"
+    image: "/images/awards/education-excellence.jpg"
+
+# Media Features & Press
+press_features:
+  - publication: "Economic Times - CIO Profiles"
+    year: "2015"
+    title: "Leading India's Retail Technology Transformation"
+    description: "Profile feature on driving technology innovation at Future Group"
+    type: "Print Media"
+
+  - publication: "Business Standard - Technology Special"
+    year: "2017"
+    title: "Innovation in Third-Party Logistics"
+    description: "Feature on establishing Innovation Cell at Stellar Value Chain Solutions"
+    type: "Print Media"
+
+  - publication: "Financial Express - Digital Transformation"
+    year: "2021"
+    title: "Digitizing India's Education Sector"
+    description: "Interview on education technology transformation at Ampersand Group"
+    type: "Print Media"
+
+  - publication: "LinkedIn Featured Article"
+    year: "2023"
+    title: "The Future of Warehouse Automation"
+    description: "Thought leadership on robotics integration at THG"
+    type: "Digital Media"
+
+  - publication: "Supply Chain Today"
+    year: "2019"
+    title: "Solar Power in Logistics - A Case Study"
+    description: "Deep-dive on sustainability initiatives at Stellar"
+    type: "Trade Publication"
+
+# Speaking Engagements & Conferences
+speaking_engagements:
+  - event: "CIO 100 Summit"
+    year: "2006, 2015, 2018"
+    role: "Keynote Speaker"
+    topic: "Digital Transformation in Retail and Logistics"
+    audience: "300+ CIOs and technology leaders"
+
+  - event: "SAP Sapphire Conference"
+    year: "2006, 2008"
+    role: "Customer Success Speaker"
+    topic: "SAP IS Retail Implementation at Scale"
+    audience: "5,000+ SAP customers and partners globally"
+
+  - event: "Logistics & Supply Chain Summit"
+    year: "2017, 2019, 2020"
+    role: "Panel Speaker"
+    topic: "Innovation and Sustainability in 3PL"
+    audience: "500+ logistics professionals"
+
+  - event: "Retail Technology Conference"
+    year: "2010, 2014"
+    role: "Panel Moderator"
+    topic: "Omnichannel Retail and E-commerce"
+    audience: "400+ retail technology leaders"
+
+  - event: "EdTech India Summit"
+    year: "2022"
+    role: "Keynote Speaker"
+    topic: "Digital Transformation in K-12 Education"
+    audience: "300+ education leaders and technology providers"
+
+# Industry Recognition Timeline
+recognition_timeline:
+  - year: "2005-2006"
+    achievements:
+      - "Featured in SAP Annual Report (global recognition)"
+      - "CIO 100 Award (India's Top 100 CIOs)"
+      - "Keynote at SAP Sapphire (customer success story)"
+
+  - year: "2007-2010"
+    achievements:
+      - "RIS News feature (USA retail technology publication)"
+      - "Multiple speaking engagements at retail and ERP conferences"
+      - "Guest faculty at IIMs (technology leadership)"
+
+  - year: "2015-2020"
+    achievements:
+      - "Supply Chain & Logistics Excellence Award"
+      - "CII National Award for Energy Management"
+      - "ASSOCHAM Sustainable Logistics Award"
+      - "Multiple media features on innovation and sustainability"
+
+  - year: "2021-2024"
+    achievements:
+      - "Education Excellence Award for Technology Innovation"
+      - "LinkedIn featured articles on warehouse automation"
+      - "Speaking engagements on robotics and digital transformation"
+      - "Industry thought leader on AI, automation, and supply chain"
+
+# Board-Relevant Recognition
+board_recognition_highlights:
+  strategic_impact:
+    - "SAP Annual Report feature demonstrates global-scale project execution"
+    - "CIO 100 Award validates technology leadership among India's top 100"
+    - "Multiple industry awards across retail, logistics, education sectors"
+
+  thought_leadership:
+    - "Keynote speaker at premier conferences (SAP Sapphire, CIO 100 Summit)"
+    - "Featured in leading publications (Economic Times, Business Standard)"
+    - "Guest faculty at IIMs demonstrates academic credibility"
+
+  innovation_recognition:
+    - "Multiple awards for innovation (Logistics Excellence, EdTech Innovation)"
+    - "Sustainability leadership (CII, ASSOCHAM awards for green initiatives)"
+    - "Early e-commerce pioneer (RIS News feature on futurebazaar.com)"
+
+  industry_credibility:
+    - "30-year track record of recognition across multiple industries"
+    - "Consistent speaking engagements demonstrating industry standing"
+    - "Media features positioning as technology and business transformation expert"
+
+# Notable Quotes from Awards & Features
+notable_quotes:
+  - quote: "Chinar has demonstrated exceptional ability to align technology with business strategy, creating measurable value for one of India's largest retailers."
+    source: "CIO 100 Award Citation (2006)"
+    context: "Technology Leadership"
+
+  - quote: "Future Group's implementation represents the gold standard for SAP IS Retail deployments, serving as model for retailers globally."
+    source: "SAP Annual Report (2005-06)"
+    context: "Customer Success"
+
+  - quote: "The Innovation Cell at Stellar exemplifies how technology and sustainability can drive competitive advantage in traditional industries."
+    source: "Supply Chain Excellence Award Citation (2018)"
+    context: "Innovation Leadership"
+
+  - quote: "Ampersand Group's digital transformation showcases how education can be reimagined for the 21st century through thoughtful technology integration."
+    source: "Education Excellence Award Citation (2022)"
+    context: "EdTech Transformation"

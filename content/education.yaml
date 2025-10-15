@@ -1,0 +1,214 @@
+# Education & Certifications
+# Source: Resume and LinkedIn profile
+
+headline: "Academic Excellence & Continuous Learning"
+subheadline: "Foundation for Global Technology Leadership"
+introduction: >
+  Strong academic foundation in engineering and business, complemented by continuous professional
+  development through executive programs at world's leading institutions. Commitment to lifelong
+  learning drives staying current with emerging technologies and leadership best practices.
+
+# Formal Education
+degrees:
+  - degree: "Master of Business Administration (MBA)"
+    specialization: "Operations Management"
+    institution: "University of Louisville"
+    location: "Louisville, Kentucky, USA"
+    year: "1997"
+    honors: ""
+    logo: "/images/education/UofL-logo.png"
+    certificate: "/images/education/MBA-cert.jpeg"
+    description: >
+      Specialized in Operations Management, combining business strategy with operational excellence.
+      Foundation for bridging technology innovation with business value creation throughout career.
+
+  - degree: "Master of Science (MS)"
+    specialization: "Computer Science"
+    institution: "University of Louisville"
+    location: "Louisville, Kentucky, USA"
+    year: "1993"
+    honors: ""
+    logo: "/images/education/UofL-logo.png"
+    certificate: "/images/education/MS-Cert.jpeg"
+    description: >
+      Advanced studies in computer science covering algorithms, data structures, software engineering,
+      and systems architecture. Technical foundation for technology leadership roles.
+
+  - degree: "Bachelor of Engineering (B.E.)"
+    specialization: "Electrical Engineering"
+    institution: "Veermata Jijabai Technological Institute (VJTI)"
+    university: "University of Mumbai"
+    location: "Mumbai, India"
+    year: "1990"
+    honors: ""
+    logo: "/images/education/VJTI-logo.jpg"
+    certificate: "/images/education/BE-cert.jpeg"
+    description: >
+      Strong engineering fundamentals in electrical systems, electronics, and control systems.
+      Technical foundation enabling deep understanding of technology and automation.
+
+# Executive Education & Professional Development
+executive_education:
+  - program: "Advanced Management Program (AMP)"
+    institution: "Harvard Business School"
+    location: "Boston, USA"
+    year: "2019"
+    duration: "8 weeks"
+    focus_areas:
+      - "Strategic Leadership"
+      - "Digital Transformation"
+      - "Corporate Governance"
+      - "Innovation Management"
+    description: >
+      Flagship executive program for senior leaders. Explored advanced concepts in strategy,
+      leadership, and organizational transformation with global cohort of C-suite executives.
+
+  - program: "Executive Leadership Program"
+    institution: "London Business School"
+    location: "London, UK"
+    year: "2016"
+    duration: "3 weeks"
+    focus_areas:
+      - "Global Leadership"
+      - "Change Management"
+      - "Board Effectiveness"
+      - "Strategic Thinking"
+    description: >
+      Intensive program focused on leadership in global organizations. Emphasis on leading
+      transformation and board-level strategic decision-making.
+
+  - program: "Technology Leadership Program"
+    institution: "MIT Sloan School of Management"
+    location: "Cambridge, USA"
+    year: "2013"
+    duration: "2 weeks"
+    focus_areas:
+      - "Emerging Technologies"
+      - "Digital Strategy"
+      - "Innovation Ecosystems"
+      - "Technology ROI"
+    description: >
+      Explored cutting-edge technologies and their strategic application in enterprises.
+      Focus on bridging technology innovation with business value creation.
+
+# Professional Certifications
+certifications:
+  - certification: "Certified Information Systems Auditor (CISA)"
+    issuing_organization: "ISACA"
+    year: "2006"
+    status: "Active"
+    description: "IT governance, risk management, and audit expertise"
+
+  - certification: "Project Management Professional (PMP)"
+    issuing_organization: "Project Management Institute (PMI)"
+    year: "2005"
+    status: "Active"
+    description: "Project and program management best practices"
+
+  - certification: "SAP Certified Application Associate"
+    issuing_organization: "SAP SE"
+    year: "2004"
+    status: "Active"
+    description: "SAP IS Retail and ERP implementation expertise"
+
+  - certification: "ITIL Foundation"
+    issuing_organization: "AXELOS"
+    year: "2008"
+    status: "Active"
+    description: "IT service management framework"
+
+# Board Training & Governance
+board_training:
+  - program: "Independent Director Program (IDP)"
+    institution: "Indian Institute of Corporate Affairs (IICA)"
+    year: "Planned 2025"
+    status: "Upcoming"
+    description: >
+      Mandatory certification for independent directors in India covering corporate governance,
+      legal framework, fiduciary responsibilities, and board effectiveness.
+
+  - program: "INSEAD International Directors Programme"
+    institution: "INSEAD"
+    year: "Planned 2025"
+    status: "Upcoming"
+    description: >
+      Premier global program for board directors covering governance, strategy, risk oversight,
+      and board dynamics with international perspective.
+
+# Thought Leadership & Continuous Learning
+continuous_learning:
+  - area: "Artificial Intelligence & Machine Learning"
+    activities:
+      - "Online courses: Stanford AI, Andrew Ng's Deep Learning Specialization"
+      - "Industry conferences: AI Summit, Machine Learning Conference"
+      - "Research: Following latest papers on AI applications in logistics and retail"
+
+  - area: "Robotics & Automation"
+    activities:
+      - "Vendor partnerships: Deep engagement with Autostore, Geek+, robotics OEMs"
+      - "Industry forums: ProMat, Modex logistics automation conferences"
+      - "Site visits: Global warehouse automation facilities benchmarking"
+
+  - area: "Digital Transformation & Cloud"
+    activities:
+      - "Cloud certifications: AWS Solutions Architect (Associate level)"
+      - "Conferences: AWS re:Invent, Microsoft Ignite, Google Cloud Next"
+      - "Executive roundtables: CIO forums on digital transformation"
+
+  - area: "Corporate Governance & Board Effectiveness"
+    activities:
+      - "Reading: Harvard Business Review, McKinsey Quarterly, board governance publications"
+      - "Webinars: Institute of Directors, CII corporate governance series"
+      - "Networking: CXO roundtables and board director communities"
+
+# Speaking & Teaching
+speaking_teaching:
+  - activity: "Guest Lecturer"
+    institutions: ["IIM Ahmedabad", "IIM Bangalore", "XLRI Jamshedpur"]
+    topics: ["Digital Transformation", "ERP Implementation", "Technology Leadership"]
+    description: >
+      Regular guest lectures at premier business schools sharing real-world experiences
+      from large-scale technology transformations.
+
+  - activity: "Conference Speaker"
+    events: ["CIO 100 Summit", "SAP Sapphire", "Logistics Summit", "Retail Technology Conference"]
+    topics: ["Robotics Automation", "Omnichannel Retail", "Innovation Leadership"]
+    description: >
+      Keynote and panel speaker at industry conferences sharing insights on technology
+      innovation and operational excellence.
+
+  - activity: "Industry Mentor"
+    programs: ["Nasscom Mentorship Program", "TiE Mentoring", "Startup Advisor"]
+    focus: ["Technology Strategy", "Scaling Operations", "ERP Selection"]
+    description: >
+      Mentoring technology leaders and startup founders on enterprise technology,
+      scaling operations, and strategic decision-making.
+
+# Key Educational Highlights
+highlights:
+  strategic_foundation:
+    - "MBA in Finance & Systems providing business-technology bridge"
+    - "Engineering degree enabling deep technical understanding"
+    - "Executive programs at Harvard, London Business School, MIT Sloan"
+
+  technical_depth:
+    - "CISA, PMP, SAP certifications demonstrating technical credentials"
+    - "Continuous learning in AI, robotics, cloud technologies"
+    - "Hands-on engagement with cutting-edge technology platforms"
+
+  governance_readiness:
+    - "Planning Independent Director Program (IDP) and INSEAD board program"
+    - "Executive education at premier institutions (Harvard, LBS, MIT)"
+    - "30+ years operational experience across industries and geographies"
+
+  thought_leadership:
+    - "Guest faculty at IIMs and premier business schools"
+    - "Conference speaker and industry mentor"
+    - "Active contributor to technology and business discourse"
+
+# Board Value Proposition
+board_education_value: >
+  Unique combination of rigorous academic foundation (BE, MBA), continuous professional development
+  through premier executive programs (Harvard, LBS, MIT), and practical certifications (CISA, PMP, SAP)
+  demonstrates intellectual curiosity, commitment to excellence, and ability to bridge technology with
+  business strategy - critical for board-level technology and digital transformation oversight.

@@ -1,0 +1,196 @@
+# Robotics & Automation Platforms
+# Showcasing hands-on technology leadership
+
+headline: "Robotics & Automation Platforms"
+subheadline: "Driving Warehouse Automation at Global Scale"
+introduction: >
+  Leading implementation of cutting-edge robotics and automation technologies across 18 global
+  warehouses serving 300+ e-commerce brands. Hands-on experience with Autostore, Geek+, T-sorter,
+  Libiao Robotics, and proprietary Warehouse Control Systems. Featured videos and demonstrations
+  showcasing real-world deployment and operational excellence.
+
+# Technology Platforms Overview
+platforms:
+  - name: "Autostore"
+    type: "Cube Storage & Robotic Picking"
+    description: "High-density automated storage and retrieval system with robotic bins and picking ports"
+    use_case: "Large volume SKU storage with 4x space efficiency compared to traditional racking"
+    deployment: "Multiple THG facilities globally"
+    key_metrics:
+      - "4x storage density improvement"
+      - "99.7% picking accuracy"
+      - "40% labor cost reduction"
+    image: "/images/robotics/autostore.jpg"
+
+  - name: "Geek+ Robotics"
+    type: "Autonomous Mobile Robots (AMRs)"
+    description: "Bring-work-to-worker mobile robots for goods-to-person fulfillment"
+    use_case: "Medium to high volume order fulfillment with flexible scalability"
+    deployment: "8+ warehouses across UK and Europe"
+    key_metrics:
+      - "300% picking productivity increase"
+      - "Scalable fleet (10-200 robots per facility)"
+      - "50% reduction in walking distance for pickers"
+    image: "/images/robotics/geek-plus.jpg"
+
+  - name: "T-sorter"
+    type: "Automated Sortation System"
+    description: "High-speed automated sorting and routing for outbound shipments"
+    use_case: "Multi-carrier sortation and order consolidation at scale"
+    deployment: "High-volume distribution centers"
+    key_metrics:
+      - "10,000+ units per hour throughput"
+      - "99.9% sorting accuracy"
+      - "60% faster order processing"
+    image: "/images/robotics/t-sorter.jpg"
+
+  - name: "Libiao Robotics"
+    type: "Shuttle-based Storage System"
+    description: "High-speed shuttle robots for dense storage and rapid retrieval"
+    use_case: "Fast-moving SKUs requiring high-frequency access"
+    deployment: "Pilot implementations in Asia facilities"
+    key_metrics:
+      - "5x faster retrieval than manual picking"
+      - "Compact footprint for urban warehouses"
+      - "24/7 continuous operation capability"
+    image: "/images/robotics/libiao.jpg"
+
+  - name: "Proprietary Warehouse Control System (WCS)"
+    type: "Integration & Orchestration Platform"
+    description: "In-house developed WCS integrating multiple robotics platforms with WMS and ERP"
+    use_case: "Unified control and optimization across heterogeneous robotics fleet"
+    deployment: "All THG automated facilities globally"
+    key_metrics:
+      - "Single platform managing 4+ robotics vendors"
+      - "Real-time optimization algorithms for task allocation"
+      - "API-based integration with 10+ enterprise systems"
+    image: "/images/robotics/wcs-platform.jpg"
+
+# Video Demonstrations (LinkedIn Embeds)
+# Using the linkedin-posts.yaml content for video showcases
+video_showcases:
+  - title: "Autostore Implementation for 3PL Fulfillment"
+    description: "Deep-dive into Autostore deployment for third-party logistics operations"
+    linkedin_post_id: "autostore-3pl"
+    technologies: ["Autostore", "WCS", "3PL"]
+    highlights:
+      - "Autostore grid design and bin management"
+      - "Integration with Warehouse Management System"
+      - "Picking port operations and order fulfillment flow"
+
+  - title: "Warehouse Automation Strategy at THG"
+    description: "Strategic approach to multi-vendor robotics integration"
+    linkedin_post_id: "automation-strategy"
+    technologies: ["Autostore", "Geek+", "T-sorter", "WCS"]
+    highlights:
+      - "Multi-vendor robotics strategy and vendor selection"
+      - "Phased rollout approach across 18 global facilities"
+      - "ROI realization and operational metrics"
+
+  - title: "Libiao Robotics Deployment"
+    description: "Implementing advanced shuttle-based robotics for rapid fulfillment"
+    linkedin_post_id: "libiao-robotics"
+    technologies: ["Libiao Robotics", "Shuttle Systems"]
+    highlights:
+      - "Shuttle robot operation and speed demonstration"
+      - "Dense storage configuration and space optimization"
+      - "Integration with existing warehouse infrastructure"
+
+  - title: "Global Fulfillment Excellence"
+    description: "Scaling automation across global warehouse network"
+    linkedin_post_id: "global-fulfillment"
+    technologies: ["Multi-platform Automation"]
+    highlights:
+      - "18 warehouses with integrated automation"
+      - "300+ brands served with consistent SLAs"
+      - "198 global destinations with optimized routing"
+
+  - title: "Retail Fulfillment Innovation"
+    description: "Cutting-edge fulfillment solutions for retail and e-commerce"
+    linkedin_post_id: "automation-arne"
+    technologies: ["Retail Automation", "E-commerce Fulfillment"]
+    highlights:
+      - "Retail-specific automation configurations"
+      - "Same-day and next-day fulfillment capabilities"
+      - "Peak season scalability and performance"
+
+  - title: "Warehouse Automation Overview"
+    description: "Comprehensive overview of THG's automation journey"
+    linkedin_post_id: "warehouse-automation"
+    technologies: ["End-to-end Automation"]
+    highlights:
+      - "Automation maturity journey from manual to lights-out"
+      - "Technology stack and integration architecture"
+      - "Change management and workforce transformation"
+
+  - title: "Bumblebee Automation Platform"
+    description: "Next-generation automation and operations management"
+    linkedin_post_id: "bumblebee-automation"
+    technologies: ["Bumblebee Platform", "Operations Management"]
+    highlights:
+      - "AI-driven task allocation and optimization"
+      - "Real-time performance monitoring and dashboards"
+      - "Predictive analytics for capacity planning"
+
+  - title: "THG Checkout Launch"
+    description: "Launching innovative checkout solution for global e-commerce"
+    linkedin_post_id: "thg-checkout-launch"
+    technologies: ["Checkout Platform", "E-commerce Integration"]
+    highlights:
+      - "Seamless checkout experience integration"
+      - "Multi-currency and global payment support"
+      - "Conversion optimization through technology"
+
+# Technology Stack & Integration
+technology_stack:
+  robotics_layer:
+    - "Autostore (cube storage and robotic picking)"
+    - "Geek+ (autonomous mobile robots)"
+    - "T-sorter (automated sortation)"
+    - "Libiao Robotics (shuttle systems)"
+
+  control_layer:
+    - "Proprietary Warehouse Control System (WCS)"
+    - "Real-time task allocation and optimization"
+    - "API-based integration framework"
+
+  management_layer:
+    - "Warehouse Management System (WMS)"
+    - "Enterprise Resource Planning (ERP)"
+    - "Order Management System (OMS)"
+
+  analytics_layer:
+    - "Real-time operational dashboards"
+    - "Predictive analytics and capacity planning"
+    - "AI/ML for demand forecasting and route optimization"
+
+# Innovation Highlights
+innovation_highlights:
+  - title: "Multi-Vendor Integration"
+    description: "Unique ability to integrate and orchestrate 4+ different robotics platforms under single WCS"
+    impact: "Flexibility to choose best-of-breed solutions and avoid vendor lock-in"
+
+  - title: "Proprietary WCS Development"
+    description: "Built in-house Warehouse Control System instead of vendor solutions for competitive advantage"
+    impact: "Faster customization, lower ongoing costs, complete control over roadmap"
+
+  - title: "AI-Driven Optimization"
+    description: "Machine learning algorithms for task allocation, demand forecasting, and route optimization"
+    impact: "15-20% efficiency gains beyond standard robotics automation"
+
+  - title: "Phased Rollout Methodology"
+    description: "Proven approach: pilot → scale → optimize across 18 global facilities"
+    impact: "Reduced risk, accelerated learning, consistent quality across deployments"
+
+  - title: "Change Management at Scale"
+    description: "Successfully trained and transitioned 2,000+ warehouse associates to automated operations"
+    impact: "95%+ workforce retention, zero strikes, improved job satisfaction"
+
+# Board Value Proposition
+board_value:
+  strategic: "Demonstrated hands-on technology leadership implementing cutting-edge automation at scale (18 facilities globally)"
+  operational: "Proven ability to drive operational excellence with measurable results (40% efficiency gains, 99.7% accuracy)"
+  innovation: "Built proprietary technology (WCS) creating competitive moat and avoiding vendor lock-in"
+  financial: "Strong ROI realization through cost reduction (25% fulfillment costs) and revenue enablement (300+ brands served)"
+  execution: "Successfully executed complex multi-vendor, multi-geography technology transformations with minimal disruption"
+  people: "Effective change management transitioning 2,000+ workers to automated operations with high retention"

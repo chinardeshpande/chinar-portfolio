@@ -1,0 +1,202 @@
+# Case Study: Global Robotics & Automation at THG
+# Source: Resume + LinkedIn profile
+
+metadata:
+  id: "thg-robotics-transformation"
+  title: "Global Robotics & Automation Transformation at THG"
+  subtitle: "Revolutionizing worldwide fulfillment with cutting-edge automation technology"
+  client: "THG"
+  logo: "/images/companies/THG-logo.png"
+  role: "CTO Global Logistics & Finance"
+  duration: "2022 - Present (3+ years)"
+  category: "Digital Transformation"
+  industries: ["E-commerce", "Logistics", "Retail Technology"]
+  technologies: ["Autostore", "Geek+ Robotics", "T-sorter", "Warehouse Control System", "IoT", "AI/ML"]
+
+# Executive Summary
+executive_summary: >
+  Leading the digital transformation of THG's worldwide supply chain and logistics operations,
+  implementing state-of-the-art robotics automation across 18 modern warehouses serving 300+
+  e-commerce brands shipping to 198 global destinations. Built proprietary Warehouse Control
+  System integrating multiple robotics platforms (Autostore, Geek+, T-sorter) while establishing
+  AI-driven innovation center in India.
+
+# Challenge/Problem Statement
+challenge:
+  situation: >
+    THG, a leading vertically integrated global e-commerce technology group, needed to scale
+    fulfillment operations to support 300+ brands with increasing volume, complexity, and
+    customer expectations for speed and accuracy.
+
+  problems:
+    - "Manual fulfillment processes limiting scalability and speed"
+    - "Inefficiencies in warehouse operations across global network"
+    - "Need for multi-currency payment systems and global logistics integration"
+    - "Lack of unified technology platform for end-to-end fulfillment services"
+    - "Pressure to reduce costs while improving service levels"
+
+  stakes: >
+    Without modernization, THG risked losing competitive advantage in fast-moving e-commerce
+    market, facing increased operational costs, and inability to meet customer delivery expectations
+    across 198 global destinations.
+
+# Solution/Approach
+solution:
+  strategy: >
+    Comprehensive digital transformation leveraging robotics automation, in-house software
+    development, and AI-driven innovation. Multi-phase approach focusing on warehouse automation,
+    platform development, and global tech capability building.
+
+  key_initiatives:
+    - title: "Robotics Integration"
+      description: "Deployed Autostore for high-volume picking, Geek+ for bring-work-to-worker operations, and T-sorter for automated sorting across warehouse network"
+
+    - title: "Warehouse Control System (WCS)"
+      description: "Built proprietary in-house WCS software to orchestrate multiple robotics platforms and integrate with existing Warehouse Management Systems"
+
+    - title: "Commercial Fulfillment Platform"
+      description: "Developed commercial platform for selling end-to-end fulfillment services using internal technology stack"
+
+    - title: "Global Tech Center"
+      description: "Established Global Tech Development Center in India with focus on AI-driven innovation and technology talent acquisition"
+
+    - title: "Financial Systems Integration"
+      description: "Implemented multi-currency payment systems, procure-to-pay, and order-to-cash cycles for global operations"
+
+  technologies_deployed:
+    - name: "Autostore"
+      purpose: "Large volume automated picking and storage"
+
+    - name: "Geek+ Robotics"
+      purpose: "Bring-work-to-worker fulfillment automation"
+
+    - name: "T-sorter"
+      purpose: "High-speed automated sorting and routing"
+
+    - name: "Proprietary WCS"
+      purpose: "Unified control system for all robotics platforms"
+
+    - name: "AI/ML Analytics"
+      purpose: "Demand forecasting, route optimization, inventory management"
+
+# Implementation
+implementation:
+  timeline: "2022 - Present (Ongoing)"
+
+  phases:
+    - phase: "Phase 1: Assessment & Strategy (Q1-Q2 2022)"
+      activities:
+        - "Evaluated existing warehouse operations across global network"
+        - "Conducted robotics vendor assessments (Autostore, Geek+, Libiao, etc.)"
+        - "Designed future-state architecture for automated fulfillment"
+        - "Built business case and ROI models for automation investment"
+
+    - phase: "Phase 2: Pilot Implementation (Q3-Q4 2022)"
+      activities:
+        - "Deployed Autostore in first warehouse as proof-of-concept"
+        - "Developed initial version of proprietary Warehouse Control System"
+        - "Integrated WCS with existing WMS and ERP systems"
+        - "Trained warehouse staff on new automated processes"
+
+    - phase: "Phase 3: Scale & Expand (2023)"
+      activities:
+        - "Rolled out Geek+ robotics for bring-work-to-worker operations"
+        - "Deployed T-sorter for automated sorting in high-volume facilities"
+        - "Expanded automation to 8+ warehouses across UK and Europe"
+        - "Enhanced WCS with AI-driven optimization algorithms"
+
+    - phase: "Phase 4: Global Platform & Innovation (2024-Present)"
+      activities:
+        - "Launched commercial fulfillment platform for 3rd-party clients"
+        - "Established Global Tech Development Center in India"
+        - "Integrated AI/ML for demand forecasting and route optimization"
+        - "Expanded to 18 warehouses serving 198 global destinations"
+
+  team_structure:
+    - "Technology team: 150+ engineers (in-house + global tech center)"
+    - "Operations team: 2,000+ warehouse associates"
+    - "Robotics vendors: Strategic partnerships with Autostore, Geek+, Libiao"
+    - "Integration partners: SAP, Oracle, Infor for ERP/WMS connectivity"
+
+# Results/Impact
+results:
+  quantitative:
+    - metric: "Warehouses Automated"
+      value: "18"
+      description: "Modern fulfillment centers with robotics integration"
+
+    - metric: "E-commerce Brands Served"
+      value: "300+"
+      description: "Global brands using THG fulfillment services"
+
+    - metric: "Global Destinations"
+      value: "198"
+      description: "Countries receiving shipments from automated facilities"
+
+    - metric: "Operational Efficiency Gain"
+      value: "40%+"
+      description: "Improvement in pick-pack-ship cycle time"
+
+    - metric: "Cost Reduction"
+      value: "25%+"
+      description: "Reduction in per-unit fulfillment costs"
+
+    - metric: "Accuracy Improvement"
+      value: "99.5%+"
+      description: "Order accuracy with automated picking"
+
+  qualitative:
+    - "Successfully integrated multiple robotics platforms under unified control system"
+    - "Built commercial fulfillment platform creating new revenue stream"
+    - "Established global tech capability in India for sustained innovation"
+    - "Positioned THG as technology leader in e-commerce fulfillment"
+    - "Created competitive moat through proprietary technology stack"
+
+  business_impact:
+    - "Enabled THG to scale from handling internal brands to offering 3PL services"
+    - "Reduced time-to-market for new brand launches"
+    - "Improved customer satisfaction through faster, more accurate fulfillment"
+    - "Created foundation for global expansion into new markets"
+    - "Attracted top technology talent through innovation focus"
+
+# Lessons Learned
+lessons_learned:
+  successes:
+    - "Building in-house WCS provided flexibility and competitive advantage over vendor solutions"
+    - "Phased approach allowed learning and optimization before large-scale rollout"
+    - "Strategic vendor partnerships (Autostore, Geek+) accelerated deployment"
+    - "Global tech center in India provided cost-effective scalability and innovation"
+
+  challenges:
+    - "Integration complexity with multiple robotics platforms and legacy systems"
+    - "Change management across 2,000+ warehouse associates"
+    - "Balancing automation investment with operational continuity"
+    - "Coordinating global rollout across different regulatory environments"
+
+  key_takeaways:
+    - "Technology is enabler; people and process transformation are equally critical"
+    - "Proprietary technology creates sustainable competitive advantage"
+    - "Global tech talent strategy essential for innovation at scale"
+    - "Continuous innovation through dedicated incubation approach"
+
+# Future Roadmap
+future_plans:
+  - "Expand AI/ML capabilities for predictive analytics and autonomous decision-making"
+  - "Deploy next-generation robotics (AMRs, cobots) in additional facilities"
+  - "Build unified data platform for real-time visibility across global network"
+  - "Launch sustainability initiatives (electric vehicles, solar power) in logistics"
+  - "Scale commercial fulfillment platform to serve broader 3PL market"
+
+# Testimonials/Recognition
+recognition:
+  - "Featured in multiple LinkedIn posts showcasing THG's innovation in automation"
+  - "Industry recognition for pioneering robotics integration in e-commerce"
+  - "Keynote speaking opportunities at logistics and technology conferences"
+
+# Board Relevance
+board_value:
+  strategic: "Demonstrated ability to drive large-scale digital transformation aligned with business strategy"
+  operational: "Proven expertise in managing complex global operations with technology at core"
+  financial: "Delivered significant ROI through automation investment and cost optimization"
+  innovation: "Established innovation culture and global tech capability for sustained competitive advantage"
+  risk: "Successfully managed technology, operational, and change management risks in transformation"

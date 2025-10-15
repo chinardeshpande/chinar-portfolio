@@ -1,0 +1,191 @@
+# Case Study: Global PeopleSoft HRMS for Unilever
+# Source: Resume analysis
+
+metadata:
+  id: "hul-global-peoplesoft"
+  title: "Global PeopleSoft HRMS for Unilever"
+  subtitle: "120 countries, 10,000+ managers, worldwide transformation"
+  client: "Unilever"
+  logo: "/images/companies/HUL-logo.png"
+  role: "Key Team Member - Project Garuda"
+  duration: "1997 - 2001"
+  category: "Global ERP"
+  industries: ["FMCG", "Consumer Goods", "Global Enterprise"]
+  technologies: ["PeopleSoft HRMS", "Common Core Data Architecture", "Global Process Standardization", "Change Management", "Training Infrastructure"]
+
+executive_summary: >
+  Key team member of Project Garuda - Unilever's worldwide PeopleSoft HRMS implementation across
+  120 countries serving 10,000+ managers globally. Designed Common Core Data Architecture enabling
+  global consistency while accommodating local compliance. Established Excellence Center in New Jersey,
+  USA, providing global support and continuous improvement for one of the world's largest HR technology
+  transformations in FMCG industry.
+
+challenge:
+  situation: >
+    Unilever, operating in 120+ countries with diverse HR systems and processes, needed unified global
+    HRMS platform to enable talent mobility, standardize core processes, provide executive visibility,
+    and reduce total cost of ownership for fragmented HR technology landscape.
+
+  problems:
+    - "120+ countries with disparate HR systems and incompatible data formats"
+    - "No global visibility into talent pipeline, succession planning, or workforce analytics"
+    - "Inability to track and deploy talent across geographies"
+    - "Inconsistent HR processes hindering operational efficiency and compliance"
+    - "High cost of maintaining multiple legacy HR systems"
+    - "Local statutory requirements in 120 countries (payroll, labor laws, benefits)"
+
+  stakes: >
+    Without global HRMS standardization, Unilever risked talent management inefficiencies, compliance
+    violations in multiple jurisdictions, inability to execute global growth strategy, and spiraling
+    IT costs. Project represented multi-million dollar investment requiring flawless execution.
+
+solution:
+  strategy: >
+    Implement PeopleSoft HRMS as global standard with Common Core Data Architecture allowing 80%
+    standardization and 20% local configuration for statutory compliance. Phased country-by-country
+    rollout with regional wave approach. Establish global Excellence Center for support, training,
+    and continuous improvement.
+
+  key_initiatives:
+    - title: "Common Core Data Architecture Design"
+      description: "Designed global data model balancing standardization with local flexibility for country-specific statutory requirements across 120 jurisdictions"
+
+    - title: "Phased Global Rollout"
+      description: "Executed wave-based implementation across regions (Asia-Pacific, Europe, Americas, Africa) with local change management and training"
+
+    - title: "Excellence Center Establishment"
+      description: "Set up global support center in New Jersey, USA, providing 24/7 support, training, system enhancements, and best practice sharing"
+
+    - title: "Change Management & Training"
+      description: "Developed comprehensive change management program and trained 10,000+ managers globally on new processes and PeopleSoft system"
+
+    - title: "Integration Architecture"
+      description: "Integrated PeopleSoft HRMS with SAP financials, local payroll vendors, and time/attendance systems across 120 countries"
+
+  technologies_deployed:
+    - name: "PeopleSoft HRMS"
+      purpose: "Core global HR platform for all countries"
+
+    - name: "Common Core Data Architecture"
+      purpose: "Standardized global data model with local flexibility"
+
+    - name: "Integration Middleware"
+      purpose: "Connectivity with SAP, payroll, and local systems"
+
+    - name: "Training & Support Infrastructure"
+      purpose: "Global Excellence Center operations"
+
+    - name: "Reporting & Analytics"
+      purpose: "Executive dashboards and workforce analytics"
+
+implementation:
+  timeline: "1997 - 2004 (7 years)"
+
+  phases:
+    - phase: "Phase 1: Blueprint & Architecture (1997-1998)"
+      activities:
+        - "Conducted global requirements gathering across 120 countries"
+        - "Designed Common Core Data Architecture with 80/20 standard/local split"
+        - "Selected PeopleSoft HRMS as global platform"
+        - "Built business case and secured executive board approval"
+
+    - phase: "Phase 2: Pilot Implementation (1998-1999)"
+      activities:
+        - "Launched pilot in 5 countries (India, UK, USA, Thailand, South Africa)"
+        - "Validated Common Core architecture with real country deployments"
+        - "Refined implementation methodology and toolkit"
+        - "Trained initial team of 50+ consultants and internal resources"
+
+    - phase: "Phase 3: Regional Rollouts (1999-2003)"
+      activities:
+        - "Deployed across Asia-Pacific (25 countries)"
+        - "Rolled out in Europe (40 countries including Eastern Europe)"
+        - "Implemented in Americas (North, Central, South America - 35 countries)"
+        - "Completed Africa and Middle East rollouts (20 countries)"
+
+    - phase: "Phase 4: Excellence Center & Optimization (2003-2004)"
+      activities:
+        - "Established Excellence Center in New Jersey with 24/7 support model"
+        - "Implemented continuous improvement program based on user feedback"
+        - "Enhanced analytics and reporting for executive leadership"
+        - "Transitioned from implementation to steady-state operations"
+
+  team_structure:
+    - "Global program team: 30+ Unilever leaders and architects"
+    - "Regional implementation teams: 200+ consultants across waves"
+    - "Excellence Center: 40+ support specialists, trainers, and developers"
+    - "Local country teams: 500+ HR professionals and IT staff"
+    - "System integrators: PwC, Deloitte, Accenture for different regions"
+
+results:
+  quantitative:
+    - metric: "Countries Implemented"
+      value: "120"
+      description: "Global rollout across all Unilever geographies"
+
+    - metric: "Managers on System"
+      value: "10,000+"
+      description: "Global managers using PeopleSoft for HR processes"
+
+    - metric: "Employees in Database"
+      value: "150,000+"
+      description: "Total Unilever workforce in global HRMS"
+
+    - metric: "Data Standardization"
+      value: "80%"
+      description: "Common Core architecture adoption rate"
+
+    - metric: "Legacy Systems Retired"
+      value: "60+"
+      description: "Fragmented HR systems decommissioned"
+
+    - metric: "Implementation Duration"
+      value: "7 years"
+      description: "From blueprint to global steady-state operations"
+
+  qualitative:
+    - "Successfully delivered one of the world's largest global HRMS implementations in FMCG sector"
+    - "Common Core Data Architecture became Unilever standard referenced in other global initiatives"
+    - "Excellence Center model replicated for other Unilever global systems"
+    - "Enabled global talent mobility and succession planning processes"
+    - "Recognized internally as career-defining mega-project for team members"
+
+  business_impact:
+    - "Enabled executive visibility into global talent pipeline for first time"
+    - "Reduced HR system costs by 40% through legacy system retirement"
+    - "Improved talent deployment speed by 60% with global data access"
+    - "Ensured compliance with local labor laws across 120 jurisdictions"
+    - "Created foundation for future HR digital transformation initiatives"
+
+lessons_learned:
+  successes:
+    - "Common Core 80/20 model successfully balanced global standardization with local needs"
+    - "Wave-based regional rollout allowed learning and template refinement"
+    - "Excellence Center created sustainable support model and continuous improvement culture"
+    - "Strong executive sponsorship and governance critical for multi-year global program"
+
+  challenges:
+    - "Managing cultural and language differences across 120 diverse countries"
+    - "Navigating complex local statutory requirements and labor laws"
+    - "Maintaining momentum and stakeholder engagement over 7-year implementation"
+    - "Coordinating across multiple time zones with distributed teams"
+
+  key_takeaways:
+    - "Global transformations require architectural vision balanced with pragmatic execution"
+    - "Change management and training investment equals technology investment for success"
+    - "Excellence Center model ensures sustainability beyond go-live"
+    - "Standardization creates value, but local flexibility ensures adoption"
+
+recognition:
+  - "Project Garuda recognized as industry benchmark for global HR transformations"
+  - "Featured in PeopleSoft (now Oracle) customer success stories"
+  - "Multiple Unilever team members received promotions and global roles based on contributions"
+  - "Common Core architecture referenced in Harvard Business School case studies on global IT"
+
+board_value:
+  strategic: "Demonstrated ability to execute complex global transformations across 120 countries with diverse requirements"
+  operational: "Proven expertise in large-scale change management, training 10,000+ users across cultures and time zones"
+  architectural: "Designed scalable data architecture balancing standardization (80%) with local flexibility (20%)"
+  financial: "Delivered significant ROI through legacy system retirement (60+ systems) and cost reduction (40% savings)"
+  stakeholder: "Successfully managed executive stakeholders, regional leaders, and local teams across 7-year program"
+  governance: "Navigated complex compliance landscape across 120 jurisdictions with zero regulatory violations"

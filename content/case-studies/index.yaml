@@ -1,0 +1,92 @@
+# Case Studies Index
+# Source: Resume analysis - major transformational projects
+
+featured_cases:
+  - id: "thg-robotics-transformation"
+    title: "Global Robotics & Automation at THG"
+    subtitle: "Transforming worldwide fulfillment with cutting-edge automation"
+    category: "Digital Transformation"
+    industry: "E-commerce & Logistics"
+    year: "2022-2025"
+    impact:
+      - "300+ e-commerce brands automated"
+      - "18 warehouses with robotics integration"
+      - "198 global destinations served"
+    excerpt: "Led the digital transformation of THG's worldwide supply chain, implementing Autostore, Geek+, and T-sorter robotics integrated with proprietary Warehouse Control System."
+    image: "/images/case-studies/thg-robotics.jpg"
+    featured: true
+
+  - id: "future-group-sap-transformation"
+    title: "SAP IS Retail for India's Largest Retailer"
+    subtitle: "Enterprise transformation serving 300M customers"
+    category: "ERP Implementation"
+    industry: "Retail"
+    year: "2004-2016"
+    impact:
+      - "3,200 users across 900+ stores"
+      - "35 warehouses automated"
+      - "300M+ customers served"
+      - "Featured in SAP Annual Report 2005-06"
+    excerpt: "Spearheaded SAP IS Retail implementation for Future Group, managing INR 3 Billion technology budget and creating India's most advanced retail technology infrastructure."
+    image: "/images/case-studies/future-sap.jpg"
+    featured: true
+
+  - id: "hul-global-peoplesoft"
+    title: "Global PeopleSoft HRMS for Unilever"
+    subtitle: "120 countries, 10,000+ managers, worldwide transformation"
+    category: "Global ERP"
+    industry: "FMCG"
+    year: "1997-2004"
+    impact:
+      - "120 countries implemented"
+      - "10,000+ managers on system"
+      - "Common Core Data Architecture"
+      - "Excellence Center in US"
+    excerpt: "Key team member of Project Garuda - Unilever's worldwide PeopleSoft implementation. Designed Common Core Data Architecture and established Excellence Center in New Jersey."
+    image: "/images/case-studies/hul-peoplesoft.jpg"
+    featured: true
+
+  - id: "stellar-innovation-cell"
+    title: "Innovation & Incubation Cell at Stellar"
+    subtitle: "Building India's first Customer Experience Centers for 3PL"
+    category: "Innovation Leadership"
+    industry: "Supply Chain & Logistics"
+    year: "2016-2021"
+    impact:
+      - "60M sq ft warehouse network"
+      - "Solar power across 8M sq ft"
+      - "Electric mobility for 19,000 pin codes"
+      - "BI platforms for customers"
+    excerpt: "Established Innovation and Incubation Cell driving solar power, electric mobility, business intelligence, and customer experience centers across India."
+    image: "/images/case-studies/stellar-innovation.jpg"
+    featured: true
+
+  - id: "ampersand-education-digital"
+    title: "Digital Transformation of Education Conglomerate"
+    subtitle: "End-to-end digitization with Deloitte partnership"
+    category: "Enterprise Transformation"
+    industry: "Education"
+    year: "2021-2022"
+    impact:
+      - "Pan-India school network digitized"
+      - "Real-time operational visibility"
+      - "eLMS for digital learning"
+      - "Group ERP integration"
+    excerpt: "Spearheaded digital transformation of multi-business education conglomerate, creating connected ecosystem with real-time feeds, GPS tracking, and parent communication."
+    image: "/images/case-studies/ampersand-education.jpg"
+    featured: true
+
+  - id: "future-group-ecommerce"
+    title: "Launching futurebazaar.com"
+    subtitle: "India's early e-commerce platform for omnichannel retail"
+    category: "Product Launch"
+    industry: "E-commerce"
+    year: "2008-2012"
+    impact:
+      - "First omnichannel retail in India"
+      - "40+ countries served"
+      - "350+ stores integrated"
+      - "Data Warehouse & Analytics"
+    excerpt: "Launched e-commerce initiative for Future Group, creating integrated omnichannel model serving online and offline customers with advanced analytics."
+    image: "/images/case-studies/futurebazaar.jpg"
+    featured: true
