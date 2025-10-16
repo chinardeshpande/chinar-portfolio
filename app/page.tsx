@@ -55,21 +55,10 @@ export default function Home() {
         <HeroCarousel />
 
         {/* Key Highlights Section - Compact */}
-        <section className="py-8 bg-white">
+        <section className="py-4 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Single-line header with size/color differentiation */}
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-900">
-                <span className="text-3xl text-primary-700">Key Expertise</span>
-                {' '}<span className="text-gray-400">|</span>{' '}
-                <span className="text-lg font-normal text-gray-600">
-                  Bringing strategic technology leadership and operational excellence to boardrooms worldwide
-                </span>
-              </h2>
-            </div>
-
             {/* Compact cards with integrated SVG icons */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Technology Leadership */}
               <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all">
                 <div className="flex items-start gap-3">
@@ -80,7 +69,7 @@ export default function Home() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-lg text-gray-900 mb-1">Technology Leadership</h3>
-                    <p className="text-sm text-gray-600 mb-2">30+ years as CTO and Group CIO across global organizations, leading digital transformation initiatives.</p>
+                    <p className="text-sm text-gray-600 mb-2">30+ years as CIO, CTO and CEO across global organizations, leading digital transformation initiatives, and building disruptive products and markets.</p>
                     <div className="flex flex-wrap gap-1.5">
                       {['Digital Strategy', 'Innovation', 'Leadership'].map((tag, i) => (
                         <span key={i} className="px-2 py-0.5 text-xs rounded-full bg-gray-100 text-gray-700">
@@ -101,8 +90,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-lg text-gray-900 mb-1">Robotics & Automation</h3>
-                    <p className="text-sm text-gray-600 mb-2">Leading robotics implementation across 18 warehouses with Autostore, Geek+, and T-sorter technologies.</p>
+                    <h3 className="font-bold text-lg text-gray-900 mb-1">Robotics & AI</h3>
+                    <p className="text-sm text-gray-600 mb-2">Leading robotics implementation globally with Autostore, Geek+, and T-sorters. Driving Business AI adoption and AI-driven eCommerce experience.</p>
                     <div className="flex flex-wrap gap-1.5">
                       {['Robotics', 'Automation', 'AI'].map((tag, i) => (
                         <span key={i} className="px-2 py-0.5 text-xs rounded-full bg-gray-100 text-gray-700">
@@ -123,8 +112,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-lg text-gray-900 mb-1">Global Operations</h3>
-                    <p className="text-sm text-gray-600 mb-2">Experience managing operations across 14 countries and 8 industries, serving 300+ e-commerce brands.</p>
+                    <h3 className="font-bold text-lg text-gray-900 mb-1">Global Operations & GCC Setup</h3>
+                    <p className="text-sm text-gray-600 mb-2">Championing large-scale operations across 14 countries and 8 industries, serving 300+ global brands. Masterfully setting up new GCCs from scratch in India.</p>
                     <div className="flex flex-wrap gap-1.5">
                       {['Global', 'E-commerce', 'Logistics'].map((tag, i) => (
                         <span key={i} className="px-2 py-0.5 text-xs rounded-full bg-gray-100 text-gray-700">

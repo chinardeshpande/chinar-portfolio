@@ -24,31 +24,15 @@ export default function ExperiencePage() {
         {/* Hero */}
         <Section background="white" padding="default">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Professional Experience
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mb-8">
-              30+ years of technology leadership across multinational corporations,
-              driving digital transformation, innovation, and operational excellence across 14 countries.
-            </p>
-
-            {/* Career Stats - Inline */}
-            <div className="flex flex-wrap gap-6 pt-6 border-t border-gray-200">
-              <div className="flex items-center gap-2">
-                <span className="text-3xl font-bold text-blue-600">{content.career_stats.total_years}</span>
-                <span className="text-sm text-gray-600">Years of Excellence</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-3xl font-bold text-blue-600">{content.career_stats.countries}</span>
-                <span className="text-sm text-gray-600">Countries</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-3xl font-bold text-blue-600">{content.career_stats.professionals_led}</span>
-                <span className="text-sm text-gray-600">Professionals Led</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-3xl font-bold text-blue-600">{content.career_stats.technology_budget}</span>
-                <span className="text-sm text-gray-600">Max Tech Budget</span>
+            <div className="flex items-center gap-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+                Professional Experience
+              </h1>
+              <div className="flex-1 border-l-2 border-gray-300 pl-6">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                  30+ years of technology leadership across multinational corporations,<br />
+                  driving digital transformation, innovation, and operational excellence across 14 countries.
+                </p>
               </div>
             </div>
           </div>
@@ -56,9 +40,8 @@ export default function ExperiencePage() {
 
         {/* Career Timeline - Horizontal Carousel */}
         <Section background="cream" padding="default">
+          <div className="mb-16"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Career Timeline</h2>
-
             {/* Horizontal Carousel with Navigation */}
             <div className="relative group">
               {/* Left Arrow */}

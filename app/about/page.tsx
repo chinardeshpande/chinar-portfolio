@@ -19,8 +19,31 @@ function loadContent() {
   return yaml.load(fs.readFileSync(contentPath, 'utf8')) as any;
 }
 
+function loadBoardSkills() {
+  const contentPath = path.join(process.cwd(), 'content', 'board-skills.yaml');
+  const data = yaml.load(fs.readFileSync(contentPath, 'utf8')) as any;
+
+  // Extract top 10 expert-level skills for compact display
+  const topSkills: any[] = [];
+  Object.values(data.skills_categories).forEach((category: any) => {
+    category.skills.forEach((skill: any) => {
+      if (skill.level >= 4) {
+        topSkills.push(skill);
+      }
+    });
+  });
+
+  return {
+    readiness_score: data.overall_assessment.readiness_score,
+    top_skills: topSkills.slice(0, 10),
+    ideal_board_roles: data.ideal_board_roles,
+    target_industries: data.target_industries,
+  };
+}
+
 export default function AboutPage() {
   const content = loadContent();
+  const boardSkills = loadBoardSkills();
 
   return (
     <div className="min-h-screen bg-white">
@@ -36,6 +59,7 @@ export default function AboutPage() {
                 rolePositions={content.role_positions}
                 aiExpertise={content.ai_expertise}
                 differentiators={content.differentiators}
+                boardSkills={boardSkills}
               />
             </div>
           </div>

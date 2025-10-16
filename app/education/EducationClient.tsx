@@ -14,12 +14,20 @@ export function EducationClient({ content }: EducationClientProps) {
   return (
     <>
       <main className="pt-20">
-        {/* Hero - Left aligned */}
-        <section className="bg-gradient-to-br from-gray-50 to-white py-8">
+        {/* Hero - Banner Format */}
+        <section className="bg-white py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Education
-            </h1>
+            <div className="flex items-center gap-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+                Education
+              </h1>
+              <div className="flex-1 border-l-2 border-gray-300 pl-6">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                  B.E. (Electrical Engineering), MS (Computer Science),<br />
+                  MBA (Operations Management)
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 

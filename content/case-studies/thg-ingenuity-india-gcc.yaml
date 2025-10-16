@@ -1,0 +1,214 @@
+# Case Study: Building THG Ingenuity India Global Capability Center
+# Building a world-class GCC from vision to thriving operations
+
+metadata:
+  id: "thg-ingenuity-india-gcc"
+  title: "Building THG Ingenuity India: From Vision to Thriving GCC"
+  subtitle: "Establishing a world-class Global Capability Center mirroring THG's innovation culture and operational excellence"
+  client: "THG"
+  logo: "/images/companies/THG-logo.png"
+  role: "CTO Global Logistics & Finance"
+  duration: "2024 - 2025 (18 months)"
+  category: "GCC Setup & Global Expansion"
+  industries: ["Technology Services", "Global Capability Centers", "E-commerce Technology"]
+  technologies: ["Enterprise Infrastructure", "LEED-Compliant Workspace", "Dual Tier-1 Connectivity", "Global Collaboration Tools", "AI Innovation Labs"]
+
+# Executive Summary
+executive_summary: >
+  Led the end-to-end establishment of THG Ingenuity India—transforming a blank canvas into a
+  fully operational Global Capability Center (GCC) with 100+ engineers delivering across
+  logistics, AI, and platform technology. Orchestrated every aspect from legal incorporation,
+  regulatory compliance, infrastructure build-out, to cultural integration between UK and India,
+  setting a new benchmark for global tech expansion.
+
+# Challenge/Problem Statement
+challenge:
+  situation: >
+    THG needed to expand its technology footprint to India, not just as an outsourcing destination
+    but as a full-fledged Global Capability Center that would mirror THG's innovation culture,
+    operational excellence, and collaborative DNA. The challenge was building an entire ecosystem
+    from scratch with seamless UK-India integration.
+
+  problems:
+    - "No legal entity or operational presence in India"
+    - "Complex regulatory landscape requiring FDI compliance, tax structuring, and multi-agency coordination"
+    - "Need for world-class infrastructure matching UK headquarters standards"
+    - "Transition of 60+ engineers from EOR model to direct payroll"
+    - "Establishing governance, financial controls, and audit-ready operations"
+    - "Building cultural bridge between Manchester HQ and Pune operations"
+
+  stakes: >
+    Without proper execution, THG risked compliance violations, infrastructure delays, talent
+    attrition, operational inefficiencies, and failure to realize the strategic value of a
+    high-performing GCC contributing to core engineering and innovation.
+
+# Solution/Approach
+solution:
+  strategy: >
+    Comprehensive end-to-end orchestration covering legal incorporation, regulatory compliance,
+    infrastructure development, HR transition, governance establishment, and cultural integration.
+    Multi-track parallel execution ensuring speed without compromising compliance or quality.
+
+  key_initiatives:
+    - title: "Legal Entity Incorporation"
+      description: "Established THG Ingenuity Pvt Ltd with end-to-end Ministry of Corporate Affairs filings, PAN/TAN registration, FDI capital inflows, RBI FIRC/FCGPR compliance, working with Shardul Amarchand Mangaldas and PwC India"
+
+    - title: "Regulatory & Banking Setup"
+      description: "Completed GST, IEC, RCMC, EPFO, ESIC, Professional Tax registrations; established HSBC India corporate banking with international wire capabilities"
+
+    - title: "World-Class Infrastructure"
+      description: "Designed and delivered 30,000 sq. ft. LEED-compliant workspace at Phoenix Millennium Towers, Wakad, for 125 engineers with dual Tier-1 connectivity, boardrooms, collaboration spaces, wellness rooms, and 100-seater cafeteria"
+
+    - title: "HR & Payroll Transition"
+      description: "Migrated 60+ engineers from EOR model (Remunance) to direct THG India payroll with full statutory compliance (PF, ESIC, PT, POSH) and digital record-keeping"
+
+    - title: "Governance & Financial Controls"
+      description: "Established board governance, Inter-Company Services Agreement (India-UK), procurement policies, schedule of authority, vendor empanelment, and cost-plus transfer pricing framework"
+
+    - title: "UK-India Collaboration & Culture"
+      description: "Created hybrid work rhythms, hosted UK leadership visits (including Schalk van der Merwe), launched hackathons, AI showcases, and employer branding positioning THG as Pune's aspirational tech destination"
+
+  technologies_deployed:
+    - name: "Dual Tier-1 Tata Communications"
+      purpose: "High-availability UK-India connectivity with redundancy"
+
+    - name: "LEED-Compliant Infrastructure"
+      purpose: "Sustainable, tech-centric workspace with 24x7 power and security"
+
+    - name: "Enterprise IT & AV Systems"
+      purpose: "Seamless global collaboration and presentation infrastructure"
+
+    - name: "TableSpace Technologies"
+      purpose: "Workspace design and facility management partner"
+
+# Implementation
+implementation:
+  timeline: "Early 2024 - Mid 2025 (18 months)"
+
+  phases:
+    - phase: "Phase 1: Vision & Incorporation (Q1 2024)"
+      activities:
+        - "Strategic planning with UK legal, treasury, and tax teams"
+        - "Engagement of Shardul Amarchand Mangaldas (India) and PwC India"
+        - "Ministry of Corporate Affairs filings and entity incorporation"
+        - "PAN/TAN registration and RBI FDI approval process"
+        - "HSBC India bank account setup and capital inflow structuring"
+
+    - phase: "Phase 2: Infrastructure & Compliance (Q2 2024)"
+      activities:
+        - "Property search and finalization across Pune business corridors"
+        - "Selection of Phoenix Millennium Towers, Wakad (30,000 sq. ft.)"
+        - "Workspace design with TableSpace Technologies for 125 capacity"
+        - "GST, IEC, RCMC, EPFO, ESIC, Professional Tax registrations"
+        - "Dual Tier-1 internet lease line procurement (Tata Communications)"
+        - "IT infrastructure, AV systems, 24x7 power and security setup"
+
+    - phase: "Phase 3: Governance & Payroll (Q3 2024)"
+      activities:
+        - "First board meeting, auditor appointment, share issuance"
+        - "Inter-Company Services Agreement drafting and execution (India-UK)"
+        - "Procurement policy and schedule of authority creation"
+        - "Transition of 60+ engineers from EOR to THG India payroll"
+        - "HSBC corporate banking activation for payroll disbursement"
+        - "Full statutory compliance setup (PF, ESIC, PT, POSH)"
+
+    - phase: "Phase 4: Cultural Integration & Scale (Q4 2024 - Q2 2025)"
+      activities:
+        - "Employer branding campaign and career page launch"
+        - "Recruitment drives positioning THG as innovation powerhouse"
+        - "UK leadership visits and cultural integration events"
+        - "Hackathons, AI showcases, and innovation initiatives"
+        - "Expansion to 100+ engineers delivering core platform engineering"
+        - "Establishment of 24x7 product support frameworks"
+
+  team_structure:
+    - "Project Leader: Chinar Deshpande (end-to-end orchestration)"
+    - "Legal Partners: Shardul Amarchand Mangaldas (India), THG Legal (UK)"
+    - "Tax & Compliance: PwC India, THG Treasury (UK)"
+    - "Infrastructure: TableSpace Technologies, Tata Communications"
+    - "Banking: HSBC India Corporate Banking"
+    - "HR & Payroll: THG HR (UK-India), Statutory Consultants"
+
+# Results/Impact
+results:
+  quantitative:
+    - metric: "Engineers Transitioned"
+      value: "100+"
+      description: "From EOR to direct payroll with full compliance"
+
+    - metric: "Office Capacity"
+      value: "125 seats"
+      description: "LEED-compliant, scalable to 200+ capacity"
+
+    - metric: "Incorporation Timeline"
+      value: "6 months"
+      description: "From vision to fully operational legal entity"
+
+    - metric: "Infrastructure Delivery"
+      value: "30,000 sq. ft."
+      description: "World-class tech-centric workspace"
+
+    - metric: "Regulatory Compliance"
+      value: "100%"
+      description: "GST, FDI, EPFO, ESIC, PT, POSH, RBI, MCA compliant"
+
+    - metric: "UK-India Connectivity"
+      value: "Dual Tier-1"
+      description: "High-availability redundant internet lease lines"
+
+  qualitative:
+    - "Established seamless governance and audit-ready operations"
+    - "Created strong cultural and operational link between Manchester HQ and Pune"
+    - "Positioned THG India as aspirational tech destination in Pune market"
+    - "Built self-sufficient, high-performance GCC contributing to core engineering"
+    - "Successfully transitioned complex EOR model to direct employment"
+
+  business_impact:
+    - "Enabled THG to scale engineering capacity cost-effectively while maintaining quality"
+    - "Created 24x7 development and support capability across time zones"
+    - "Established India as strategic hub for AI-driven innovation and platform engineering"
+    - "Attracted top-tier engineering talent through employer branding and culture"
+    - "Provided blueprint for future GCC expansions in other geographies"
+
+# Lessons Learned
+lessons_learned:
+  successes:
+    - "Parallel multi-track execution (legal, infrastructure, HR) accelerated time-to-value"
+    - "Engaging top-tier advisors (SAM, PwC) ensured compliance and risk mitigation"
+    - "Strong UK-India leadership collaboration created seamless cultural integration"
+    - "Investment in world-class infrastructure positioned THG as employer of choice"
+
+  challenges:
+    - "Navigating complex FDI, RBI, and inter-company tax regulations"
+    - "Coordinating multiple stakeholders (legal, tax, treasury, HR, infrastructure) across geographies"
+    - "Transitioning engineers from EOR while maintaining morale and productivity"
+    - "Balancing speed of execution with governance and compliance rigor"
+
+  key_takeaways:
+    - "GCC success requires holistic approach—legal, infrastructure, culture are equally critical"
+    - "Early investment in governance and compliance prevents future operational friction"
+    - "Cultural integration cannot be delegated—requires active leadership engagement"
+    - "World-class infrastructure is not luxury—it's strategic imperative for talent attraction"
+
+# Future Roadmap
+future_plans:
+  - "Scale to 200+ engineers supporting expanded product and AI roadmap"
+  - "Establish dedicated AI innovation lab for cutting-edge R&D"
+  - "Launch THG India as regional hub for APAC engineering initiatives"
+  - "Build local partnerships with universities for talent pipeline development"
+  - "Expand infrastructure to support hybrid work and collaboration models"
+
+# Testimonials/Recognition
+recognition:
+  - "Schalk van der Merwe (UK leadership) visit galvanized teams and reinforced India's strategic role"
+  - "Featured as case study for successful GCC establishment in India market"
+  - "Positioned as benchmark for UK tech companies expanding to India"
+
+# Board Relevance
+board_value:
+  strategic: "Demonstrated ability to execute complex global expansion with multi-stakeholder coordination"
+  operational: "Built fully compliant, audit-ready GCC from ground zero with no prior presence"
+  financial: "Delivered cost-effective engineering capacity while maintaining quality and governance"
+  governance: "Established robust legal, tax, and compliance frameworks for international operations"
+  risk: "Successfully navigated FDI, tax, employment, and regulatory risks across jurisdictions"
+  cultural: "Created seamless UK-India collaboration model with strong cultural integration"

@@ -2,20 +2,22 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navigationLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/experience', label: 'Experience' },
   { href: '/education', label: 'Education' },
-  { href: '/board-skills', label: 'Skills' },
-  { href: '/case-studies', label: 'Case Studies' },
+  { href: '/accolades', label: 'Accolades' },
+  { href: '/case-studies', label: 'Success Stories' },
   { href: '/contact', label: 'Contact' },
 ];
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,15 +50,25 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            {navigationLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navigationLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'text-primary-600'
+                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  } rounded-lg`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-1 bg-primary-600 rounded-t-full"></span>
+                  )}
+                </Link>
+              );
+            })}
             <Link
               href="/board-bio"
               className="ml-4 px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-700 transition-colors"

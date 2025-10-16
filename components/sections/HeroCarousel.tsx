@@ -111,7 +111,7 @@ export function HeroCarousel() {
           {/* Carousel */}
           <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2">
             {/* Images */}
-            <div className="relative h-full overflow-hidden">
+            <div className="relative h-full overflow-hidden bg-gray-100">
               {photos.map((photo, index) => (
                 <div
                   key={photo}
@@ -123,7 +123,7 @@ export function HeroCarousel() {
                     src={photo}
                     alt={`Chinar Deshpande - Photo ${index + 1}`}
                     fill
-                    className="object-cover object-top"
+                    className="object-contain"
                     priority={index === 0}
                   />
                 </div>

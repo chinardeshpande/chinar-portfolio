@@ -7,9 +7,10 @@ interface AboutTabsProps {
   rolePositions: any[];
   aiExpertise: any;
   differentiators: string[];
+  boardSkills: any;
 }
 
-export function AboutTabs({ rolePositions, aiExpertise, differentiators }: AboutTabsProps) {
+export function AboutTabs({ rolePositions, aiExpertise, differentiators, boardSkills }: AboutTabsProps) {
   const [activeTab, setActiveTab] = useState('value');
 
   const tabs = [
@@ -23,20 +24,20 @@ export function AboutTabs({ rolePositions, aiExpertise, differentiators }: About
       ),
     },
     {
-      id: 'tech',
-      label: 'AI & Technology Stack',
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-    },
-    {
       id: 'apart',
       label: 'What Sets Me Apart',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+        </svg>
+      ),
+    },
+    {
+      id: 'skills',
+      label: 'Board Skills',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
         </svg>
       ),
     },
@@ -61,7 +62,7 @@ export function AboutTabs({ rolePositions, aiExpertise, differentiators }: About
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`
-                flex items-center gap-3 px-8 py-4 text-base font-semibold whitespace-nowrap border-b-3 transition-all
+                flex items-center gap-3 px-8 py-4 text-base font-semibold whitespace-nowrap border-b-4 transition-all
                 ${activeTab === tab.id
                   ? 'border-blue-600 text-blue-600 bg-blue-50/50'
                   : 'border-transparent text-slate-600 hover:text-slate-900 hover:border-slate-300'
@@ -84,30 +85,6 @@ export function AboutTabs({ rolePositions, aiExpertise, differentiators }: About
           </div>
         )}
 
-        {/* AI & Technology Stack Tab */}
-        {activeTab === 'tech' && (
-          <div className="animate-fadeIn">
-            <h2 className="font-display text-2xl md:text-3xl text-slate-900 mb-8 text-center flex items-center justify-center">
-              <span className="w-2 h-8 bg-gradient-to-b from-blue-600 to-purple-600 mr-3 rounded-full"></span>
-              AI & Technology Stack
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {aiExpertise.areas.map((area: any, index: number) => (
-                <div
-                  key={index}
-                  className="bg-white/95 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-md hover:shadow-xl transition-all hover:border-blue-300 hover:-translate-y-1"
-                >
-                  <h3 className="font-display text-lg text-slate-900 mb-3 flex items-center">
-                    <span className="w-3 h-3 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mr-2"></span>
-                    {area.name}
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">{area.details}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* What Sets Me Apart Tab */}
         {activeTab === 'apart' && (
           <div className="animate-fadeIn">
@@ -127,6 +104,90 @@ export function AboutTabs({ rolePositions, aiExpertise, differentiators }: About
                   <span className="text-base text-slate-700 leading-relaxed">{item}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Skills Matrix Tab */}
+        {activeTab === 'skills' && (
+          <div className="animate-fadeIn">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex items-center gap-6 mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  Board Skills Matrix
+                </h2>
+                <div className="flex-1 border-l-2 border-gray-300 pl-6">
+                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                    Expert-level competencies across strategic,<br />
+                    operational, and governance dimensions
+                  </p>
+                </div>
+              </div>
+
+              {/* Top Skills Grid */}
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                {boardSkills.top_skills.map((skill: any, index: number) => (
+                  <div
+                    key={index}
+                    className="flex items-start space-x-4 p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300"
+                  >
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                      skill.level === 5 ? 'bg-emerald-500' : 'bg-blue-500'
+                    }`}>
+                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold text-slate-900 text-sm mb-1">{skill.skill}</h3>
+                      <p className="text-xs text-slate-600 leading-relaxed">{skill.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Board Roles & Industries */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Ideal Board Roles */}
+                <div className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 rounded-xl p-6 border border-blue-200/50">
+                  <h3 className="font-semibold text-slate-900 mb-4 flex items-center">
+                    <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                    </svg>
+                    Ideal Board Roles
+                  </h3>
+                  <div className="space-y-2">
+                    {boardSkills.ideal_board_roles.map((role: string, index: number) => (
+                      <div key={index} className="flex items-center space-x-2 text-sm text-slate-700">
+                        <svg className="w-4 h-4 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>{role}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Target Industries */}
+                <div className="bg-gradient-to-br from-purple-50/80 to-pink-50/80 rounded-xl p-6 border border-purple-200/50">
+                  <h3 className="font-semibold text-slate-900 mb-4 flex items-center">
+                    <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
+                    </svg>
+                    Target Industries
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {boardSkills.target_industries.map((industry: string, index: number) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-white text-purple-700 text-xs font-medium rounded-full border border-purple-200"
+                      >
+                        {industry}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}

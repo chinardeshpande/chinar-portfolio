@@ -2,6 +2,21 @@
 # Source: Resume analysis - major transformational projects
 
 featured_cases:
+  - id: "thg-ingenuity-india-gcc"
+    title: "Building THG Ingenuity India: From Vision to Thriving GCC"
+    subtitle: "Establishing world-class Global Capability Center from ground zero"
+    category: "GCC Setup & Global Expansion"
+    industry: "Technology Services"
+    year: "2024-2025"
+    impact:
+      - "100+ engineers transitioned to direct payroll"
+      - "30,000 sq ft LEED-compliant workspace"
+      - "Full FDI, RBI, and regulatory compliance"
+      - "Seamless UK-India collaboration established"
+    excerpt: "Led end-to-end establishment of THG's India GCC—from legal incorporation, regulatory compliance, world-class infrastructure, to cultural integration between Manchester and Pune."
+    image: "/images/case-studies/thg-warehouse.jpg"
+    featured: true
+
   - id: "thg-robotics-transformation"
     title: "Global Robotics & Automation at THG"
     subtitle: "Transforming worldwide fulfillment with cutting-edge automation"

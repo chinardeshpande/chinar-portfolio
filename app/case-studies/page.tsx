@@ -25,21 +25,24 @@ export default function CaseStudiesPage() {
         {/* Hero */}
         <Section background="white" padding="default">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Case Studies
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl">
-              Real-world transformational projects demonstrating strategic technology leadership,
-              operational excellence, and measurable business impact across industries.
-            </p>
+            <div className="flex items-center gap-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+                Success Stories
+              </h1>
+              <div className="flex-1 border-l-2 border-gray-300 pl-6">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                  Real-world transformational projects demonstrating strategic<br />
+                  technology leadership, operational excellence, and measurable business impact across industries.
+                </p>
+              </div>
+            </div>
           </div>
         </Section>
 
         {/* Featured Case Studies */}
         <Section background="cream" padding="default">
+          <div className="mb-16"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Transformational Projects</h2>
-
             {/* Horizontal Carousel with Navigation */}
             <div className="relative group">
               {/* Left Arrow */}
@@ -78,8 +81,59 @@ export default function CaseStudiesPage() {
                   .map((caseStudy: any) => (
                     <Link key={caseStudy.id} href={`/case-studies/${caseStudy.id}`}>
                       <Card variant="boardroom" className="w-[420px] group cursor-pointer flex flex-col">
-                        {/* Image - Collage for THG and SAP, Placeholder for others */}
-                        {caseStudy.id === 'thg-robotics-transformation' ? (
+                        {/* Image - Collage for THG cases, SAP, and Peoplesoft */}
+                        {caseStudy.id === 'thg-ingenuity-india-gcc' ? (
+                          <div className="relative h-48 rounded-t-lg overflow-hidden bg-gradient-to-br from-blue-900 to-blue-700">
+                            {/* 3x2 Grid Collage for GCC */}
+                            <div className="grid grid-cols-3 grid-rows-2 h-full gap-1">
+                              <div className="relative">
+                                <Image
+                                  src="/images/case-studies/thg-gcc-office-1.png"
+                                  alt="THG India Office Workspace"
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                              </div>
+                              <div className="relative">
+                                <Image
+                                  src="/images/case-studies/thg-gcc-office-2.png"
+                                  alt="THG India Collaboration Space"
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                              </div>
+                              <div className="relative row-span-2">
+                                <Image
+                                  src="/images/case-studies/thg-gcc-building.jpg"
+                                  alt="Phoenix Millennium Towers"
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                              </div>
+                              <div className="relative">
+                                <Image
+                                  src="/images/case-studies/thg-gcc-workspace.jpg"
+                                  alt="Modern Workspace Design"
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                              </div>
+                              <div className="relative">
+                                <Image
+                                  src="/images/case-studies/thg-gcc-lobby.jpg"
+                                  alt="THG India Office Lobby"
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                              </div>
+                            </div>
+                            <div className="absolute top-3 right-3 z-10">
+                              <span className="px-3 py-1 bg-primary-600 text-white text-xs font-semibold rounded-full shadow-lg">
+                                {caseStudy.category}
+                              </span>
+                            </div>
+                          </div>
+                        ) : caseStudy.id === 'thg-robotics-transformation' ? (
                           <div className="relative h-48 rounded-t-lg overflow-hidden bg-gray-900">
                             {/* 2x2 Grid Collage */}
                             <div className="grid grid-cols-2 grid-rows-2 h-full gap-1">
@@ -181,6 +235,48 @@ export default function CaseStudiesPage() {
                                 />
                               </div>
                             </div>
+                            <div className="absolute top-3 right-3 z-10">
+                              <span className="px-3 py-1 bg-primary-600 text-white text-xs font-semibold rounded-full shadow-lg">
+                                {caseStudy.category}
+                              </span>
+                            </div>
+                          </div>
+                        ) : caseStudy.id === 'stellar-innovation-cell' ? (
+                          <div className="relative h-48 rounded-t-lg overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+                            <Image
+                              src="/images/case-studies/stellar-customer-experience-center.jpeg"
+                              alt="Customer Experience & Innovation Center"
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-3 right-3 z-10">
+                              <span className="px-3 py-1 bg-primary-600 text-white text-xs font-semibold rounded-full shadow-lg">
+                                {caseStudy.category}
+                              </span>
+                            </div>
+                          </div>
+                        ) : caseStudy.id === 'ampersand-education-digital' ? (
+                          <div className="relative h-48 rounded-t-lg overflow-hidden bg-gradient-to-br from-purple-100 to-blue-50">
+                            <Image
+                              src="/images/case-studies/ampersand-digital-education.avif"
+                              alt="Digital Transformation of Education"
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-3 right-3 z-10">
+                              <span className="px-3 py-1 bg-primary-600 text-white text-xs font-semibold rounded-full shadow-lg">
+                                {caseStudy.category}
+                              </span>
+                            </div>
+                          </div>
+                        ) : caseStudy.id === 'future-group-ecommerce' ? (
+                          <div className="relative h-48 rounded-t-lg overflow-hidden bg-white">
+                            <Image
+                              src="/images/case-studies/future-bazaar.jpg"
+                              alt="Future Bazaar eCommerce Platform"
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
                             <div className="absolute top-3 right-3 z-10">
                               <span className="px-3 py-1 bg-primary-600 text-white text-xs font-semibold rounded-full shadow-lg">
                                 {caseStudy.category}

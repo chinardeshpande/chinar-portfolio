@@ -1,5 +1,6 @@
 // UI Component Library - barrel export
 export { AboutTabs } from './AboutTabs';
+export { AccoladeTabs } from './AccoladeTabs';
 export { Button } from './Button';
 export { Card, CardHeader, CardTitle, CardContent } from './Card';
 export { CompactCard, CardGrid } from './CompactCard';
