@@ -1,19 +1,5 @@
-import { Navigation, Footer, HeroCarousel, LinkedInPosts } from '@/components/sections';
+import { Navigation, Footer, HeroCarousel } from '@/components/sections';
 import { JsonLd, personSchema, breadcrumbSchema } from '@/components/JsonLd';
-import { CompactCard, CardGrid } from '@/components/ui';
-import fs from 'fs';
-import path from 'path';
-import yaml from 'js-yaml';
-
-// Load content from YAML files
-function loadContent() {
-  const postsPath = path.join(process.cwd(), 'content', 'linkedin-posts.yaml');
-  const postsContent = yaml.load(fs.readFileSync(postsPath, 'utf8')) as any;
-
-  return {
-    posts: postsContent.posts,
-  };
-}
 
 const highlights = [
   {
@@ -37,8 +23,6 @@ const highlights = [
 ];
 
 export default function Home() {
-  const { posts } = loadContent();
-
   return (
     <div className="min-h-screen">
       {/* JSON-LD Structured Data for SEO */}
@@ -127,8 +111,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <LinkedInPosts posts={posts} />
       </main>
 
       <Footer />
