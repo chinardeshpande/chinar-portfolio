@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import { ImageModal } from './ImageModal';
 
 interface AccoladeTabsProps {
   pressPublications: any[];
@@ -12,6 +14,18 @@ interface AccoladeTabsProps {
 
 export function AccoladeTabs({ pressPublications, awards, eventsMedia, mediaCoverage, linkedinPosts }: AccoladeTabsProps) {
   const [activeTab, setActiveTab] = useState('press');
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleCardClick = (item: any) => {
+    // If URL is a PDF, open it directly regardless of image
+    if (item.url && item.url.endsWith('.pdf')) {
+      window.open(item.url, '_blank', 'noopener,noreferrer');
+    } else if (item.image) {
+      setSelectedImage(item.image);
+    } else if (item.url && item.url !== '#') {
+      window.open(item.url, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   const tabs = [
     {
@@ -81,49 +95,116 @@ export function AccoladeTabs({ pressPublications, awards, eventsMedia, mediaCove
         {/* Press & Publications Tab */}
         {activeTab === 'press' && (
           <div className="animate-fadeIn">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {pressPublications.map((item: any, index: number) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-blue-300 transition-all group"
+                  className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-blue-400 transition-all group cursor-pointer"
+                  onClick={() => handleCardClick(item)}
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3">
-                        {item.type}
-                      </span>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        {item.title}
-                      </h3>
+                  {/* Thumbnail - Always Present */}
+                  <div className="relative h-40 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-contain hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-center px-4">
+                          <svg className="w-12 h-12 mx-auto text-blue-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                          </svg>
+                          <p className="text-xs font-semibold text-blue-600">{item.publication}</p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Click Overlay */}
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center pointer-events-none">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 px-3 py-1.5 rounded-md">
+                        <div className="flex items-center gap-1.5 text-xs font-semibold text-gray-900">
+                          {item.image ? (
+                            <>
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                              </svg>
+                              Click to enlarge
+                            </>
+                          ) : item.url && item.url !== '#' ? (
+                            <>
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                              Click to view
+                            </>
+                          ) : (
+                            <>
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                              Click for details
+                            </>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
-                    <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clipRule="evenodd" />
-                    </svg>
-                    <span className="font-medium">{item.publication}</span>
-                    <span>•</span>
-                    <span>{item.date}</span>
-                  </div>
+                  {/* Content */}
+                  <div className="p-4">
+                    <span className="inline-block px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-2">
+                      {item.type}
+                    </span>
 
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors min-h-[2.5rem]">
+                      {item.title}
+                    </h3>
 
-                  {item.url && item.url !== '#' && (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
-                    >
-                      Read More
-                      <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <div className="flex items-center gap-1.5 text-xs text-gray-600 mb-2">
+                      <svg className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clipRule="evenodd" />
                       </svg>
-                    </a>
-                  )}
+                      <span className="font-medium truncate">{item.publication}</span>
+                    </div>
+
+                    <div className="text-xs text-gray-500 mb-2">
+                      {item.date}
+                    </div>
+
+                    <p className="text-xs text-gray-600 mb-2 leading-relaxed line-clamp-3">
+                      {item.description}
+                    </p>
+
+                    {/* Action indicator */}
+                    <div className="flex items-center gap-1 text-xs font-semibold text-blue-600">
+                      {item.image ? (
+                        <span className="flex items-center gap-1">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          View Image
+                        </span>
+                      ) : item.url && item.url !== '#' ? (
+                        <span className="flex items-center gap-1">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          Open Link
+                        </span>
+                      ) : (
+                        <span className="flex items-center gap-1 text-gray-400">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          Press Feature
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -238,45 +319,61 @@ export function AccoladeTabs({ pressPublications, awards, eventsMedia, mediaCove
         {/* Awards & Recognition Tab */}
         {activeTab === 'awards' && (
           <div className="animate-fadeIn">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {awards.map((award: any, index: number) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl border-2 border-yellow-200 p-6 hover:shadow-xl hover:scale-105 transition-all"
+                  className={`bg-gradient-to-br from-yellow-50 to-amber-50 rounded-lg border-2 border-yellow-200 p-4 hover:shadow-xl hover:scale-105 transition-all ${award.image ? 'cursor-pointer' : ''}`}
+                  onClick={() => award.image && handleCardClick(award)}
                 >
-                  {/* Award Icon */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  </div>
-
-                  {/* Year Badge */}
-                  <div className="text-center mb-3">
-                    <span className="inline-block px-4 py-1 bg-white text-amber-700 text-lg font-bold rounded-full shadow-sm border border-amber-300">
-                      {award.year}
-                    </span>
-                  </div>
+                  {/* Award Image or Icon */}
+                  {award.image ? (
+                    <div className="relative w-full h-32 mb-3 rounded-lg overflow-hidden bg-white shadow-md group">
+                      <Image
+                        src={award.image}
+                        alt={award.title}
+                        fill
+                        className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center pointer-events-none">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 px-2 py-1 rounded-md">
+                          <div className="flex items-center gap-1 text-xs font-semibold text-gray-900">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                            Click to enlarge
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+                  )}
 
                   {/* Award Title */}
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+                  <h3 className="text-sm font-bold text-gray-900 mb-2 text-center line-clamp-2 min-h-[2.5rem]">
                     {award.title}
                   </h3>
 
                   {/* Organization */}
-                  <p className="text-sm text-amber-700 font-semibold mb-3 text-center">
+                  <p className="text-xs text-amber-700 font-semibold mb-2 text-center line-clamp-1">
                     {award.organization}
                   </p>
 
                   {/* Category */}
-                  <div className="text-center mb-3">
-                    <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">
+                  <div className="text-center mb-2">
+                    <span className="inline-block px-2 py-0.5 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">
                       {award.category}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-xs text-gray-700 leading-relaxed text-center">
+                  <p className="text-xs text-gray-700 leading-relaxed text-center line-clamp-3">
                     {award.description}
                   </p>
                 </div>
@@ -375,6 +472,14 @@ export function AccoladeTabs({ pressPublications, awards, eventsMedia, mediaCove
           </div>
         )}
       </div>
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={!!selectedImage}
+        imageSrc={selectedImage || ''}
+        imageAlt="Accolade"
+        onClose={() => setSelectedImage(null)}
+      />
     </div>
   );
 }
