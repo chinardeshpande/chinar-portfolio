@@ -4,7 +4,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.chinardeshpande.com';
+  const baseUrl = 'https://www.chinardeshpande.tech';
 
   // Load case studies to generate dynamic URLs
   const caseStudiesPath = path.join(process.cwd(), 'content', 'case-studies', 'index.yaml');
@@ -62,6 +62,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/robotics`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/accolades`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/board-bio`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,

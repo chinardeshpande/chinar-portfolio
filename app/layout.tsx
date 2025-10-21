@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import StructuredData from "./components/StructuredData";
+import { WebVitals } from "./components/WebVitals";
 import "./globals.css";
 
 // Ultra-luxury editorial fonts
@@ -43,22 +46,31 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Chinar Deshpande" }],
   creator: "Chinar Deshpande",
-  metadataBase: new URL("https://chinardeshpande.com"),
+  metadataBase: new URL("https://www.chinardeshpande.tech"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://chinardeshpande.com",
+    url: "https://www.chinardeshpande.tech",
     title: "Chinar Deshpande | Independent Non-Executive Director",
     description: "30+ years driving technology excellence across 14 countries. CTO at THG, board advisor, innovation leader.",
     siteName: "Chinar Deshpande",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chinar Deshpande - Technology Leadership",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Chinar Deshpande | INED & Technology Leader",
     description: "30+ years driving technology excellence across 14 countries",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -84,9 +96,12 @@ export default function RootLayout({
         {/* Preconnect to Google Fonts for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <StructuredData />
       </head>
       <body className="antialiased">
+        <WebVitals />
         {children}
+        <Analytics />
       </body>
     </html>
   );
