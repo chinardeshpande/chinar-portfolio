@@ -1,5 +1,7 @@
 import { Navigation, Footer, HeroCarousel } from '@/components/sections';
 import { JsonLd, personSchema, breadcrumbSchema } from '@/components/JsonLd';
+import AnimatedCard from '@/components/ui/AnimatedCard';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const highlights = [
   {
@@ -39,12 +41,13 @@ export default function Home() {
         <HeroCarousel />
 
         {/* Key Highlights Section - Compact */}
-        <section className="py-4 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Compact cards with integrated SVG icons */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Technology Leadership */}
-              <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all">
+        <AnimatedSection>
+          <section className="py-4 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Compact cards with integrated SVG icons */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Technology Leadership */}
+                <AnimatedCard delay={0} className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,10 +66,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+                </AnimatedCard>
 
-              {/* Robotics & Automation */}
-              <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all">
+                {/* Robotics & Automation */}
+                <AnimatedCard delay={0.1} className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,10 +88,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+                </AnimatedCard>
 
-              {/* Global Operations */}
-              <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all">
+                {/* Global Operations */}
+                <AnimatedCard delay={0.2} className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,10 +110,11 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                </AnimatedCard>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </AnimatedSection>
       </main>
 
       <Footer />

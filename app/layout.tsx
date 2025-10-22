@@ -3,6 +3,8 @@ import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import StructuredData from "./components/StructuredData";
 import { WebVitals } from "./components/WebVitals";
+import ScrollToTop from "@/components/ui/ScrollToTop";
+import ProgressBar from "@/components/ui/ProgressBar";
 import "./globals.css";
 
 // Ultra-luxury editorial fonts
@@ -99,8 +101,10 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className="antialiased">
+        <ProgressBar />
         <WebVitals />
         {children}
+        <ScrollToTop />
         <Analytics />
       </body>
     </html>
