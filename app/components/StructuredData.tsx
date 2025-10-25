@@ -5,8 +5,16 @@ export default function StructuredData() {
     name: "Chinar Deshpande",
     givenName: "Chinar",
     familyName: "Deshpande",
-    jobTitle: "Independent Non-Executive Director",
-    description: "Visionary technology leader with 30+ years driving digital transformation across 14 countries",
+    jobTitle: [
+      "Independent Non-Executive Director (INED)",
+      "Chief Technology Officer",
+      "Digital Transformation Leader",
+      "Board Advisor",
+      "Technology Consultant",
+      "Startup Mentor",
+      "GCC Setup Expert"
+    ],
+    description: "Independent Non-Executive Director and Technology Leader with 30+ years driving digital transformation, board governance, and innovation across 14 countries. Expert in robotics, AI, ERP implementation, GCC setup, and startup mentorship. Available for board positions, advisory roles, and government projects.",
     url: "https://www.chinardeshpande.tech",
     image: "https://www.chinardeshpande.tech/og-image.jpg",
     email: "chinardeshpande@gmail.com",
@@ -48,29 +56,93 @@ export default function StructuredData() {
       url: "https://www.thg.com",
     },
     knowsAbout: [
+      "Independent Non-Executive Director",
+      "Board Governance",
       "Digital Transformation",
       "Technology Leadership",
+      "Chief Technology Officer",
       "ERP Implementation",
-      "Robotics",
+      "SAP Implementation",
+      "Oracle ERP",
+      "Robotics Automation",
       "Artificial Intelligence",
+      "Machine Learning",
       "Global Capability Centers",
-      "Board Advisory",
+      "GCC Setup India",
+      "Board Advisory Services",
+      "Corporate Governance",
+      "Technology Strategy",
+      "Innovation Management",
+      "Startup Mentorship",
+      "Technology Consulting",
+      "E-commerce Technology",
+      "Supply Chain Technology",
+      "Warehouse Automation",
+      "Autostore Implementation",
+      "Geek+ Robotics",
+      "Change Management",
+      "Technology Due Diligence",
+      "IT Governance",
+      "Cybersecurity Strategy",
+      "Cloud Transformation",
+      "Agile Transformation",
+      "DevOps Leadership",
+      "Government Technology Projects",
+      "Public Sector Advisory"
     ],
-    hasOccupation: {
-      "@type": "Occupation",
-      name: "Chief Technology Officer",
-      occupationLocation: {
-        "@type": "Country",
-        name: "United Kingdom",
+    hasOccupation: [
+      {
+        "@type": "Occupation",
+        name: "Independent Non-Executive Director",
+        description: "Board-level technology and digital transformation advisory",
+        skills: "Board Governance, Technology Strategy, Risk Management, Digital Transformation",
+        occupationLocation: {
+          "@type": "Country",
+          name: "India",
+        },
       },
-    },
+      {
+        "@type": "Occupation",
+        name: "Chief Technology Officer",
+        description: "Leading technology operations for global e-commerce",
+        occupationLocation: {
+          "@type": "Country",
+          name: "United Kingdom",
+        },
+      },
+      {
+        "@type": "Occupation",
+        name: "Technology Consultant",
+        description: "Strategic technology consulting for enterprises and startups",
+        skills: "Digital Strategy, ERP, Robotics, AI, Cloud, GCC Setup",
+      },
+      {
+        "@type": "Occupation",
+        name: "Startup Mentor",
+        description: "Mentoring technology startups on scaling and innovation",
+      }
+    ],
+    award: [
+      "CIO 100 Award",
+      "Supply Chain Excellence Award",
+      "Technology Innovation Leadership",
+      "Digital Transformation Leader"
+    ],
+    seeks: [
+      "Independent Non-Executive Director positions",
+      "Board Advisory roles",
+      "Technology consulting engagements",
+      "Startup mentorship opportunities",
+      "Government project advisory",
+      "GCC setup consulting"
+    ],
   };
 
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Chinar Deshpande - Technology Leadership & Board Advisory",
-    description: "Independent Non-Executive Director providing strategic technology leadership and board advisory services",
+    name: "Chinar Deshpande - Independent Non-Executive Director (INED) | Board Advisory | Technology Consulting",
+    description: "Independent Non-Executive Director (INED) and technology leader providing board governance, digital transformation consulting, startup mentorship, and GCC setup expertise. Specialized in AI, robotics, ERP implementation, and government technology projects across India, UK, and globally.",
     url: "https://www.chinardeshpande.tech",
     image: "https://www.chinardeshpande.tech/og-image.jpg",
     address: {
@@ -99,12 +171,69 @@ export default function StructuredData() {
       },
     ],
     serviceType: [
-      "Board Advisory",
-      "Technology Strategy",
-      "Digital Transformation",
-      "ERP Implementation",
-      "Innovation Leadership",
+      "Independent Non-Executive Director (INED)",
+      "Board Advisory Services",
+      "Corporate Governance Consulting",
+      "Technology Strategy Consulting",
+      "Digital Transformation Consulting",
+      "CTO Advisory",
+      "ERP Implementation Consulting",
+      "SAP Implementation",
+      "Oracle ERP Consulting",
+      "Robotics & AI Consulting",
+      "Warehouse Automation Consulting",
+      "Innovation Leadership Training",
+      "Startup Mentorship",
+      "Technology Due Diligence",
+      "GCC Setup Consulting",
+      "Global Capability Center Advisory",
+      "Government Technology Advisory",
+      "Public Sector Digital Transformation",
+      "Change Management Consulting",
+      "IT Governance Advisory",
+      "Cybersecurity Strategy",
+      "Cloud Transformation Consulting",
+      "E-commerce Technology Consulting",
+      "Supply Chain Digitalization"
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Professional Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Independent Non-Executive Director (INED) Services",
+            description: "Board-level governance and technology strategic advisory for Indian and global companies"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Digital Transformation Consulting",
+            description: "End-to-end digital transformation strategy and implementation for enterprises"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "GCC Setup & Management",
+            description: "Complete Global Capability Center setup and operational excellence consulting in India"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Startup Technology Mentorship",
+            description: "Strategic mentorship for technology startups on scaling, fundraising, and innovation"
+          }
+        }
+      ]
+    },
     telephone: "+91-98201-99922",
     email: "chinardeshpande@gmail.com",
   };

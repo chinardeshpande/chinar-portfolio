@@ -32,19 +32,65 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Chinar Deshpande | Independent Non-Executive Director (INED)",
-  description: "Visionary technology leader with 30+ years driving digital transformation across 14 countries. CTO at THG, board advisor, and India's most valuable INED.",
+  title: "Chinar Deshpande | Independent Non-Executive Director (INED) | Board Advisor | Technology Consultant",
+  description: "Independent Non-Executive Director (INED) with 30+ years in technology leadership. Expert in board governance, digital transformation, AI, robotics, ERP, GCC setup, and startup mentorship. Available for board positions, consulting, and government advisory roles across India and globally.",
   keywords: [
+    // Primary Roles
     "Independent Non-Executive Director",
-    "INED",
+    "INED India",
     "Board Member",
+    "Board Advisor",
+    "Technology Board Director",
+    "Non-Executive Director Technology",
+
+    // Leadership Roles
+    "Chief Technology Officer",
+    "CTO Consultant",
     "Technology Leadership",
+    "Digital Transformation Leader",
+    "Technology Consultant",
+    "CIO Advisor",
+
+    // Specializations
     "Digital Transformation",
-    "CTO",
-    "THG",
+    "Digital Transformation Consulting",
     "ERP Implementation",
-    "Innovation",
-    "Global Business",
+    "SAP Implementation",
+    "Oracle ERP",
+    "Robotics Automation",
+    "AI Strategy",
+    "Artificial Intelligence Consulting",
+    "Warehouse Automation",
+    "Autostore",
+    "Geek+ Robotics",
+
+    // Services
+    "Board Advisory Services",
+    "Corporate Governance",
+    "Technology Strategy",
+    "GCC Setup India",
+    "Global Capability Center",
+    "Startup Mentor",
+    "Startup Technology Advisor",
+    "Technology Due Diligence",
+    "Government Technology Advisory",
+
+    // Industries
+    "E-commerce Technology",
+    "Supply Chain Technology",
+    "Retail Technology",
+    "Manufacturing Digital Transformation",
+
+    // Geographic
+    "INED Mumbai",
+    "Board Advisor India",
+    "Technology Consultant India",
+    "Digital Transformation India",
+
+    // Education
+    "Harvard Business School",
+    "MIT Sloan",
+    "London Business School",
   ],
   authors: [{ name: "Chinar Deshpande" }],
   creator: "Chinar Deshpande",
@@ -56,9 +102,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.chinardeshpande.tech",
-    title: "Chinar Deshpande | Independent Non-Executive Director",
-    description: "30+ years driving technology excellence across 14 countries. CTO at THG, board advisor, innovation leader.",
-    siteName: "Chinar Deshpande",
+    title: "Chinar Deshpande | INED | Board Advisor | Technology Consultant | Startup Mentor",
+    description: "Independent Non-Executive Director (INED) available for board positions. Expert in digital transformation, AI, robotics, ERP, GCC setup. CTO at THG. 30+ years across 14 countries. Harvard, MIT, London Business School alumnus.",
+    siteName: "Chinar Deshpande - Technology Leadership & Board Advisory",
     images: [
       {
         url: "/og-image.jpg",
@@ -70,8 +116,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chinar Deshpande | INED & Technology Leader",
-    description: "30+ years driving technology excellence across 14 countries",
+    title: "Chinar Deshpande | INED | Board Advisor | Tech Consultant",
+    description: "Independent Non-Executive Director. Digital Transformation, AI, Robotics, ERP, GCC Setup Expert. CTO @ THG. Harvard, MIT, LBS alumnus. Available for board & advisory roles.",
     images: ["/og-image.jpg"],
   },
   robots: {
