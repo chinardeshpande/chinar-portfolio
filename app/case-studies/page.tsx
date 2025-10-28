@@ -25,13 +25,13 @@ export default function CaseStudiesPage() {
         {/* Hero */}
         <Section background="white" padding="default">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
                 Success Stories
               </h1>
-              <div className="flex-1 border-l-2 border-gray-300 pl-6">
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                  Real-world transformational projects demonstrating strategic<br />
+              <div className="flex-1 md:border-l-2 border-gray-300 md:pl-6">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                  Real-world transformational projects demonstrating strategic
                   technology leadership, operational excellence, and measurable business impact across industries.
                 </p>
               </div>
@@ -45,13 +45,13 @@ export default function CaseStudiesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Horizontal Carousel with Navigation */}
             <div className="relative group">
-              {/* Left Arrow */}
+              {/* Left Arrow - Hidden on mobile */}
               <button
                 onClick={() => {
                   const container = document.getElementById('case-studies-carousel');
                   if (container) container.scrollBy({ left: -440, behavior: 'smooth' });
                 }}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -ml-5"
+                className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -ml-5"
                 aria-label="Previous case studies"
               >
                 <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,13 +59,13 @@ export default function CaseStudiesPage() {
                 </svg>
               </button>
 
-              {/* Right Arrow */}
+              {/* Right Arrow - Hidden on mobile */}
               <button
                 onClick={() => {
                   const container = document.getElementById('case-studies-carousel');
                   if (container) container.scrollBy({ left: 440, behavior: 'smooth' });
                 }}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -mr-5"
+                className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -mr-5"
                 aria-label="Next case studies"
               >
                 <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -74,13 +74,13 @@ export default function CaseStudiesPage() {
               </button>
 
               {/* Carousel Container */}
-              <div id="case-studies-carousel" className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide scroll-smooth">
-                <div className="flex gap-6 min-w-max">
+              <div id="case-studies-carousel" className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide scroll-smooth snap-x snap-mandatory">
+                <div className="flex gap-4 md:gap-6 min-w-max">
                 {content.featured_cases
                   .filter((caseStudy: any) => caseStudy.featured)
                   .map((caseStudy: any) => (
                     <Link key={caseStudy.id} href={`/case-studies/${caseStudy.id}`}>
-                      <Card variant="boardroom" className="w-[420px] group cursor-pointer flex flex-col">
+                      <Card variant="boardroom" className="w-[340px] sm:w-[380px] md:w-[420px] group cursor-pointer flex flex-col snap-center">
                         {/* Image - Collage for THG cases, SAP, and Peoplesoft */}
                         {caseStudy.id === 'thg-ingenuity-india-gcc' ? (
                           <div className="relative h-48 rounded-t-lg overflow-hidden bg-gradient-to-br from-blue-900 to-blue-700">

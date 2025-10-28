@@ -24,13 +24,13 @@ export default function ExperiencePage() {
         {/* Hero */}
         <Section background="white" padding="default">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
                 Professional Experience
               </h1>
-              <div className="flex-1 border-l-2 border-gray-300 pl-6">
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                  30+ years of technology leadership across multinational corporations,<br />
+              <div className="flex-1 md:border-l-2 border-gray-300 md:pl-6">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                  30+ years of technology leadership across multinational corporations,
                   driving digital transformation, innovation, and operational excellence across 14 countries.
                 </p>
               </div>
@@ -44,13 +44,13 @@ export default function ExperiencePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Horizontal Carousel with Navigation */}
             <div className="relative group">
-              {/* Left Arrow */}
+              {/* Left Arrow - Hidden on mobile */}
               <button
                 onClick={() => {
                   const container = document.getElementById('experience-carousel');
                   if (container) container.scrollBy({ left: -440, behavior: 'smooth' });
                 }}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -ml-5"
+                className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -ml-5"
                 aria-label="Previous experience"
               >
                 <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,13 +58,13 @@ export default function ExperiencePage() {
                 </svg>
               </button>
 
-              {/* Right Arrow */}
+              {/* Right Arrow - Hidden on mobile */}
               <button
                 onClick={() => {
                   const container = document.getElementById('experience-carousel');
                   if (container) container.scrollBy({ left: 440, behavior: 'smooth' });
                 }}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -mr-5"
+                className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -mr-5"
                 aria-label="Next experience"
               >
                 <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,10 +73,10 @@ export default function ExperiencePage() {
               </button>
 
               {/* Carousel Container */}
-              <div id="experience-carousel" className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide scroll-smooth">
-                <div className="flex gap-6 min-w-max">
+              <div id="experience-carousel" className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide scroll-smooth snap-x snap-mandatory">
+                <div className="flex gap-4 md:gap-6 min-w-max">
                   {content.timeline.map((role: any, index: number) => (
-                    <Card key={index} variant="boardroom" className="w-[420px] group flex flex-col">
+                    <Card key={index} variant="boardroom" className="w-[340px] sm:w-[380px] md:w-[420px] group flex flex-col snap-center">
                       {/* Company Logo/Header */}
                       <div className="relative h-32 bg-gradient-to-br from-blue-50 to-purple-50 rounded-t-lg overflow-hidden flex items-center justify-center border-b border-gray-200">
                         {/* Company Logo - placeholder or actual */}
@@ -91,21 +91,21 @@ export default function ExperiencePage() {
                       </div>
 
                       {/* Content */}
-                      <div className="p-5 flex flex-col flex-1">
+                      <div className="p-4 md:p-5 flex flex-col flex-1">
                         {/* Title & Duration */}
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">
+                        <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                           {role.title}
                         </h4>
 
-                        <div className="flex items-center gap-2 text-xs text-gray-500 mb-4">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="flex items-center gap-1.5 md:gap-2 text-[10px] md:text-xs text-gray-500 mb-3 md:mb-4 flex-wrap">
+                          <svg className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           </svg>
-                          <span>{role.location}</span>
+                          <span className="whitespace-nowrap">{role.location}</span>
                           <span>•</span>
-                          <span>{role.start_date} - {role.end_date}</span>
+                          <span className="whitespace-nowrap">{role.start_date} - {role.end_date}</span>
                           <span>•</span>
-                          <span className="font-semibold text-blue-600">{role.duration}</span>
+                          <span className="font-semibold text-blue-600 whitespace-nowrap">{role.duration}</span>
                         </div>
 
                         {/* Key Highlights */}

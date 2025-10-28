@@ -48,43 +48,43 @@ export default function ContactPage() {
       <main className="pt-20">
         {/* Single Section - Above the Fold */}
         <section className="min-h-[calc(100vh-5rem)] flex items-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
               {/* Left Column - Contact Info */}
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 {/* Hero Title */}
                 <div>
-                  <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4">
                     Let's Connect
                   </h1>
-                  <p className="text-xl text-blue-600 font-semibold mb-4">
+                  <p className="text-base sm:text-lg md:text-xl text-blue-600 font-semibold mb-3 sm:mb-4">
                     Board Opportunities • Speaking • Advisory
                   </p>
-                  <p className="text-base text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     Open to board positions with technology oversight focus, speaking at premier conferences,
                     and selective advisory opportunities.
                   </p>
                 </div>
 
                 {/* Contact Methods - Compact */}
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {/* LinkedIn */}
                   <a
                     href="https://www.linkedin.com/in/chinardeshpande/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all group"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all group"
                   >
-                    <div className="w-12 h-12 bg-[#0A66C2] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0A66C2] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">LinkedIn</h3>
-                      <p className="text-sm text-gray-500">linkedin.com/in/chinardeshpande</p>
+                      <h3 className="font-semibold text-sm sm:text-base text-gray-900 group-hover:text-blue-600 transition-colors">LinkedIn</h3>
+                      <p className="text-xs sm:text-sm text-gray-500 truncate">linkedin.com/in/chinardeshpande</p>
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
@@ -92,48 +92,48 @@ export default function ContactPage() {
                   {/* Email */}
                   <a
                     href="mailto:chinardeshpande@gmail.com"
-                    className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all group"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all group"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Email</h3>
-                      <p className="text-sm text-gray-500">chinardeshpande@gmail.com</p>
+                      <h3 className="font-semibold text-sm sm:text-base text-gray-900 group-hover:text-blue-600 transition-colors">Email</h3>
+                      <p className="text-xs sm:text-sm text-gray-500 truncate">chinardeshpande@gmail.com</p>
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
 
                   {/* Location */}
-                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200">
-                    <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl border border-gray-200">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Location</h3>
-                      <p className="text-sm text-gray-500">Manchester, UK • Mumbai/Pune, India</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold text-sm sm:text-base text-gray-900">Location</h3>
+                      <p className="text-xs sm:text-sm text-gray-500">Manchester, UK • Mumbai/Pune, India</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Quick Links */}
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                   <a
                     href="/board-bio"
-                    className="px-4 py-2 text-center text-sm font-semibold text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-all"
+                    className="px-3 sm:px-4 py-2 text-center text-xs sm:text-sm font-semibold text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-all"
                   >
                     View Board Bio
                   </a>
                   <a
                     href="/case-studies"
-                    className="px-4 py-2 text-center text-sm font-semibold text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-50 transition-all"
+                    className="px-3 sm:px-4 py-2 text-center text-xs sm:text-sm font-semibold text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-50 transition-all"
                   >
                     Success Stories
                   </a>
@@ -141,12 +141,12 @@ export default function ContactPage() {
               </div>
 
               {/* Right Column - Compact Form */}
-              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-5 sm:p-6 md:p-8">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Send a Message</h2>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                   {/* Name and Email */}
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
                         Name *
@@ -180,7 +180,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Organization and Inquiry Type */}
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label htmlFor="organization" className="block text-xs font-medium text-gray-700 mb-1">
                         Organization
