@@ -3,6 +3,7 @@
 import { Navigation, Footer } from '@/components/sections';
 import { Section, Card } from '@/components/ui';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function ExperiencePage() {
   const [content, setContent] = useState<any>(null);
@@ -76,16 +77,43 @@ export default function ExperiencePage() {
               <div id="experience-carousel" className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide scroll-smooth snap-x snap-mandatory">
                 <div className="flex gap-4 md:gap-6 min-w-max">
                   {content.timeline.map((role: any, index: number) => (
-                    <Card key={index} variant="boardroom" className="w-[340px] sm:w-[380px] md:w-[420px] group flex flex-col snap-center">
+                    <Link
+                      key={index}
+                      href={`/experience/${role.slug}`}
+                      className="block w-[340px] sm:w-[380px] md:w-[420px] snap-center"
+                    >
+                      <Card variant="boardroom" className="h-full group flex flex-col hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
                       {/* Company Logo/Header */}
-                      <div className="relative h-32 bg-gradient-to-br from-blue-50 to-purple-50 rounded-t-lg overflow-hidden flex items-center justify-center border-b border-gray-200">
-                        {/* Company Logo - placeholder or actual */}
-                        <div className="text-center px-4">
-                          <h3 className="text-2xl font-bold text-gray-900 mb-1">
-                            {role.company}
-                          </h3>
-                          <div className="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-                            {role.type}
+                      <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-t-lg overflow-hidden border-b border-gray-200 p-4">
+                        <div className="flex items-center gap-4">
+                          {/* Company Logo */}
+                          {role.logo ? (
+                            <div className="w-14 h-14 flex-shrink-0 bg-white rounded-xl shadow-md flex items-center justify-center p-2 overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                              <img
+                                src={role.logo}
+                                alt={`${role.company} logo`}
+                                className="w-full h-full object-contain"
+                                onError={(e) => {
+                                  // Fallback to letter if image fails
+                                  e.currentTarget.style.display = 'none';
+                                  if (e.currentTarget.parentElement) {
+                                    e.currentTarget.parentElement.innerHTML = `<span class="text-xl font-bold text-gray-800">${role.company.charAt(0)}</span>`;
+                                  }
+                                }}
+                              />
+                            </div>
+                          ) : (
+                            <div className="w-14 h-14 flex-shrink-0 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                              <span className="text-xl font-bold text-gray-800">
+                                {role.company.charAt(0)}
+                              </span>
+                            </div>
+                          )}
+                          {/* Company Name */}
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-xl font-bold text-gray-900 truncate">
+                              {role.company}
+                            </h3>
                           </div>
                         </div>
                       </div>
@@ -144,8 +172,17 @@ export default function ExperiencePage() {
                             </div>
                           </div>
                         )}
+
+                        {/* Click to View Details Indicator */}
+                        <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-center text-blue-600 group-hover:text-blue-700 font-medium text-sm">
+                          <span>Click to view full details</span>
+                          <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
                       </div>
                     </Card>
+                  </Link>
                   ))}
                 </div>
               </div>

@@ -3,13 +3,14 @@
 
 timeline:
   - company: "THG - The Hut Group"
+    slug: "thg-cto-global-logistics-finance"
     title: "CTO Global Logistics & Finance"
     location: "United Kingdom"
     start_date: "2022"
     end_date: "Present"
     duration: "3+ years"
     type: "Executive Leadership"
-    logo: "/images/companies/thg.png"
+    logo: "/images/companies/THG-logo.png"
     highlights:
       - "Leading digital transformation of worldwide supply chain for 300+ e-commerce brands across 18 warehouses shipping to 198 destinations globally"
       - "Driving robotics automation (Autostore, Geek+, T-sorter) with in-house Warehouse Control System software"
@@ -22,13 +23,14 @@ timeline:
       - "Launched commercial fulfillment platform using proprietary technology"
 
   - company: "Ampersand Group"
+    slug: "ampersand-group-cto"
     title: "Group CTO"
     location: "India"
     start_date: "Jun 2021"
     end_date: "Aug 2022"
     duration: "1 year 3 months"
     type: "Executive Leadership"
-    logo: "/images/companies/ampersand.png"
+    logo: "/images/companies/Ampersand-logo.png"
     highlights:
       - "Spearheaded digital transformation of multi-business conglomerate pioneering Indian education industry"
       - "Drove technology vision across schools chain, EPC business, multi-channel retail, health-tech, and hospitality"
@@ -41,13 +43,14 @@ timeline:
       - "Led digital transformation project with Deloitte as strategic partner"
 
   - company: "Stellar Value Chain"
+    slug: "stellar-value-chain-cto-innovation"
     title: "CTO and Head of Innovation & Incubation Cell"
     location: "India"
     start_date: "Sep 2016"
     end_date: "Jun 2021"
     duration: "4 years 10 months"
     type: "Executive Leadership"
-    logo: "/images/companies/stellar.png"
+    logo: "/images/companies/Stellar-logo.jpeg"
     highlights:
       - "Led technology initiatives for Pan-India supply chain company funded by Warburg Pincus"
       - "Managed 50 million sq. ft. highly automated warehousing infrastructure across 21 cities"
@@ -61,13 +64,14 @@ timeline:
       - "Built Customer Experience Centers across 4 major cities (first-of-its-kind in 3PL industry)"
 
   - company: "Millennium Sports Management"
+    slug: "millennium-sports-cofounder-cto"
     title: "Co-Founder and CTO"
     location: "Mumbai Area, India"
     start_date: "Oct 2013"
     end_date: "Sep 2016"
     duration: "3 years"
     type: "Entrepreneurship & Innovation"
-    logo: "/images/companies/millennium-sports.png"
+    logo: "/images/companies/Millennium-Sports-logo.jpeg"
     highlights:
       - "Co-founded innovation-led sports management company operating across 6 pillars: Sports Infrastructure, Events Management, Coaching & Talent Management, Sports Retail, Sports Education, and Corporate Wellness"
       - "Spearheaded development of state-of-the-art SPORTS TECHNOLOGY PLATFORM for complete life-cycle management of sportsmen and sports enthusiasts"
@@ -82,13 +86,14 @@ timeline:
       - "Built coaching centers at multiple locations with high-skilled, certified coaches for all age groups"
 
   - company: "CITI, USA"
+    slug: "citi-usa-ceo-india-europe"
     title: "CEO (India & Europe)"
     location: "Virginia, United States"
     start_date: "Dec 2007"
     end_date: "Oct 2013"
     duration: "5 years 11 months"
     type: "Executive Leadership"
-    logo: "/images/companies/citi-usa.png"
+    logo: "/images/companies/CITI-logo.jpeg"
     highlights:
       - "CEO of multi-national IT company providing Technology & Business Transformation services, responsible for INR 1 Billion business development & delivery"
       - "Built and ran Global IT Delivery Centre across 20,000 sq. ft. housing 150 IT professionals serving customers in US, Europe and India"
@@ -103,13 +108,14 @@ timeline:
       - "Built strong collaboration with management and technology institutes for talent acquisition and retention"
 
   - company: "Pantaloon Retail (Future Group)"
+    slug: "future-group-cio"
     title: "Group CIO"
     location: "India"
     start_date: "Apr 2004"
     end_date: "Oct 2007"
     duration: "3 years 7 months"
     type: "Executive Leadership"
-    logo: "/images/companies/future-group.png"
+    logo: "/images/companies/Future-Group-logo.jpg"
     highlights:
       - "Managed technology budget of INR 3 Billion for India's largest retailer"
       - "Implemented SAP IS Retail for 3,200 users across 900+ stores, 35 warehouses, and 4 branch offices"
@@ -123,13 +129,14 @@ timeline:
       - "Received CIO 100 Award (2006)"
 
   - company: "Hindustan Unilever Ltd (HUL)"
+    slug: "hul-it-manager"
     title: "IT Manager / Project Lead"
     location: "India"
     start_date: "1997"
     end_date: "2004"
     duration: "7 years"
     type: "Enterprise Technology"
-    logo: "/images/companies/hul.png"
+    logo: "/images/companies/HUL-logo.png"
     highlights:
       - "Managed company-wide ERP solution (Mfg-Pro) encompassing entire supply chain"
       - "Implemented PeopleSoft HRMS for 120 countries covering 10,000+ managers globally"
@@ -142,13 +149,14 @@ timeline:
       - "Implemented TATA Honeywell Security System with 3D facility view"
 
   - company: "Mercer (William M. Mercer)"
+    slug: "mercer-senior-software-engineer"
     title: "Senior Software Engineer"
     location: "USA"
     start_date: "1993"
     end_date: "1997"
     duration: "4 years"
     type: "Software Development"
-    logo: "/images/companies/mercer.png"
+    logo: "/images/companies/Mercer-logo.jpeg"
     highlights:
       - "Developed compensation management software solutions in Visual C++"
       - "Designed complex spreadsheet application MeritLink™ in MS Excel with VB front-end"
