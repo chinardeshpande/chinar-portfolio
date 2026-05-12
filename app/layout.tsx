@@ -319,6 +319,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${cormorant.variable}`}>
       <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="8u2qoePADCCCHo1qQ6gjjOA5mbZg9tJyevBG5PpCZ6Q" />
         {/* Preconnect to Google Fonts for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
