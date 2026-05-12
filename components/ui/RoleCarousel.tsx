@@ -67,7 +67,7 @@ export function RoleCarousel({ roles }: RoleCarouselProps) {
   return (
     <div className="mb-12">
       <h2 className="font-display text-xl md:text-2xl text-slate-900 mb-6 text-center">
-        How I Add Value
+        Potential Board Roles
       </h2>
 
       {/* Horizontal Scroll Container */}

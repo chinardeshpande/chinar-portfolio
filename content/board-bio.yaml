@@ -3,95 +3,156 @@
 
 name: "Chinar Deshpande"
 title: "Independent Non-Executive Director (INED) Candidate"
+subtitle: "Technology Leader | Transformation Architect | Builder of Institutions"
 location: "United Kingdom"
 linkedin: "linkedin.com/in/chinardeshpande"
 
 # Executive Summary (2-3 sentences)
 executive_summary: >
-  Visionary technology leader with 30+ years driving digital transformation across 14 countries
-  and 8 industries. Currently CTO Global Logistics & Finance at THG, leading robotics automation
-  across 18 warehouses serving 300+ e-commerce brands. Proven board-ready expertise in technology
-  oversight, digital strategy, cybersecurity governance, and innovation leadership.
+  A hands-on technologist with board-level maturity; a strategist who respects detail; and a leader who
+  believes people are never "resources" — they are energy, emotion, aspiration and possibility.
+  Across three decades, my work has lived at the intersection of technology, business strategy,
+  large-scale execution, and people leadership — from boardrooms and shop floors to warehouses,
+  technology labs, leadership tables, and entrepreneurial trenches. Currently CTO Global Logistics &
+  Finance at THG (£2B+ FTSE 250), leading AI-driven automation across 18 warehouses serving 300+ brands globally.
 
-# Key Qualifications
-qualifications:
-  - "30+ years global technology leadership (CTO, Group CIO roles)"
-  - "Expertise: Digital Transformation, Robotics/AI, ERP Implementation, Innovation"
-  - "Experience: 14 countries, 8 industries (E-commerce, Retail, Logistics, FMCG, Education)"
-  - "Current: CTO at THG - £2B+ revenue, FTSE 250 company"
-  - "Education: MBA (Finance & Systems), BE (Production), Harvard AMP, London Business School, MIT Sloan"
-  - "Awards: CIO 100, Supply Chain Excellence, CII Energy Management, Featured in SAP Annual Report"
+# Core Leadership Values
+leadership_values:
+  - name: "Clarity"
+    description: "Vision must eventually become architecture — I do not romanticise execution"
+  - name: "Compassion"
+    description: "People are energy, emotion, aspiration and possibility — they deserve to be led that way"
+  - name: "Courage"
+    description: "Carrying responsibility where judgement matters more than title"
+  - name: "Accountability"
+    description: "Architecture must become a plan, and plans must produce results — outcomes, never noise"
 
-# Board-Ready Skills
+# Key Differentiators (What Sets Me Apart)
+key_differentiators:
+  - category: "Global Multi-Dimensional Network"
+    details:
+      - "C-level executives: Microsoft, SAP, Oracle, Zoho, Deloitte, PwC, Accenture, E&Y, IBM"
+      - "Business leaders: NSE Chairman, HDFC CTO, Werburgh Pincus, Podar family (3-gen business)"
+      - "Political access: Deputy CM & CM Maharashtra, key MPs/MLAs"
+      - "Sports icons: Sachin Tendulkar, Rohit Sharma, Rahul Dravid, Mahesh Bhupathi"
+      - "Strategic network as asset, not just connections"
+
+  - category: "Large-Scale Infrastructure Execution"
+    details:
+      - "Built modern warehouses, cross-country pipelines, nuclear powerplants, oil refineries from scratch"
+      - "Established Global Capability Centers and scaled legal entities"
+      - "Event management at scale — concept to execution"
+      - "Proven track record across heavy infrastructure and digital transformation"
+
+  - category: "Multidimensional People Leadership"
+    details:
+      - "Led 2,500+ professionals across 14 countries, multiple generations and cultures"
+      - "Unique capability: elite C-suite to blue collar workforce (union/non-union)"
+      - "White collar at scale (corporate), blue collar (warehousing, logistics, manufacturing)"
+      - "Labor management and multi-country cultural alignment"
+
+  - category: "Hands-On AI & Data Capability"
+    details:
+      - "Extensive use of ChatGPT, Codex, Claude Code, Claude Cowork, Google Gemini, n8n, NotebookLM"
+      - "Technical fluency translates AI into business impact"
+      - "Pattern recognition at scale — strategic edge in analytics and insights"
+      - "AI/ML strategy with hands-on implementation experience"
+
+  - category: "Thought Leadership & Innovation"
+    details:
+      - "Editorial Board CIO Magazine | Speaker: SAP Sapphire, CTO Forum"
+      - "CIO 100 Award | Featured in SAP Annual Report 2005-06"
+      - "Ability to conceptualize, document, design, plan and execute transformational ideas"
+      - "Fast thinking, solution-oriented, out-of-the-box problem solving"
+
+# Board-Ready Competencies
 board_skills:
-  strategic:
-    - "Technology Strategy & Digital Transformation"
-    - "Cybersecurity & Data Privacy Governance"
-    - "Innovation & R&D Oversight"
-    - "M&A Technology Due Diligence"
+  governance_strategic:
+    - "Board governance & independence; Audit/Risk oversight"
+    - "Capital allocation & ROI discipline; regulatory compliance"
+    - "Strategic counsel leveraging C-suite network (Microsoft, SAP, Oracle, Deloitte, PwC)"
+    - "Access to political, industry & investment leaders (NSE, HDFC, Werburgh Pincus)"
 
-  operational:
-    - "Global Operations & Supply Chain"
-    - "Robotics & Automation"
-    - "ERP/Enterprise Systems"
-    - "Vendor & Partner Management"
+  technology_ai_data:
+    - "AI/ML strategy & hands-on capability; pattern recognition at scale"
+    - "Data analytics, visualization & business intelligence"
+    - "Cyber risk; zero-trust architecture; cloud economics"
+    - "Platform modernization - ERP (SAP/Oracle/Infor/Zoho)"
 
-  financial:
-    - "Technology Budget Management (INR 3B+ budgets)"
-    - "ROI & Business Case Development"
-    - "Cost Optimization & Efficiency"
-    - "Capital Investment Decisions"
+  large_scale_execution:
+    - "Cross-border logistics & warehouse automation (AutoStore, Geek+, T-Sorter)"
+    - "Infrastructure delivery (warehouses, pipelines, refineries, corporate offices)"
+    - "GCC setup & scaling; legal entity formation & start-up acceleration"
+    - "Execution discipline: Bridges technology and strategy — balancing innovation, governance, measurable outcomes"
 
-  governance:
-    - "Risk Management & Business Continuity"
-    - "Regulatory Compliance (GDPR, Data Privacy)"
-    - "Audit & Controls"
-    - "ESG & Sustainability (Solar Power, Electric Mobility)"
+  people_leadership:
+    - "Elite leadership hiring & org design (100+ engineers scale-up)"
+    - "Multi-country, multi-generational workforce management"
+    - "Blue/white collar; union/non-union; cultural alignment"
+    - "Executive communication & stakeholder orchestration"
 
 # Career Highlights (Top 3)
 career_highlights:
   - role: "CTO Global Logistics & Finance | THG - The Hut Group"
     period: "2022 - Present"
-    achievement: "Leading robotics automation (Autostore, Geek+, T-sorter) across 18 global warehouses serving 300+ brands to 198 destinations"
+    achievement: "Leading AI-driven robotics automation (Autostore, Geek+, T-sorter) across 18 global warehouses. Built THG India Technology Center from ground up. 300+ e-commerce brands serving 198 countries."
 
   - role: "Group CIO | Future Group (India's Largest Retailer)"
     period: "2004 - 2016"
-    achievement: "Led SAP IS Retail transformation for 3,200 users, 900+ stores, INR 3B budget. Featured in SAP Annual Report 2005-06, CIO 100 Award"
+    achievement: "Led SAP IS Retail transformation: 3,200 users, 900+ stores, 35 warehouses, INR 3B budget. Featured in SAP Annual Report 2005-06. CIO 100 Award. Supply Chain Excellence."
 
   - role: "EVP & Group CIO | Stellar Value Chain Solutions"
     period: "2016 - 2021"
-    achievement: "Established Innovation Cell: Solar power (8M+ sq ft), Electric mobility (19,000 pin codes), India's first 3PL Customer Experience Centers"
+    achievement: "Built Innovation Cell from scratch: Solar power (8M+ sq ft), Electric mobility fleet (19,000 pin codes), India's first 3PL Customer Experience Centers. Sustainability and automation at scale."
 
 # Transformational Impact (Quantified)
 transformational_impact:
-  - "300+ e-commerce brands automated at THG"
-  - "3,200 users on SAP across 900+ retail stores"
-  - "120 countries - Global PeopleSoft HRMS for Unilever"
-  - "40% operational efficiency gains through robotics"
-  - "INR 3 Billion technology budget managed"
-  - "2,500+ professionals led across career"
+  - "30+ years C-suite experience (CTO, Group CIO roles)"
+  - "14 countries • 8 industries • 2,500+ professionals led"
+  - "6 world-class ERP implementations (SAP/Oracle/Infor)"
+  - "18 global warehouses with AI/robotics automation"
+  - "120 countries — Global PeopleSoft HRMS for Unilever"
+  - "INR 3 Billion technology budget managed with ROI discipline"
+  - "900+ retail stores • 300+ e-commerce brands automated"
+
+# Ideal Board Roles
+ideal_board_roles:
+  - "Independent Non-Executive Director"
+  - "Technology & Innovation Committee Chair"
+  - "Audit & Risk Committee Member"
+  - "Strategic Advisory Board Member"
+  - "Digital Transformation Advisor"
+
+# Target Industries & Sectors
+target_industries:
+  - "E-commerce & Digital Retail"
+  - "Logistics & Supply Chain (3PL/4PL)"
+  - "Technology Services & SaaS"
+  - "FMCG & Consumer Goods"
+  - "Infrastructure & Heavy Industries"
+  - "Education Technology"
 
 # Board Committee Fit
 committee_fit:
-  - "Technology Committee (Chair/Member) - Digital strategy, cybersecurity, IT governance"
-  - "Audit & Risk Committee - Technology risk, data privacy, business continuity"
-  - "Strategy Committee - Digital transformation, innovation, M&A technology due diligence"
+  - "Technology & Innovation Committee - Digital strategy, AI governance, cybersecurity oversight, platform modernization"
+  - "Audit & Risk Committee - Technology risk, data privacy, business continuity, regulatory compliance"
+  - "Strategy Committee - Digital transformation, M&A tech due diligence, innovation roadmap, capital allocation"
+  - "ESG & Sustainability Committee - Green tech, electric mobility, solar power, responsible AI adoption"
 
-# Ideal Board Opportunities
-ideal_boards:
-  sectors:
-    - "E-commerce & Digital Retail"
-    - "Supply Chain & Logistics (3PL/4PL)"
-    - "Technology & SaaS"
-    - "FMCG & Consumer Goods"
-    - "Education Technology"
+# Beyond Work — Personal Foundation
+personal_foundation: >
+  Deeply shaped by family, spirituality, sport and service. A proud father and committed family man.
+  Sport has given me resilience, timing, competitive grace. Spirituality has taught me restraint,
+  humility and inner alignment. My Indian roots, cultural pride, and desire to contribute meaningfully
+  to society guide my long-term aspirations.
 
-  characteristics:
-    - "Companies undergoing digital transformation"
-    - "Technology-driven business models"
-    - "Global operations requiring technology oversight"
-    - "Growth companies seeking operational scalability"
-    - "Organizations with sustainability/ESG focus"
+# What I Seek in Board Opportunities
+board_opportunity_criteria:
+  - "Organizations building for the future — responsible growth, founder clarity, independent judgement"
+  - "Leaders seeking transformation without losing their human touch"
+  - "Companies at inflection points requiring technology-driven growth"
+  - "Boards valuing diverse perspectives: technical depth + strategic foresight + operational excellence"
+  - "Cultures that value ethics, execution discipline, and measurable outcomes"
 
 # Availability & Contact
 availability: "Available for Independent Non-Executive Director positions"

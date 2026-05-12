@@ -6,11 +6,28 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 export const metadata: Metadata = {
-  title: 'About Chinar Deshpande | INED, Board Advisor, AI Evangelist',
-  description: '30+ years technology leadership. Board governance expert, startup mentor, strategic advisor, and AI evangelist. Transforming organizations across 14 countries.',
+  title: 'About Chinar Deshpande | Independent Non-Executive Director UK | INED | Board Governance Expert',
+  description: '30+ years technology leadership. Independent Non-Executive Director (INED) available for UK & global board positions. Expert in board governance, technology strategy, AI, digital transformation. CTO at THG (FTSE 250). Harvard, MIT, London Business School alumnus.',
+  keywords: [
+    'Independent Non-Executive Director',
+    'INED UK',
+    'Board Governance',
+    'Technology Board Director',
+    'Digital Transformation Leader',
+    'AI Strategy Expert',
+    'Board Advisor',
+    'Technology Committee Chair',
+    'FTSE Board Director',
+    'Corporate Governance UK'
+  ],
   openGraph: {
-    title: 'About Chinar Deshpande',
-    description: 'Technology Visionary • Board Leader • AI Evangelist',
+    title: 'About Chinar Deshpande | INED UK | Board Governance Expert',
+    description: 'Independent Non-Executive Director • Technology Visionary • Board Leader • AI Evangelist • 30+ Years Global Experience',
+    type: 'profile',
+    locale: 'en_GB',
+  },
+  alternates: {
+    canonical: '/about',
   },
 };
 
@@ -19,31 +36,8 @@ function loadContent() {
   return yaml.load(fs.readFileSync(contentPath, 'utf8')) as any;
 }
 
-function loadBoardSkills() {
-  const contentPath = path.join(process.cwd(), 'content', 'board-skills.yaml');
-  const data = yaml.load(fs.readFileSync(contentPath, 'utf8')) as any;
-
-  // Extract top 10 expert-level skills for compact display
-  const topSkills: any[] = [];
-  Object.values(data.skills_categories).forEach((category: any) => {
-    category.skills.forEach((skill: any) => {
-      if (skill.level >= 4) {
-        topSkills.push(skill);
-      }
-    });
-  });
-
-  return {
-    readiness_score: data.overall_assessment.readiness_score,
-    top_skills: topSkills.slice(0, 10),
-    ideal_board_roles: data.ideal_board_roles,
-    target_industries: data.target_industries,
-  };
-}
-
 export default function AboutPage() {
   const content = loadContent();
-  const boardSkills = loadBoardSkills();
 
   return (
     <div className="min-h-screen bg-white">
@@ -56,10 +50,9 @@ export default function AboutPage() {
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <AboutTabs
+                introduction={content.introduction}
                 rolePositions={content.role_positions}
-                aiExpertise={content.ai_expertise}
                 differentiators={content.differentiators}
-                boardSkills={boardSkills}
               />
             </div>
           </div>

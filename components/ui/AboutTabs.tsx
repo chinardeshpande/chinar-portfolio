@@ -2,24 +2,24 @@
 
 import { useState } from 'react';
 import { RoleCarousel } from './RoleCarousel';
+import { DifferentiatorsCarousel } from './DifferentiatorsCarousel';
 
 interface AboutTabsProps {
+  introduction: {title: string; paragraphs: string[]};
   rolePositions: any[];
-  aiExpertise: any;
-  differentiators: string[];
-  boardSkills: any;
+  differentiators: Array<{category: string; items: string[]}>;
 }
 
-export function AboutTabs({ rolePositions, aiExpertise, differentiators, boardSkills }: AboutTabsProps) {
-  const [activeTab, setActiveTab] = useState('value');
+export function AboutTabs({ introduction, rolePositions, differentiators }: AboutTabsProps) {
+  const [activeTab, setActiveTab] = useState('intro');
 
   const tabs = [
     {
-      id: 'value',
-      label: 'How I Add Value',
+      id: 'intro',
+      label: 'Introduction',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
       ),
     },
@@ -33,20 +33,11 @@ export function AboutTabs({ rolePositions, aiExpertise, differentiators, boardSk
       ),
     },
     {
-      id: 'skills',
-      label: 'Board Skills',
+      id: 'value',
+      label: 'Potential Board Roles',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-        </svg>
-      ),
-    },
-    {
-      id: 'available',
-      label: 'Available For',
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       ),
     },
@@ -78,6 +69,170 @@ export function AboutTabs({ rolePositions, aiExpertise, differentiators, boardSk
 
       {/* Tab Content */}
       <div className="min-h-[500px]">
+        {/* Introduction Tab */}
+        {activeTab === 'intro' && (
+          <div className="animate-fadeIn">
+            <div className="max-w-6xl mx-auto space-y-8">
+
+              {/* Opening with drop cap */}
+              <div className="grid grid-cols-[120px_1fr] gap-6 items-start">
+                <div className="pt-2 border-t-2 border-slate-900">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-slate-500">01 / Identity</span>
+                </div>
+                <p className="text-2xl font-serif leading-snug text-slate-900 first-letter:text-6xl first-letter:font-bold first-letter:text-blue-600 first-letter:float-left first-letter:pr-3 first-letter:leading-[0.85]">
+                  {introduction.paragraphs[0]}
+                </p>
+              </div>
+
+              {/* Story 1: Journey + Pull Quote on Right */}
+              <div className="grid grid-cols-[120px_1fr_280px] gap-6 items-start">
+                <div className="sticky top-24">
+                  <div className="text-4xl font-serif font-medium text-slate-900">02</div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500 mt-1">Career · Scope</div>
+                  <div className="text-base font-bold text-slate-900 mt-3 leading-tight">Where the work has lived</div>
+                </div>
+                <div className="text-sm text-slate-700 leading-relaxed space-y-3 max-w-3xl">
+                  <p>{introduction.paragraphs[1]}</p>
+                  <p className="text-base leading-relaxed">
+                    My professional journey has given me the rare privilege of operating across{' '}
+                    <span className="font-bold text-blue-600">boardrooms</span>,{' '}
+                    <span className="font-bold text-purple-600">shop floors</span>,{' '}
+                    <span className="font-bold text-indigo-600">warehouses</span>,{' '}
+                    <span className="font-bold text-violet-600">technology labs</span>,{' '}
+                    <span className="font-bold text-pink-600">leadership tables</span>, and{' '}
+                    <span className="font-bold text-emerald-600">entrepreneurial trenches</span>.
+                  </p>
+                </div>
+
+                {/* Pull Quote - Right Side */}
+                <div className="sticky top-24">
+                  <div className="relative overflow-hidden bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-pink-50/40 rounded-xl p-6 border border-blue-100/50 shadow-sm">
+                    {/* Watermark effect */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.08),transparent_50%)]"></div>
+                    <div className="absolute top-3 left-4 text-7xl leading-none text-blue-600/15 font-serif">&ldquo;</div>
+                    <blockquote className="relative text-sm font-serif leading-snug text-slate-800 italic">
+                      {introduction.paragraphs[6]}
+                    </blockquote>
+                    <div className="flex items-center gap-2 mt-4 text-[10px] text-slate-500">
+                      <span className="w-4 h-px bg-slate-400"></span>
+                      <span className="font-mono uppercase tracking-wider">CD</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Story 2: Leadership Values - 4 Cards + Beyond Work Quote on Right */}
+              <div className="grid grid-cols-[120px_1fr_280px] gap-6 items-start">
+                <div className="sticky top-24">
+                  <div className="text-4xl font-serif font-medium text-slate-900">03</div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500 mt-1">Leadership · Style</div>
+                  <div className="text-base font-bold text-slate-900 mt-3 leading-tight">Four values</div>
+                </div>
+                <div>
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="bg-white border border-slate-200 rounded-lg p-3 relative overflow-hidden min-h-[110px]">
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+                      <span className="text-[9px] font-mono uppercase tracking-wider text-slate-500">V · 01</span>
+                      <h4 className="text-base font-serif font-semibold text-slate-900 mt-1 mb-1">Clarity</h4>
+                      <p className="text-[11px] text-slate-600 leading-snug">I like to dream big, but I do not romanticise execution. Vision must eventually become architecture.</p>
+                    </div>
+                    <div className="bg-white border border-slate-200 rounded-lg p-3 relative overflow-hidden min-h-[110px]">
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-600 to-purple-600"></div>
+                      <span className="text-[9px] font-mono uppercase tracking-wider text-slate-500">V · 02</span>
+                      <h4 className="text-base font-serif font-semibold text-slate-900 mt-1 mb-1">Compassion</h4>
+                      <p className="text-[11px] text-slate-600 leading-snug">People are never "resources". They are energy, emotion, aspiration and possibility.</p>
+                    </div>
+                    <div className="bg-white border border-slate-200 rounded-lg p-3 relative overflow-hidden min-h-[110px]">
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-purple-600"></div>
+                      <span className="text-[9px] font-mono uppercase tracking-wider text-slate-500">V · 03</span>
+                      <h4 className="text-base font-serif font-semibold text-slate-900 mt-1 mb-1">Courage</h4>
+                      <p className="text-[11px] text-slate-600 leading-snug">Carrying responsibility in situations where judgement matters more than title.</p>
+                    </div>
+                    <div className="bg-white border border-slate-200 rounded-lg p-3 relative overflow-hidden min-h-[110px]">
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 to-blue-500"></div>
+                      <span className="text-[9px] font-mono uppercase tracking-wider text-slate-500">V · 04</span>
+                      <h4 className="text-base font-serif font-semibold text-slate-900 mt-1 mb-1">Accountability</h4>
+                      <p className="text-[11px] text-slate-600 leading-snug">Architecture must become a plan, and a plan must produce results. Outcomes — never noise.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Beyond Work Quote - Right Side */}
+                <div className="sticky top-24">
+                  <div className="relative overflow-hidden bg-gradient-to-br from-green-50/80 via-emerald-50/60 to-teal-50/40 rounded-xl p-6 border border-green-100/50 shadow-sm">
+                    {/* Watermark effect */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_50%)]"></div>
+                    <div className="absolute top-3 left-4 text-7xl leading-none text-green-600/10 font-serif">&ldquo;</div>
+                    <blockquote className="relative text-sm font-serif leading-relaxed text-slate-800">
+                      {introduction.paragraphs[9]}
+                    </blockquote>
+                    <div className="flex items-center gap-2 mt-4 text-[10px] text-slate-500">
+                      <span className="w-4 h-px bg-slate-400"></span>
+                      <span className="font-mono uppercase tracking-wider">Beyond Work</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Personal Grid + Quote on Right */}
+              <div className="grid grid-cols-[120px_1fr_280px] gap-6 items-start">
+                <div className="sticky top-24">
+                  <div className="text-4xl font-serif font-medium text-slate-900">04</div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500 mt-1">Beyond · Work</div>
+                  <div className="text-base font-bold text-slate-900 mt-3 leading-tight">Personal values</div>
+                </div>
+                <div className="grid grid-cols-2 gap-2.5">
+                  <div className="bg-slate-50 border border-slate-200 rounded-lg p-3">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white mb-2">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+                    </div>
+                    <h4 className="text-sm font-bold text-slate-900 mb-1">Family</h4>
+                    <p className="text-[11px] text-slate-600 leading-snug">A proud father and committed family man — the anchor for everything else.</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-200 rounded-lg p-3">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white mb-2">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <h4 className="text-sm font-bold text-slate-900 mb-1">Spirituality</h4>
+                    <p className="text-[11px] text-slate-600 leading-snug">Restraint, humility, inner alignment — the quiet discipline behind the work.</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-200 rounded-lg p-3">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center text-white mb-2">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h4 className="text-sm font-bold text-slate-900 mb-1">Sport</h4>
+                    <p className="text-[11px] text-slate-600 leading-snug">Resilience, timing, competitive grace, and deep respect for the opponent.</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-200 rounded-lg p-3">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white mb-2">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </div>
+                    <h4 className="text-sm font-bold text-slate-900 mb-1">Service</h4>
+                    <p className="text-[11px] text-slate-600 leading-snug">Indian roots, cultural pride, and a desire to contribute meaningfully to society.</p>
+                  </div>
+                </div>
+
+                {/* Vision Quote - Right Side */}
+                <div className="sticky top-24">
+                  <div className="relative overflow-hidden bg-gradient-to-br from-amber-50/80 via-orange-50/60 to-rose-50/40 rounded-xl p-6 border border-amber-100/50 shadow-sm">
+                    {/* Watermark effect */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(251,146,60,0.08),transparent_50%)]"></div>
+                    <div className="absolute bottom-3 right-4 text-7xl leading-none text-amber-600/10 font-serif">&rdquo;</div>
+                    <blockquote className="relative text-sm font-serif leading-relaxed text-slate-800">
+                      {introduction.paragraphs[8]}
+                    </blockquote>
+                    <div className="flex items-center gap-2 mt-4 text-[10px] text-slate-500">
+                      <span className="w-4 h-px bg-slate-400"></span>
+                      <span className="font-mono uppercase tracking-wider">Vision</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        )}
+
         {/* How I Add Value Tab */}
         {activeTab === 'value' && (
           <div className="animate-fadeIn">
@@ -88,181 +243,7 @@ export function AboutTabs({ rolePositions, aiExpertise, differentiators, boardSk
         {/* What Sets Me Apart Tab */}
         {activeTab === 'apart' && (
           <div className="animate-fadeIn">
-            <h2 className="font-display text-2xl md:text-3xl text-slate-900 mb-8 text-center flex items-center justify-center">
-              <span className="w-2 h-8 bg-gradient-to-b from-blue-600 to-purple-600 mr-3 rounded-full"></span>
-              What Sets Me Apart
-            </h2>
-            <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-              {differentiators.map((item: string, index: number) => (
-                <div
-                  key={index}
-                  className="flex items-start space-x-4 p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 shadow-md hover:shadow-lg transition-all hover:border-purple-300"
-                >
-                  <svg className="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-base text-slate-700 leading-relaxed">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Skills Matrix Tab */}
-        {activeTab === 'skills' && (
-          <div className="animate-fadeIn">
-            <div className="max-w-5xl mx-auto">
-              <div className="flex items-center gap-6 mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                  Board Skills Matrix
-                </h2>
-                <div className="flex-1 border-l-2 border-gray-300 pl-6">
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Expert-level competencies across strategic,<br />
-                    operational, and governance dimensions
-                  </p>
-                </div>
-              </div>
-
-              {/* Top Skills Grid */}
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                {boardSkills.top_skills.map((skill: any, index: number) => (
-                  <div
-                    key={index}
-                    className="flex items-start space-x-4 p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300"
-                  >
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                      skill.level === 5 ? 'bg-emerald-500' : 'bg-blue-500'
-                    }`}>
-                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-slate-900 text-sm mb-1">{skill.skill}</h3>
-                      <p className="text-xs text-slate-600 leading-relaxed">{skill.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Board Roles & Industries */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Ideal Board Roles */}
-                <div className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 rounded-xl p-6 border border-blue-200/50">
-                  <h3 className="font-semibold text-slate-900 mb-4 flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-                    </svg>
-                    Ideal Board Roles
-                  </h3>
-                  <div className="space-y-2">
-                    {boardSkills.ideal_board_roles.map((role: string, index: number) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm text-slate-700">
-                        <svg className="w-4 h-4 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span>{role}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Target Industries */}
-                <div className="bg-gradient-to-br from-purple-50/80 to-pink-50/80 rounded-xl p-6 border border-purple-200/50">
-                  <h3 className="font-semibold text-slate-900 mb-4 flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
-                    </svg>
-                    Target Industries
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {boardSkills.target_industries.map((industry: string, index: number) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-white text-purple-700 text-xs font-medium rounded-full border border-purple-200"
-                      >
-                        {industry}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Available For Tab */}
-        {activeTab === 'available' && (
-          <div className="animate-fadeIn">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="font-display text-2xl md:text-3xl text-slate-900 mb-8 text-center">
-                Available For
-              </h2>
-
-              <div className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm rounded-2xl p-10 border border-blue-200/50 shadow-lg mb-8">
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-xl font-semibold text-slate-900 mb-2">Independent Board Roles</p>
-                    <p className="text-sm text-slate-600">Bringing strategic technology governance and digital transformation expertise to boardrooms</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-xl font-semibold text-slate-900 mb-2">Advisory Mandates</p>
-                    <p className="text-sm text-slate-600">Strategic counsel for organizations navigating digital disruption and AI transformation</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-xl font-semibold text-slate-900 mb-2">Strategic AI Transformation</p>
-                    <p className="text-sm text-slate-600">Hands-on AI implementation and intelligent automation partnerships</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-6 justify-center mt-8">
-                <a
-                  href="/contact"
-                  className="px-12 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg shadow-xl transition-all hover:scale-105"
-                >
-                  Let's Connect →
-                </a>
-                <a
-                  href="/board-bio"
-                  className="px-12 py-4 text-lg font-semibold border-2 border-blue-600 text-blue-700 hover:bg-blue-50 rounded-lg transition-all"
-                >
-                  View Profile
-                </a>
-              </div>
-
-              {/* LinkedIn */}
-              <div className="text-center mt-8">
-                <a
-                  href="https://www.linkedin.com/in/chinardeshpande"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-slate-600 hover:text-blue-600 transition-colors text-base font-medium"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
-                  </svg>
-                  Connect on LinkedIn
-                </a>
-              </div>
-            </div>
+            <DifferentiatorsCarousel differentiators={differentiators} />
           </div>
         )}
       </div>

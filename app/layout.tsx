@@ -33,65 +33,106 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Chinar Deshpande | Independent Non-Executive Director (INED) | Board Advisor | Technology Consultant",
-  description: "Independent Non-Executive Director (INED) with 30+ years in technology leadership. Expert in board governance, digital transformation, AI, robotics, ERP, GCC setup, and startup mentorship. Available for board positions, consulting, and government advisory roles across India and globally.",
+  title: "Chinar Deshpande | Independent Non-Executive Director UK | INED | Board Advisor | Technology Consultant",
+  description: "Independent Non-Executive Director (INED) with 30+ years in technology leadership. Expert in board governance, digital transformation, AI, robotics, ERP, GCC setup, and startup mentorship. Available for board positions, consulting, and government advisory roles across UK, India and globally.",
   keywords: [
-    // Primary Roles
+    // Primary Roles - UK Focused
     "Independent Non-Executive Director",
-    "INED India",
-    "Board Member",
-    "Board Advisor",
-    "Technology Board Director",
+    "INED UK",
+    "INED London",
+    "Non-Executive Director UK",
+    "Board Member UK",
+    "Board Director UK",
+    "Technology Board Director UK",
+    "Independent Director Technology",
     "Non-Executive Director Technology",
+    "FTSE Board Director",
+
+    // India Board Roles
+    "INED India",
+    "Independent Director India",
+    "Board Member India",
+    "SEBI Independent Director",
+    "Companies Act Independent Director",
+
+    // Board Advisory
+    "Board Advisor",
+    "Board Advisory Services",
+    "Corporate Governance UK",
+    "Corporate Governance India",
+    "Technology Committee Chair",
+    "Audit Committee Member",
+    "Risk Committee Member",
 
     // Leadership Roles
     "Chief Technology Officer",
     "CTO Consultant",
+    "CTO Advisory",
     "Technology Leadership",
     "Digital Transformation Leader",
     "Technology Consultant",
     "CIO Advisor",
+    "Fractional CTO",
 
     // Specializations
     "Digital Transformation",
-    "Digital Transformation Consulting",
+    "Digital Transformation Consulting UK",
     "ERP Implementation",
     "SAP Implementation",
     "Oracle ERP",
     "Robotics Automation",
     "AI Strategy",
+    "AI Governance",
     "Artificial Intelligence Consulting",
     "Warehouse Automation",
     "Autostore",
     "Geek+ Robotics",
+    "E-commerce Technology",
 
     // Services
-    "Board Advisory Services",
-    "Corporate Governance",
     "Technology Strategy",
-    "GCC Setup India",
-    "Global Capability Center",
+    "Technology Due Diligence",
+    "Strategic Advisor",
+    "Executive Mentor",
     "Startup Mentor",
     "Startup Technology Advisor",
-    "Technology Due Diligence",
+    "Scale-up Advisor",
+    "GCC Setup India",
+    "Global Capability Center",
     "Government Technology Advisory",
 
     // Industries
-    "E-commerce Technology",
+    "E-commerce Board Advisor",
     "Supply Chain Technology",
     "Retail Technology",
+    "Logistics Technology",
     "Manufacturing Digital Transformation",
+    "SaaS Board Advisor",
+    "Technology Services Board",
 
-    // Geographic
+    // Geographic - UK
+    "INED Manchester",
+    "Board Advisor London",
+    "Technology Consultant UK",
+    "Digital Transformation London",
+    "Board Director Manchester",
+
+    // Geographic - India
     "INED Mumbai",
     "Board Advisor India",
     "Technology Consultant India",
     "Digital Transformation India",
+    "Independent Director Mumbai",
 
     // Education
     "Harvard Business School",
     "MIT Sloan",
     "London Business School",
+
+    // Credentials
+    "THG CTO",
+    "FTSE 250 Technology Leader",
+    "CIO 100 Award Winner",
   ],
   authors: [{ name: "Chinar Deshpande" }],
   creator: "Chinar Deshpande",
@@ -101,11 +142,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_GB",
+    alternateLocale: ["en_US", "en_IN"],
     url: "https://www.chinardeshpande.tech",
-    title: "Chinar Deshpande | INED | Board Advisor | Technology Consultant | Startup Mentor",
-    description: "Independent Non-Executive Director (INED) available for board positions. Expert in digital transformation, AI, robotics, ERP, GCC setup. CTO at THG. 30+ years across 14 countries. Harvard, MIT, London Business School alumnus.",
-    siteName: "Chinar Deshpande - Technology Leadership & Board Advisory",
+    title: "Chinar Deshpande | INED UK | Independent Non-Executive Director | Board Advisor | Technology Consultant",
+    description: "Independent Non-Executive Director (INED) available for UK & global board positions. Expert in board governance, digital transformation, AI, robotics, ERP. CTO at THG (FTSE 250). 30+ years across 14 countries. Harvard, MIT, London Business School alumnus.",
+    siteName: "Chinar Deshpande - Independent Non-Executive Director & Technology Leadership",
     images: [
       {
         url: "/og-image.jpg",
@@ -117,8 +159,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chinar Deshpande | INED | Board Advisor | Tech Consultant",
-    description: "Independent Non-Executive Director. Digital Transformation, AI, Robotics, ERP, GCC Setup Expert. CTO @ THG. Harvard, MIT, LBS alumnus. Available for board & advisory roles.",
+    title: "Chinar Deshpande | INED UK | Board Advisor | Tech Consultant",
+    description: "Independent Non-Executive Director (UK & Global). Board Governance, Digital Transformation, AI, Robotics Expert. CTO @ THG (FTSE 250). Harvard, MIT, LBS alumnus. Available for board & advisory roles.",
     images: ["/og-image.jpg"],
   },
   robots: {

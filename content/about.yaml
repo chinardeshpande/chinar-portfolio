@@ -1,6 +1,21 @@
 # About Page Content - Compact & Visual
 # Positioning for 5 key roles: INED, Advisory Board, Startup Mentor, Strategic Advisor, AI Evangelist
 
+# Introduction
+introduction:
+  title: "Introduction"
+  paragraphs:
+    - "I am Chinar Deshpande — a technology leader, transformation architect, builder of institutions, and lifelong student of human potential."
+    - "Across three decades, my work has lived at the intersection of technology, business strategy, large-scale execution, and people leadership. I have led complex transformations across global retail, eCommerce, logistics, supply chain, finance, infrastructure, and enterprise technology — from implementing SAP for India's largest retailer across 900+ stores and 35 warehouses, to deploying PeopleSoft across 120 countries for Unilever, to building digital warehousing, transportation, robotics, AI/ML and GCC capabilities for large-scale global businesses."
+    - "My professional journey has given me the rare privilege of operating across boardrooms, shop floors, warehouses, technology labs, leadership tables, and entrepreneurial trenches."
+    - "My career has remained deliberately clean, ethical and execution-led — built not on noise, but on credibility, trust, and measurable outcomes."
+    - "What truly defines me, however, is not only the scale of systems I have built, but the spirit with which I build them."
+    - "I am a hands-on technologist with board-level maturity: a strategist who understands balance sheets, an operator who respects detail; and a leader who believes that people are never \"resources\" — they are energy, emotion, aspiration and possibility."
+    - "I am equally comfortable discussing robotics, ERP, cybersecurity, AI agents, cloud economics and data architecture as I am discussing leadership, culture, ethics, stakeholder alignment and human motivation."
+    - "My leadership style is rooted in clarity, compassion, courage and accountability. I like to dream big, but I do not romanticise execution. I believe vision must eventually become architecture, architecture must become a plan, and a plan must produce results. I have built teams, scaled organisations, mentored young professionals, influenced senior stakeholders, handled complexity across countries and cultures, and carried responsibility in situations where judgement matters more than title."
+    - "Beyond work, I am deeply shaped by family, spirituality, sport and service. I am a proud father, a committed family man, an intense sports enthusiast, and someone who believes physical excellence sharpens mental discipline. Sport has given me resilience, timing, competitive grace and respect for the opponent. Spirituality has taught me restraint, humility and the importance of inner alignment. My Indian roots, cultural pride, and desire to contribute meaningfully to society continue to guide my long-term aspirations."
+    - "I am drawn to people and institutions that are building for the future — companies seeking responsible growth, founders seeking clarity, boards seeking independent judgement, and leaders seeking transformation without losing their human touch."
+
 # Hero positioning
 board_positioning:
   headline: "Independent Non-Executive Director | CTO | AI Transformation Strategist"
@@ -34,7 +49,7 @@ role_positions:
   - role: "AI Transformation Strategist"
     icon: "brain"
     tagline: "Building Intelligent, Ethical, Scalable Organizations"
-    value: "Deep hands-on expertise in AI, automation, and intelligent systems. Extensively use ChatGPT Codex, Claude CLI, Google Gemini (AI Studio), VS Code, n8n, and NotebookLM to design and deploy enterprise-grade AI solutions with ethical governance frameworks."
+    value: "Deep hands-on expertise in AI, automation, and intelligent systems. Extensively use ChatGPT, Codex, Claude Code, Claude Cowork, Google Gemini (AI Studio), VS Code, n8n, NotebookLM, and more to design and deploy enterprise-grade AI solutions with ethical governance frameworks."
 
 # AI & Technology Expertise - Hands-On Tools & Platforms
 ai_expertise:
@@ -42,7 +57,7 @@ ai_expertise:
   subtitle: "Technical fluency that translates emerging technologies into sustainable business impact"
   areas:
     - name: "AI Development Stack"
-      details: "ChatGPT Codex, Claude CLI, Google Gemini (AI Studio), VS Code, n8n, NotebookLM for enterprise automation, analytics, and scalable AI solutions"
+      details: "ChatGPT, Codex, Claude Code, Claude Cowork, Google Gemini (AI Studio), VS Code, n8n, NotebookLM, and more for enterprise automation, analytics, and scalable AI solutions"
     - name: "Intelligent Systems"
       details: "Predictive analytics, computer vision, NLP, AI-driven warehouse optimization, machine learning operations with ethical AI governance frameworks"
     - name: "Robotics & Automation"
@@ -73,11 +88,50 @@ key_metrics:
   - number: "300+"
     label: "Brands Managed"
 
-# Compact differentiators
+# What Sets Me Apart - Structured differentiators
 differentiators:
-  - "Hands-On AI Expertise: ChatGPT, Claude CLI, Gemini, n8n, NotebookLM—technical fluency that translates AI into business impact"
-  - "Board-Ready Governance: Strategic foresight + digital fluency + operational depth for organizations navigating disruption"
-  - "Built From Ground Up: THG India Technology Center, AI-focused innovation labs, global engineering teams"
-  - "Execution Discipline: Bridges technology and strategy—balancing innovation, governance, and measurable outcomes"
-  - "Thought Leadership: Editorial Board CIO Magazine | Speaker: SAP Sapphire, CTO Forum | CIO 100 Award"
-  - "Global Operations: Led 2,500+ professionals across US, Europe, India, Middle East | Multilingual | Cross-cultural leadership"
+  - category: "Governance & Strategic Advisory"
+    items:
+      - "Board governance & independence; Audit/Risk oversight"
+      - "Capital allocation & ROI discipline; regulatory compliance"
+      - "Strategic counsel leveraging C-suite network (Microsoft, SAP, Oracle, Deloitte, PwC)"
+      - "Access to political, industry & investment leaders (NSE, HDFC, Werburgh Pincus), Deputy CM & CM Maharashtra, key MPs/MLAs, as well as eminent sports and Bollywood personalities"
+
+  - category: "Technology, AI & Data"
+    items:
+      - "Hands-On AI Expertise: ChatGPT, Codex, Claude Code, Claude Cowork, Gemini, n8n, NotebookLM—technical fluency that translates AI into business impact"
+      - "AI/ML strategy & hands-on capability; pattern recognition at scale"
+      - "Data analytics, visualization & business intelligence"
+      - "Cyber risk; zero-trust architecture; cloud economics"
+      - "Platform modernization - ERP (SAP/Oracle/Infor/Zoho)"
+
+  - category: "Multidimensional People Leadership"
+    items:
+      - "Elite leadership hiring & org design (100+ engineers scale-up)"
+      - "Multi-country, multi-generational workforce management"
+      - "Blue/white collar; union/non-union; cultural alignment"
+      - "Executive communication & stakeholder orchestration"
+
+  - category: "Large-Scale Execution"
+    items:
+      - "Cross-border logistics & warehouse automation (AutoStore, Geekt, T-Sorter)"
+      - "Infrastructure delivery (warehouses, pipelines, refineries, corporate offices)"
+      - "GCC setup & scaling; legal entity formation & start-up acceleration"
+      - "Event management at scale (concept to execution)"
+      - "Execution Discipline: Bridges technology and strategy—balancing innovation, governance, and measurable outcomes"
+
+  - category: "Thought Leadership"
+    items:
+      - "Great ability to dream, visualise and think out of the box"
+      - "Innovative approach, Fast thinking and Solution mindset"
+      - "Ability to conceptualise, document, design, plan and execute any idea(s)"
+      - "Editorial Board CIO Magazine | Speaker: SAP Sapphire, CTO Forum | CIO 100 Award"
+
+  - category: "Soft Skills"
+    items:
+      - "Born leader, who leads by example, who is compassionate, who is fearless and visionary"
+      - "Public Speaking - impromptu as well as prepared"
+      - "Presentation skills - building and delivering"
+      - "Positivity and optimism"
+      - "Counselling"
+      - "Extremely unique Interviewing skills"
