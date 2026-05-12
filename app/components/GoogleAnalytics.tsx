@@ -1,6 +1,6 @@
 'use client';
 
-import { GoogleAnalytics as GA } from '@next/third-parties/google';
+import Script from 'next/script';
 import { useEffect } from 'react';
 
 export default function GoogleAnalytics() {
@@ -18,5 +18,20 @@ export default function GoogleAnalytics() {
     return null;
   }
 
-  return <GA gaId={GA_ID} />;
+  return (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}');
+        `}
+      </Script>
+    </>
+  );
 }
