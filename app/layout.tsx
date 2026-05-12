@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import StructuredData from "./components/StructuredData";
 import { WebVitals } from "./components/WebVitals";
 import GoogleAnalytics from "./components/GoogleAnalytics";
@@ -331,7 +330,6 @@ export default function RootLayout({
         <GoogleAnalytics />
         {children}
         <ScrollToTop />
-        <Analytics />
       </body>
     </html>
   );
