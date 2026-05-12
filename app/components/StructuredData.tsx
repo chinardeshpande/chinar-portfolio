@@ -168,9 +168,21 @@ export default function StructuredData() {
       "Audit Committee Member positions",
       "Risk Committee Member positions",
       "Board Advisory roles",
+      "Strategy Consulting engagements",
+      "Management Consulting opportunities",
       "Strategic Advisory engagements",
       "Technology consulting engagements",
       "Digital transformation consulting",
+      "Interim CTO positions",
+      "Interim Chief Technology Officer roles",
+      "C-Suite Advisory engagements",
+      "Executive Coaching opportunities",
+      "Venture Partner opportunities",
+      "Investment Advisory roles",
+      "Portfolio Company Advisory",
+      "M&A Integration advisory",
+      "Keynote Speaking engagements",
+      "Conference Speaking opportunities",
       "Startup mentorship opportunities",
       "Scale-up advisory",
       "Government project advisory",
@@ -193,8 +205,8 @@ export default function StructuredData() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Chinar Deshpande - Independent Non-Executive Director (INED) | Board Advisory | Technology Consulting",
-    description: "Independent Non-Executive Director (INED) and technology leader providing board governance, digital transformation consulting, startup mentorship, and GCC setup expertise. Specialized in AI, robotics, ERP implementation, and government technology projects across India, UK, and globally.",
+    name: "Chinar Deshpande - INED | Strategy Consultant | Interim CTO | Board Advisory | Investment Advisory",
+    description: "Independent Non-Executive Director (INED), senior strategy consultant, and technology leader providing board governance, strategy consulting, interim CTO services, investment advisory, digital transformation consulting, M&A integration, and C-suite advisory. Specialized in AI governance, robotics, ERP implementation, and organizational transformation across India, UK, and globally.",
     url: "https://www.chinardeshpande.tech",
     image: "https://www.chinardeshpande.tech/og-image.jpg",
     address: {
@@ -226,9 +238,32 @@ export default function StructuredData() {
       "Independent Non-Executive Director (INED)",
       "Board Advisory Services",
       "Corporate Governance Consulting",
+      "Strategy Consulting",
+      "Management Consulting",
+      "Corporate Strategy Advisory",
+      "Business Transformation Consulting",
+      "M&A Integration Advisory",
+      "Post-Merger Integration",
+      "Performance Improvement Consulting",
+      "Operating Model Design",
+      "Organizational Effectiveness Consulting",
       "Technology Strategy Consulting",
       "Digital Transformation Consulting",
       "CTO Advisory",
+      "Interim CTO Services",
+      "Interim Chief Technology Officer",
+      "Interim Executive Services",
+      "C-Suite Advisory",
+      "Executive Coaching",
+      "Leadership Development",
+      "Organizational Transformation",
+      "Investment Advisory",
+      "Venture Partner Services",
+      "Portfolio Company Advisory",
+      "Technology Due Diligence",
+      "Keynote Speaking",
+      "Conference Speaking",
+      "Executive Education",
       "ERP Implementation Consulting",
       "SAP Implementation",
       "Oracle ERP Consulting",
@@ -236,7 +271,6 @@ export default function StructuredData() {
       "Warehouse Automation Consulting",
       "Innovation Leadership Training",
       "Startup Mentorship",
-      "Technology Due Diligence",
       "GCC Setup Consulting",
       "Global Capability Center Advisory",
       "Government Technology Advisory",
@@ -283,6 +317,38 @@ export default function StructuredData() {
             name: "Startup Technology Mentorship",
             description: "Strategic mentorship for technology startups on scaling, fundraising, and innovation"
           }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Strategy Consulting & Corporate Transformation",
+            description: "Management consulting for corporate strategy, business transformation, operating model design, and M&A integration advisory"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Interim CTO & Executive Services",
+            description: "Interim Chief Technology Officer and senior executive services for technology turnaround, transformation, and capability building"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Investment Advisory & Venture Partner Services",
+            description: "Technology investment advisory, due diligence, portfolio company advisory, and venture partner services for technology investments"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "C-Suite Advisory & Executive Coaching",
+            description: "Senior executive advisory, C-suite coaching, leadership development, and organizational effectiveness consulting"
+          }
         }
       ]
     },
@@ -297,7 +363,7 @@ export default function StructuredData() {
     url: "https://www.chinardeshpande.tech",
     logo: "https://www.chinardeshpande.tech/og-image.jpg",
     image: "https://www.chinardeshpande.tech/og-image.jpg",
-    description: "Technology leadership and board advisory services with 30+ years of global experience",
+    description: "Board advisory, strategy consulting, interim executive, and investment advisory services with 30+ years of global technology leadership experience",
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
@@ -319,6 +385,65 @@ export default function StructuredData() {
     sameAs: [
       "https://www.linkedin.com/in/chinar-deshpande",
     ],
+  };
+
+  const consultantSchema = {
+    "@context": "https://schema.org",
+    "@type": "Consultant",
+    name: "Chinar Deshpande",
+    description: "Senior strategy consultant and technology advisor specializing in digital transformation, corporate strategy, M&A integration, and C-suite advisory",
+    url: "https://www.chinardeshpande.tech",
+    serviceType: [
+      "Strategy Consulting",
+      "Management Consulting",
+      "Business Transformation Consulting",
+      "Corporate Strategy Advisory",
+      "Digital Transformation Consulting",
+      "M&A Integration Advisory",
+      "Post-Merger Integration",
+      "Interim Executive Services",
+      "Interim CTO Services",
+      "C-Suite Advisory",
+      "Executive Coaching",
+      "Investment Advisory",
+      "Technology Due Diligence",
+      "Venture Partner Services",
+      "Portfolio Company Advisory",
+      "Organizational Transformation",
+      "Performance Improvement",
+      "Operating Model Design"
+    ],
+    areaServed: [
+      {
+        "@type": "Place",
+        name: "United Kingdom",
+      },
+      {
+        "@type": "Place",
+        name: "India",
+      },
+      {
+        "@type": "Place",
+        name: "Global",
+      },
+    ],
+    priceRange: "Premium",
+    address: [
+      {
+        "@type": "PostalAddress",
+        addressCountry: "GB",
+        addressLocality: "London",
+        addressRegion: "England",
+      },
+      {
+        "@type": "PostalAddress",
+        addressCountry: "IN",
+        addressLocality: "Mumbai",
+        addressRegion: "Maharashtra",
+      }
+    ],
+    telephone: "+91-98201-99922",
+    email: "chinardeshpande@gmail.com",
   };
 
   const breadcrumbSchema = {
@@ -371,6 +496,10 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(consultantSchema) }}
       />
       <script
         type="application/ld+json"

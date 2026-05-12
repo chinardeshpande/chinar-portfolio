@@ -33,8 +33,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Chinar Deshpande | Independent Non-Executive Director UK | INED | Board Advisor | Technology Consultant",
-  description: "Independent Non-Executive Director (INED) with 30+ years in technology leadership. Expert in board governance, digital transformation, AI, robotics, ERP, GCC setup, and startup mentorship. Available for board positions, consulting, and government advisory roles across UK, India and globally.",
+  title: "Chinar Deshpande | INED | Strategy Consultant | Interim CTO | Board Advisor | Investment Advisory",
+  description: "Independent Non-Executive Director (INED) and senior strategy consultant with 30+ years technology leadership. Available for board positions, strategy consulting, interim CTO roles, investment advisory, and C-suite advisory across UK, India, and globally. Expert in digital transformation, AI governance, M&A integration, and organizational effectiveness.",
   keywords: [
     // Primary Roles - UK Focused
     "Independent Non-Executive Director",
@@ -100,6 +100,64 @@ export const metadata: Metadata = {
     "GCC Setup India",
     "Global Capability Center",
     "Government Technology Advisory",
+
+    // Strategy Consulting
+    "Management Consulting",
+    "Strategy Consulting",
+    "Strategy Consulting UK",
+    "Corporate Strategy Advisor",
+    "Business Strategy Consultant",
+    "Business Transformation Consultant",
+    "Corporate Transformation",
+    "Enterprise Transformation",
+    "Operating Model Design",
+    "Target Operating Model",
+    "Performance Improvement Consulting",
+    "Post-Merger Integration",
+    "M&A Integration Consultant",
+    "M&A Integration Advisory",
+    "Strategic Planning Consultant",
+    "Growth Strategy Consultant",
+    "Organizational Effectiveness",
+
+    // Executive Advisory & Interim
+    "C-Suite Advisory",
+    "C-Suite Consultant",
+    "Executive Advisory Services",
+    "Interim CTO",
+    "Interim Chief Technology Officer",
+    "Interim CIO",
+    "Interim Executive",
+    "Executive Coaching",
+    "Leadership Coaching",
+    "Executive Development",
+    "Leadership Development",
+    "Organizational Transformation",
+    "Change Leadership",
+    "Cultural Transformation",
+
+    // Investment & Venture
+    "Venture Partner",
+    "Venture Partner Technology",
+    "Investment Advisory",
+    "Technology Investment Advisor",
+    "Portfolio Company Advisor",
+    "Startup Board Advisor",
+    "Tech Due Diligence Expert",
+    "Investment Committee Member",
+    "Venture Capital Advisor",
+    "Private Equity Technology Advisor",
+
+    // Thought Leadership & Speaking
+    "Keynote Speaker",
+    "Conference Speaker",
+    "Technology Speaker",
+    "Digital Transformation Speaker",
+    "AI Speaker",
+    "Technology Thought Leader",
+    "Industry Thought Leader",
+    "Executive Education",
+    "Leadership Speaker",
 
     // Industries
     "E-commerce Board Advisor",
