@@ -36,6 +36,18 @@ export default function StructuredData() {
         addressCountry: "IN",
         addressLocality: "Mumbai",
         addressRegion: "Maharashtra",
+      },
+      {
+        "@type": "PostalAddress",
+        addressCountry: "AE",
+        addressLocality: "Dubai",
+        addressRegion: "Dubai",
+      },
+      {
+        "@type": "PostalAddress",
+        addressCountry: "US",
+        addressLocality: "New York",
+        addressRegion: "New York",
       }
     ],
     sameAs: [
@@ -206,7 +218,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Chinar Deshpande - INED | Strategy Consultant | Interim CTO | Board Advisory | Investment Advisory",
-    description: "Independent Non-Executive Director (INED), senior strategy consultant, and technology leader providing board governance, strategy consulting, interim CTO services, investment advisory, digital transformation consulting, M&A integration, and C-suite advisory. Specialized in AI governance, robotics, ERP implementation, and organizational transformation across India, UK, and globally.",
+    description: "Independent Non-Executive Director (INED), senior strategy consultant, and technology leader providing board governance, strategy consulting, interim CTO services, investment advisory, digital transformation consulting, M&A integration, and C-suite advisory. Specialized in AI governance, robotics, ERP implementation, and organizational transformation across UK, India, UAE, United States, and globally.",
     url: "https://www.chinardeshpande.tech",
     image: "https://www.chinardeshpande.tech/og-image.jpg",
     address: {
@@ -219,11 +231,15 @@ export default function StructuredData() {
     areaServed: [
       {
         "@type": "Place",
+        name: "United Kingdom",
+      },
+      {
+        "@type": "Place",
         name: "India",
       },
       {
         "@type": "Place",
-        name: "United Kingdom",
+        name: "United Arab Emirates",
       },
       {
         "@type": "Place",
@@ -424,6 +440,14 @@ export default function StructuredData() {
       },
       {
         "@type": "Place",
+        name: "United Arab Emirates",
+      },
+      {
+        "@type": "Place",
+        name: "United States",
+      },
+      {
+        "@type": "Place",
         name: "Global",
       },
     ],
@@ -440,6 +464,18 @@ export default function StructuredData() {
         addressCountry: "IN",
         addressLocality: "Mumbai",
         addressRegion: "Maharashtra",
+      },
+      {
+        "@type": "PostalAddress",
+        addressCountry: "AE",
+        addressLocality: "Dubai",
+        addressRegion: "Dubai",
+      },
+      {
+        "@type": "PostalAddress",
+        addressCountry: "US",
+        addressLocality: "New York",
+        addressRegion: "New York",
       }
     ],
     telephone: "+91-98201-99922",
