@@ -38,15 +38,22 @@ export default function AnalyticsPage() {
   const [ga4Data, setGa4Data] = useState<GA4Data | null>(null)
   const [searchConsoleData, setSearchConsoleData] = useState<SearchConsoleData | null>(null)
   const [loading, setLoading] = useState(true)
+  const [refreshing, setRefreshing] = useState(false)
   const [activeTab, setActiveTab] = useState<'overview' | 'ga4' | 'seo'>('overview')
   const [dateRange, setDateRange] = useState('30')
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
 
   useEffect(() => {
     fetchAnalytics()
   }, [dateRange])
 
-  const fetchAnalytics = async () => {
-    setLoading(true)
+  const fetchAnalytics = async (isRefresh = false) => {
+    if (isRefresh) {
+      setRefreshing(true)
+    } else {
+      setLoading(true)
+    }
+
     try {
       const [ga4Response, searchConsoleResponse] = await Promise.all([
         fetch(`/api/admin/analytics/ga4?startDate=${dateRange}daysAgo&endDate=today`),
@@ -58,11 +65,17 @@ export default function AnalyticsPage() {
 
       setGa4Data(ga4)
       setSearchConsoleData(searchConsole)
+      setLastUpdated(new Date())
     } catch (error) {
       console.error('Error fetching analytics:', error)
     } finally {
       setLoading(false)
+      setRefreshing(false)
     }
+  }
+
+  const handleRefresh = () => {
+    fetchAnalytics(true)
   }
 
   const getDateDaysAgo = (days: number): string => {
@@ -87,8 +100,14 @@ export default function AnalyticsPage() {
     return (
       <div className="min-h-screen bg-gray-50">
         <Navigation />
-        <div className="flex items-center justify-center h-screen">
-          <p className="text-gray-600">Loading analytics data...</p>
+        <div className="flex flex-col items-center justify-center h-screen">
+          <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg className="w-8 h-8 text-blue-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <p className="text-gray-900 font-medium">Loading Analytics Dashboard</p>
+          <p className="text-sm text-gray-600 mt-1">Fetching your performance data...</p>
         </div>
       </div>
     )
@@ -106,10 +125,35 @@ export default function AnalyticsPage() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold text-gray-900">Analytics Dashboard</h1>
-              <p className="text-gray-600 mt-2">Performance metrics and SEO insights</p>
+              <p className="text-gray-600 mt-2">
+                Performance metrics and SEO insights
+                {lastUpdated && (
+                  <span className="text-sm text-gray-500 ml-2">
+                    • Last updated: {lastUpdated.toLocaleTimeString()}
+                  </span>
+                )}
+              </p>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={handleRefresh}
+                disabled={refreshing}
+                className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <svg
+                  className={`w-4 h-4 text-gray-600 ${refreshing ? 'animate-spin' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                <span className="text-sm font-medium text-gray-700">
+                  {refreshing ? 'Refreshing...' : 'Refresh'}
+                </span>
+              </button>
+
               <select
                 value={dateRange}
                 onChange={(e) => setDateRange(e.target.value)}
@@ -125,23 +169,47 @@ export default function AnalyticsPage() {
 
         {/* Configuration Warning */}
         {(!ga4Configured || !searchConsoleConfigured) && (
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-6 mb-6">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-lg font-semibold text-yellow-900 mb-2">Analytics Configuration Required</h3>
-                <div className="space-y-1 text-sm text-yellow-800">
+                <div className="space-y-2 text-sm text-yellow-800 mb-4">
                   {!ga4Configured && (
-                    <p>• Google Analytics 4 (GA4) is not configured. Add GA4_PROPERTY_ID and GOOGLE_APPLICATION_CREDENTIALS_JSON to environment variables.</p>
+                    <div className="flex items-start gap-2">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
+                      </svg>
+                      <p><strong>Google Analytics 4:</strong> Add GA4_PROPERTY_ID and GOOGLE_APPLICATION_CREDENTIALS_JSON to environment variables</p>
+                    </div>
                   )}
                   {!searchConsoleConfigured && (
-                    <p>• Google Search Console is not configured. Add SEARCH_CONSOLE_SITE_URL and GOOGLE_APPLICATION_CREDENTIALS_JSON to environment variables.</p>
+                    <div className="flex items-start gap-2">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
+                      </svg>
+                      <p><strong>Search Console:</strong> Add SEARCH_CONSOLE_SITE_URL and GOOGLE_APPLICATION_CREDENTIALS_JSON to environment variables</p>
+                    </div>
                   )}
                 </div>
+                <a
+                  href="https://github.com/chinardeshpande/chinar-portfolio/blob/main/ANALYTICS-API-SETUP.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white font-medium rounded-lg transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  View Setup Guide
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

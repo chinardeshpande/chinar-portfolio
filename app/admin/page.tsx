@@ -108,7 +108,7 @@ export default function AdminDashboard() {
 
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               href="/admin/inbox"
               className="p-4 border border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all group"
@@ -123,6 +123,19 @@ export default function AdminDashboard() {
             </Link>
 
             <Link
+              href="/admin/analytics"
+              className="p-4 border border-gray-200 rounded-lg hover:border-orange-400 hover:bg-orange-50 transition-all group"
+            >
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3 group-hover:bg-orange-200 transition-colors">
+                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1">Analytics</h3>
+              <p className="text-sm text-gray-600">View site metrics</p>
+            </Link>
+
+            <Link
               href="/admin/templates"
               className="p-4 border border-gray-200 rounded-lg hover:border-green-400 hover:bg-green-50 transition-all group"
             >
@@ -132,7 +145,7 @@ export default function AdminDashboard() {
                 </svg>
               </div>
               <h3 className="font-semibold text-gray-900 mb-1">Templates</h3>
-              <p className="text-sm text-gray-600">Manage email templates</p>
+              <p className="text-sm text-gray-600">Email templates</p>
             </Link>
 
             <Link
@@ -146,7 +159,7 @@ export default function AdminDashboard() {
                 </svg>
               </div>
               <h3 className="font-semibold text-gray-900 mb-1">View Site</h3>
-              <p className="text-sm text-gray-600">Open public portfolio</p>
+              <p className="text-sm text-gray-600">Public portfolio</p>
             </Link>
           </div>
         </div>
