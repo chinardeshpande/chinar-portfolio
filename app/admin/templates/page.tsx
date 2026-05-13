@@ -25,7 +25,7 @@ export default function TemplatesPage() {
     }
   }
 
-  const getCategoryIcon = (category: string | null) => {
+  const getCategoryIcon = (category: string | null | undefined) => {
     const categoryLower = category?.toLowerCase() || ''
 
     if (categoryLower.includes('board')) {
