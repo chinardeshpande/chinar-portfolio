@@ -42,15 +42,28 @@ This guide will help you configure Google Analytics 4 (GA4) and Google Search Co
 
 ## Step 5: Grant Analytics Access
 
-1. Go to [Google Analytics](https://analytics.google.com/)
-2. Select your GA4 property
-3. Go to **Admin** (gear icon bottom left)
-4. Under **Property**, click **Property Access Management**
-5. Click **Add users** (+ icon)
-6. Add your service account email (from the JSON file: `client_email`)
-7. Set role to **Viewer**
-8. Uncheck "Notify new users by email"
-9. Click **Add**
+**IMPORTANT:** GA4 doesn't allow adding service accounts directly as users. Use this method instead:
+
+### Method: Link Google Cloud Project (Recommended)
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Select your project
+3. Copy the **Project Number** (shown on dashboard, e.g., `123456789012`)
+4. Go to [Google Analytics](https://analytics.google.com/)
+5. Select your GA4 property
+6. Go to **Admin** (gear icon bottom left)
+7. Under **Property**, click **Property Access Management**
+8. Click **+** (Add users)
+9. Click the **Google Cloud** tab at the top
+10. Click **Link Google Cloud Project**
+11. Enter your **Project Number**
+12. Click **Confirm**
+13. Grant **Viewer** role
+14. Click **Submit**
+
+This automatically grants access to all service accounts in your Google Cloud project.
+
+**Alternative:** If this doesn't work, see [ANALYTICS-OAUTH-SETUP.md](./ANALYTICS-OAUTH-SETUP.md) for OAuth authentication.
 
 ## Step 6: Grant Search Console Access
 
