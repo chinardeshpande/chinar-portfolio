@@ -15,26 +15,45 @@ export async function GET(request: NextRequest) {
     const startDate = searchParams.get('startDate') || getDateDaysAgo(30)
     const endDate = searchParams.get('endDate') || getDateDaysAgo(0)
 
-    // Check if Search Console credentials are configured
+    // Check if Search Console is configured
     const siteUrl = process.env.SEARCH_CONSOLE_SITE_URL
-    const credentials = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+    const serviceAccountCreds = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+    const clientId = process.env.GOOGLE_CLIENT_ID
+    const clientSecret = process.env.GOOGLE_CLIENT_SECRET
+    const refreshToken = process.env.GOOGLE_REFRESH_TOKEN
 
-    if (!siteUrl || !credentials) {
+    if (!siteUrl) {
       return NextResponse.json({
         error: 'Search Console not configured',
-        message: 'SEARCH_CONSOLE_SITE_URL and GOOGLE_APPLICATION_CREDENTIALS_JSON are required',
+        message: 'SEARCH_CONSOLE_SITE_URL is required',
         configured: false
       }, { status: 200 })
     }
 
-    // Initialize Google Auth
-    const auth = new google.auth.GoogleAuth({
-      credentials: JSON.parse(credentials),
-      scopes: ['https://www.googleapis.com/auth/webmasters.readonly']
-    })
+    // Initialize Search Console with either OAuth or Service Account
+    let authClient: any
 
-    const authClient = await auth.getClient()
-    const searchconsole = google.searchconsole({ version: 'v1', auth: authClient as any })
+    if (clientId && clientSecret && refreshToken) {
+      // OAuth authentication
+      const oauth2Client = new google.auth.OAuth2(clientId, clientSecret)
+      oauth2Client.setCredentials({ refresh_token: refreshToken })
+      authClient = oauth2Client
+    } else if (serviceAccountCreds) {
+      // Service account authentication
+      const auth = new google.auth.GoogleAuth({
+        credentials: JSON.parse(serviceAccountCreds),
+        scopes: ['https://www.googleapis.com/auth/webmasters.readonly']
+      })
+      authClient = await auth.getClient()
+    } else {
+      return NextResponse.json({
+        error: 'Search Console not configured',
+        message: 'Either OAuth credentials (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN) or GOOGLE_APPLICATION_CREDENTIALS_JSON is required',
+        configured: false
+      }, { status: 200 })
+    }
+
+    const searchconsole = google.searchconsole({ version: 'v1', auth: authClient })
 
     // Fetch search analytics data
     const response = await searchconsole.searchanalytics.query({

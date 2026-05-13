@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { BetaAnalyticsDataClient } from '@google-analytics/data'
+import { google } from 'googleapis'
 
 export async function GET(request: NextRequest) {
   const session = await getServerSession(authOptions)
@@ -15,22 +16,44 @@ export async function GET(request: NextRequest) {
     const startDate = searchParams.get('startDate') || '30daysAgo'
     const endDate = searchParams.get('endDate') || 'today'
 
-    // Check if GA4 credentials are configured
+    // Check if GA4 is configured
     const propertyId = process.env.GA4_PROPERTY_ID
-    const credentials = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+    const serviceAccountCreds = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+    const clientId = process.env.GOOGLE_CLIENT_ID
+    const clientSecret = process.env.GOOGLE_CLIENT_SECRET
+    const refreshToken = process.env.GOOGLE_REFRESH_TOKEN
 
-    if (!propertyId || !credentials) {
+    if (!propertyId) {
       return NextResponse.json({
         error: 'Analytics not configured',
-        message: 'GA4_PROPERTY_ID and GOOGLE_APPLICATION_CREDENTIALS_JSON are required',
+        message: 'GA4_PROPERTY_ID is required',
         configured: false
       }, { status: 200 })
     }
 
-    // Initialize GA4 client with credentials
-    const analyticsDataClient = new BetaAnalyticsDataClient({
-      credentials: JSON.parse(credentials)
-    })
+    // Initialize GA4 client with either OAuth or Service Account
+    let analyticsDataClient: BetaAnalyticsDataClient
+
+    if (clientId && clientSecret && refreshToken) {
+      // OAuth authentication
+      const oauth2Client = new google.auth.OAuth2(clientId, clientSecret)
+      oauth2Client.setCredentials({ refresh_token: refreshToken })
+
+      analyticsDataClient = new BetaAnalyticsDataClient({
+        auth: oauth2Client as any
+      })
+    } else if (serviceAccountCreds) {
+      // Service account authentication
+      analyticsDataClient = new BetaAnalyticsDataClient({
+        credentials: JSON.parse(serviceAccountCreds)
+      })
+    } else {
+      return NextResponse.json({
+        error: 'Analytics not configured',
+        message: 'Either OAuth credentials (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN) or GOOGLE_APPLICATION_CREDENTIALS_JSON is required',
+        configured: false
+      }, { status: 200 })
+    }
 
     // Fetch overview metrics
     const [overviewResponse] = await analyticsDataClient.runReport({
