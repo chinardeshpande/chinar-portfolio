@@ -11,6 +11,7 @@ export function Navigation() {
   const navItems = [
     { name: 'Dashboard', href: '/admin' },
     { name: 'Inbox', href: '/admin/inbox' },
+    { name: 'Analytics', href: '/admin/analytics' },
     { name: 'Templates', href: '/admin/templates' },
     { name: 'Settings', href: '/admin/settings' },
   ]
