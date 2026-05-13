@@ -1,0 +1,2457 @@
+
+> chinar-portfolio@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.33
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 3.9s (1494 modules)
+ GET / 200 in 4121ms
+ ✓ Compiled in 274ms (721 modules)
+ GET / 200 in 71ms
+ ✓ Compiled /api/web-vitals in 478ms (778 modules)
+ ✓ Compiled (803 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 960,
+  rating: 'good',
+  delta: 960,
+  id: 'v3-1776697731192-6357037115682'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 769.9000000059605,
+  rating: 'good',
+  delta: 769.9000000059605,
+  id: 'v3-1776697731190-8921114008758'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 769.9000000059605,
+  rating: 'good',
+  delta: 769.9000000059605,
+  id: 'v3-1776697731193-1804997301201'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 960,
+  rating: 'good',
+  delta: 960,
+  id: 'v3-1776697731190-8303460674989'
+}
+ POST /api/web-vitals 200 in 806ms
+ POST /api/web-vitals 200 in 806ms
+ POST /api/web-vitals 200 in 806ms
+ POST /api/web-vitals 200 in 807ms
+ GET /favicon.ico 200 in 818ms
+ ○ Compiling /case-studies ...
+ ✓ Compiled /case-studies in 876ms (1520 modules)
+Web Vitals: {
+  name: 'LCP',
+  value: 23028,
+  rating: 'poor',
+  delta: 23028,
+  id: 'v3-1776697731192-3688674977284'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 6.699999988079071,
+  rating: 'good',
+  delta: 6.699999988079071,
+  id: 'v3-1776697731190-2784335751875'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 6.699999988079071,
+  rating: 'good',
+  delta: 6.699999988079071,
+  id: 'v3-1776697731192-3268297105385'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 23028,
+  rating: 'poor',
+  delta: 23028,
+  id: 'v3-1776697731190-2270722864866'
+}
+ POST /api/web-vitals 200 in 907ms
+ POST /api/web-vitals 200 in 907ms
+ POST /api/web-vitals 200 in 906ms
+ POST /api/web-vitals 200 in 910ms
+ ✓ Compiled /api/case-studies in 104ms (813 modules)
+ GET /api/case-studies 200 in 137ms
+ GET /api/case-studies 200 in 6ms
+ ✓ Compiled /experience in 246ms (1530 modules)
+ ✓ Compiled /api/experience in 87ms (819 modules)
+ GET /api/experience 200 in 112ms
+ GET /api/experience 200 in 19ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.000003275627652840922,
+  rating: 'good',
+  delta: 0.000003275627652840922,
+  id: 'v3-1776697731190-6508003978048'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776697731190-6022546462161'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.000003275627652840922,
+  rating: 'good',
+  delta: 0.000003275627652840922,
+  id: 'v3-1776697731192-7812084086999'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776697731192-4509980124049'
+}
+ POST /api/web-vitals 200 in 29ms
+ POST /api/web-vitals 200 in 27ms
+ POST /api/web-vitals 200 in 26ms
+ POST /api/web-vitals 200 in 26ms
+ ✓ Compiled in 335ms (727 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 960,
+  rating: 'good',
+  delta: 960,
+  id: 'v3-1776698407071-8511268137471'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 6.699999988079071,
+  rating: 'good',
+  delta: 6.699999988079071,
+  id: 'v3-1776698407070-5822593833378'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 769.9000000059605,
+  rating: 'good',
+  delta: 769.9000000059605,
+  id: 'v3-1776698407071-6755344687506'
+}
+ POST /api/web-vitals 200 in 19ms
+ POST /api/web-vitals 200 in 19ms
+ POST /api/web-vitals 200 in 19ms
+ ✓ Compiled in 671ms (1469 modules)
+ ✓ Compiled /api/web-vitals in 148ms (784 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 769.9000000059605,
+  rating: 'good',
+  delta: 769.9000000059605,
+  id: 'v3-1776698473612-6426636734619'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 6.699999988079071,
+  rating: 'good',
+  delta: 6.699999988079071,
+  id: 'v3-1776698473612-8981039595738'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 960,
+  rating: 'good',
+  delta: 960,
+  id: 'v3-1776698473612-7926078445887'
+}
+ POST /api/web-vitals 200 in 204ms
+ POST /api/web-vitals 200 in 204ms
+ POST /api/web-vitals 200 in 204ms
+ ✓ Compiled in 950ms (1483 modules)
+ ○ Compiling /api/web-vitals ...
+ ✓ Compiled /api/web-vitals in 559ms (784 modules)
+Web Vitals: {
+  name: 'FID',
+  value: 6.699999988079071,
+  rating: 'good',
+  delta: 6.699999988079071,
+  id: 'v3-1776698603098-2161264241435'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 769.9000000059605,
+  rating: 'good',
+  delta: 769.9000000059605,
+  id: 'v3-1776698603099-8683256526845'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 960,
+  rating: 'good',
+  delta: 960,
+  id: 'v3-1776698603098-3138873145832'
+}
+ POST /api/web-vitals 200 in 1037ms
+ POST /api/web-vitals 200 in 997ms
+ POST /api/web-vitals 200 in 1098ms
+ ⨯ ./app/experience/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/chinar.deshpande06/CD-THG/2025/THG-AI/MyCodingJourney/current-projects/chinar-portfolio/app/experience/page.tsx[0m:18:1]
+ [2m18[0m |   if (!content) return null;
+ [2m19[0m | 
+ [2m20[0m |   return (
+ [2m21[0m |     <div className="min-h-screen">
+    : [31;1m     ^^^[0m
+ [2m22[0m |       <Navigation />
+ [2m23[0m | 
+ [2m24[0m |       <main className="pt-20">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/experience/page.tsx
+ ○ Compiling /_error ...
+ ⨯ ./app/experience/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/chinar.deshpande06/CD-THG/2025/THG-AI/MyCodingJourney/current-projects/chinar-portfolio/app/experience/page.tsx[0m:18:1]
+ [2m18[0m |   if (!content) return null;
+ [2m19[0m | 
+ [2m20[0m |   return (
+ [2m21[0m |     <div className="min-h-screen">
+    : [31;1m     ^^^[0m
+ [2m22[0m |       <Navigation />
+ [2m23[0m | 
+ [2m24[0m |       <main className="pt-20">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/experience/page.tsx
+ GET /experience 500 in 80ms
+ POST /api/web-vitals 500 in 85ms
+ POST /api/web-vitals 500 in 85ms
+ POST /api/web-vitals 500 in 85ms
+ POST /api/web-vitals 500 in 85ms
+ POST /api/web-vitals 500 in 85ms
+ POST /api/web-vitals 500 in 91ms
+ POST /api/web-vitals 500 in 35ms
+ POST /api/web-vitals 500 in 34ms
+ POST /api/web-vitals 500 in 31ms
+ ✓ Compiled /_not-found in 858ms (1726 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /experience 200 in 1158ms
+ GET /_next/static/webpack/1683c3149f6f2f09.webpack.hot-update.json 404 in 2070ms
+ GET /experience 200 in 51ms
+ ✓ Compiled /favicon.ico in 148ms (829 modules)
+ ✓ Compiled (858 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776698629009-2585966158819'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776698629007-9185669845250'
+}
+ POST /api/web-vitals 200 in 332ms
+ POST /api/web-vitals 200 in 332ms
+ GET /api/experience 200 in 353ms
+ GET /favicon.ico 200 in 360ms
+ GET /api/experience 200 in 6ms
+ GET /experience 200 in 84ms
+ GET /experience 200 in 91ms
+ GET /api/experience 200 in 15ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776698754860-9392609112989'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776698754862-2849379865907'
+}
+ POST /api/web-vitals 200 in 30ms
+ POST /api/web-vitals 200 in 30ms
+ GET /api/experience 200 in 21ms
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698754860-1945225928723'
+}
+ POST /api/web-vitals 200 in 10ms
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698754862-7515867828905'
+}
+ POST /api/web-vitals 200 in 15ms
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698754860-2692640846471'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698754862-8468850197625'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776698754862-5371502655623'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776698754860-2660401357198'
+}
+ POST /api/web-vitals 200 in 15ms
+ POST /api/web-vitals 200 in 14ms
+ POST /api/web-vitals 200 in 13ms
+ POST /api/web-vitals 200 in 13ms
+ ○ Compiling /experience/[slug] ...
+ ✓ Compiled /experience/[slug] in 544ms (1731 modules)
+ GET /api/experience 200 in 31ms
+ GET /api/experience 200 in 18ms
+ GET /api/experience 200 in 14ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 10ms
+ GET /api/experience 200 in 14ms
+ GET /api/experience 200 in 9ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776698754860-6460722311610'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776698754860-6248696317370'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776698754862-7406267777013'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776698754862-5989252401894'
+}
+ POST /api/web-vitals 200 in 17ms
+ POST /api/web-vitals 200 in 16ms
+ POST /api/web-vitals 200 in 16ms
+ POST /api/web-vitals 200 in 17ms
+ ✓ Compiled in 794ms (1713 modules)
+ ✓ Compiled /api/web-vitals in 100ms (827 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776698921399-2913571350880'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776698921396-1050756971160'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776698921396-6262593582717'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698921396-3687640733584'
+}
+ POST /api/web-vitals 200 in 173ms
+ POST /api/web-vitals 200 in 170ms
+ POST /api/web-vitals 200 in 170ms
+ POST /api/web-vitals 200 in 175ms
+ ✓ Compiled in 355ms (1741 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776698935094-1730218742655'
+}
+ POST /api/web-vitals 200 in 31ms
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698935116-4796478001685'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776698935116-3974968373291'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776698935117-3052005056545'
+}
+ POST /api/web-vitals 200 in 39ms
+ POST /api/web-vitals 200 in 39ms
+ POST /api/web-vitals 200 in 39ms
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698921396-6174549672062'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776698935116-5495212631679'
+}
+ POST /api/web-vitals 200 in 10ms
+ POST /api/web-vitals 200 in 9ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.01080581033736173,
+  rating: 'good',
+  delta: 0.01080581033736173,
+  id: 'v3-1776698754860-6460722311610'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.01080581033736173,
+  rating: 'good',
+  delta: 0.01080581033736173,
+  id: 'v3-1776698754862-7406267777013'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.01080581033736173,
+  rating: 'good',
+  delta: 0.01080581033736173,
+  id: 'v3-1776698921396-3710776778199'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776698921396-8706222993274'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.01080581033736173,
+  rating: 'good',
+  delta: 0.01080581033736173,
+  id: 'v3-1776698935116-4741653860757'
+}
+ POST /api/web-vitals 200 in 46ms
+ POST /api/web-vitals 200 in 40ms
+ POST /api/web-vitals 200 in 38ms
+ POST /api/web-vitals 200 in 37ms
+ POST /api/web-vitals 200 in 36ms
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776698935116-8992384497494'
+}
+ POST /api/web-vitals 200 in 60ms
+ ✓ Compiled in 638ms (1713 modules)
+ ✓ Compiled /api/web-vitals in 82ms (827 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776699116672-3746126885529'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776699116669-2681702826479'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776699116669-5278900027041'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776699116669-3632222410726'
+}
+ POST /api/web-vitals 200 in 118ms
+ POST /api/web-vitals 200 in 118ms
+ POST /api/web-vitals 200 in 118ms
+ POST /api/web-vitals 200 in 118ms
+ ✓ Compiled in 299ms (1741 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776699135103-4179712231734'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776699135104-7086755542197'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776699135103-9187096317031'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776699135104-5013598684600'
+}
+ POST /api/web-vitals 200 in 17ms
+ POST /api/web-vitals 200 in 17ms
+ POST /api/web-vitals 200 in 17ms
+ POST /api/web-vitals 200 in 16ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.13868492531963691,
+  id: 'v3-1776698754860-6460722311610'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.13868492531963691,
+  id: 'v3-1776698754862-7406267777013'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.13868492531963691,
+  id: 'v3-1776698921396-3710776778199'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.13868492531963691,
+  id: 'v3-1776698935116-4741653860757'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.14949073565699864,
+  id: 'v3-1776699116668-7109530465210'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776699116669-6284837741979'
+}
+ POST /api/web-vitals 200 in 44ms
+ POST /api/web-vitals 200 in 42ms
+ POST /api/web-vitals 200 in 41ms
+ POST /api/web-vitals 200 in 41ms
+ POST /api/web-vitals 200 in 40ms
+ POST /api/web-vitals 200 in 34ms
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776699116669-9636477063009'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.14949073565699864,
+  id: 'v3-1776699135103-4819725537701'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776699135103-1569252109295'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776699135103-1486082899591'
+}
+ POST /api/web-vitals 200 in 13ms
+ POST /api/web-vitals 200 in 13ms
+ POST /api/web-vitals 200 in 14ms
+ POST /api/web-vitals 200 in 13ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1361ms (1702 modules)
+ GET /images/companies/stellar.png 404 in 759ms
+ ✓ Compiled /api/web-vitals in 146ms (828 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776699351035-7098624098550'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776699351036-1393489442176'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776699351036-2184195412002'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776699351036-7201673646633'
+}
+ POST /api/web-vitals 200 in 219ms
+ POST /api/web-vitals 200 in 209ms
+ POST /api/web-vitals 200 in 209ms
+ POST /api/web-vitals 200 in 220ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.14949073565699864,
+  id: 'v3-1776699351036-7698180110763'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776699351036-4008824862622'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776699351036-7193398857695'
+}
+ POST /api/web-vitals 200 in 68ms
+ POST /api/web-vitals 200 in 61ms
+ POST /api/web-vitals 200 in 60ms
+ ✓ Compiled /api/experience in 284ms (829 modules)
+ GET /api/experience 200 in 330ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 15ms
+ GET /api/experience 200 in 6ms
+ GET /api/experience 200 in 16ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 10ms
+ GET /api/experience 200 in 11ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 10ms
+ GET /api/experience 200 in 10ms
+ GET /api/experience 200 in 14ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 6ms
+ GET /api/experience 200 in 12ms
+ GET /api/experience 200 in 9ms
+ ✓ Compiled /_not-found in 934ms (1702 modules)
+ GET /images/companies/ampersand.png 404 in 458ms
+ GET /images/companies/stellar.png 404 in 458ms
+ GET /images/companies/thg.png 404 in 463ms
+ GET /images/companies/millennium-sports.png 404 in 38ms
+ GET /images/companies/citi-usa.png 404 in 28ms
+ GET /images/companies/future-group.png 404 in 33ms
+ GET /images/companies/hul.png 404 in 31ms
+ GET /images/companies/mercer.png 404 in 34ms
+ ✓ Compiled /api/web-vitals in 100ms (828 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776700423149-9306950058704'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776700423149-2369568465661'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776700423150-8300540605244'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776700423103-6274226028850'
+}
+ POST /api/web-vitals 200 in 122ms
+ POST /api/web-vitals 200 in 121ms
+ POST /api/web-vitals 200 in 120ms
+ POST /api/web-vitals 200 in 155ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.14949073565699864,
+  rating: 'needs-improvement',
+  delta: 0.14949073565699864,
+  id: 'v3-1776700423149-8720730964431'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776700423149-5225205193251'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 8,
+  rating: 'good',
+  delta: 8,
+  id: 'v3-1776700423149-1101415738742'
+}
+ POST /api/web-vitals 200 in 42ms
+ POST /api/web-vitals 200 in 39ms
+ POST /api/web-vitals 200 in 39ms
+ ✓ Compiled in 788ms (1713 modules)
+ ✓ Compiled /api/web-vitals in 131ms (827 modules)
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776700720113-7558704684745'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776700720114-8341517558285'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776700720161-1027536438810'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776700720113-1821840121200'
+}
+ POST /api/web-vitals 200 in 231ms
+ POST /api/web-vitals 200 in 231ms
+ POST /api/web-vitals 200 in 179ms
+ POST /api/web-vitals 200 in 231ms
+ GET /experience 200 in 179ms
+ ✓ Compiled /api/web-vitals in 258ms (829 modules)
+ ✓ Compiled (831 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 257.09999999403954,
+  rating: 'good',
+  delta: 257.09999999403954,
+  id: 'v3-1776700826502-3687291214735'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 257.09999999403954,
+  rating: 'good',
+  delta: 257.09999999403954,
+  id: 'v3-1776700826504-2936787928125'
+}
+ POST /api/web-vitals 200 in 389ms
+ POST /api/web-vitals 200 in 389ms
+ GET /api/experience 200 in 409ms
+ GET /api/experience 200 in 7ms
+Web Vitals: {
+  name: 'FCP',
+  value: 1076,
+  rating: 'good',
+  delta: 1076,
+  id: 'v3-1776700826502-1944922763271'
+}
+ POST /api/web-vitals 200 in 11ms
+Web Vitals: {
+  name: 'FCP',
+  value: 1076,
+  rating: 'good',
+  delta: 1076,
+  id: 'v3-1776700826504-2670571453713'
+}
+ POST /api/web-vitals 200 in 15ms
+Web Vitals: {
+  name: 'LCP',
+  value: 1076,
+  rating: 'good',
+  delta: 1076,
+  id: 'v3-1776700826502-2732804169721'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1076,
+  rating: 'good',
+  delta: 1076,
+  id: 'v3-1776700826504-5144165652623'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 1.0999999940395355,
+  rating: 'good',
+  delta: 1.0999999940395355,
+  id: 'v3-1776700826502-4552732973783'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 1.0999999940395355,
+  rating: 'good',
+  delta: 1.0999999940395355,
+  id: 'v3-1776700826504-7572406961060'
+}
+ POST /api/web-vitals 200 in 28ms
+ POST /api/web-vitals 200 in 27ms
+ POST /api/web-vitals 200 in 17ms
+ POST /api/web-vitals 200 in 17ms
+ GET /api/experience 200 in 130ms
+ GET /api/experience 200 in 14ms
+ GET /api/experience 200 in 30ms
+ GET /api/experience 200 in 40ms
+ GET /api/experience 200 in 11ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 15ms
+ GET /api/experience 200 in 11ms
+ GET /api/experience 200 in 14ms
+ GET /api/experience 200 in 20ms
+ GET /api/experience 200 in 13ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 10ms
+ GET /api/experience 200 in 32ms
+ GET /api/experience 200 in 11ms
+ GET /api/experience 200 in 8ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776700826502-5769433566672'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776700826502-6714929260311'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776700826504-4288891082669'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776700826504-2435626114066'
+}
+ POST /api/web-vitals 200 in 137ms
+ POST /api/web-vitals 200 in 132ms
+ POST /api/web-vitals 200 in 132ms
+ POST /api/web-vitals 200 in 130ms
+ GET /api/experience 200 in 17ms
+ GET /api/experience 200 in 13ms
+ GET /api/experience 200 in 16ms
+ GET /api/experience 200 in 14ms
+ GET /api/experience 200 in 17ms
+ GET /api/experience 200 in 43ms
+ GET /api/experience 200 in 145ms
+ GET /api/experience 200 in 146ms
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776698629007-2685279797070'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776698629009-2916766008012'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776698921399-7724144341020'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776698935094-5135965492266'
+}
+ POST /api/web-vitals 200 in 42ms
+ POST /api/web-vitals 200 in 34ms
+ POST /api/web-vitals 200 in 32ms
+ POST /api/web-vitals 200 in 30ms
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776699116672-9076015301637'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776699135104-9114668940018'
+}
+ POST /api/web-vitals 200 in 44ms
+ POST /api/web-vitals 200 in 41ms
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776699351035-3740121527011'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776700423103-3145622706841'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 16,
+  rating: 'good',
+  delta: 16,
+  id: 'v3-1776700720161-4628703404490'
+}
+ POST /api/web-vitals 200 in 20ms
+ POST /api/web-vitals 200 in 20ms
+ POST /api/web-vitals 200 in 20ms
+ GET /api/experience 200 in 190ms
+ GET /api/experience 200 in 189ms
+ GET /api/experience 200 in 17ms
+ GET /api/experience 200 in 34ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 22ms
+ GET /api/experience 200 in 107ms
+ GET /api/experience 200 in 24ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 15ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 7ms
+ GET /experience/thg-cto-global-logistics-finance 200 in 299ms
+ GET /api/experience 200 in 74ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 689ms (860 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 388,
+  rating: 'good',
+  delta: 388,
+  id: 'v3-1776704698894-9081614322750'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 388,
+  rating: 'good',
+  delta: 388,
+  id: 'v3-1776704698897-4587723396678'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 316.2000000178814,
+  rating: 'good',
+  delta: 316.2000000178814,
+  id: 'v3-1776704698895-1091045367971'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 316.2000000178814,
+  rating: 'good',
+  delta: 316.2000000178814,
+  id: 'v3-1776704698897-6929571422883'
+}
+ POST /api/web-vitals 200 in 915ms
+ POST /api/web-vitals 200 in 914ms
+ POST /api/web-vitals 200 in 912ms
+ POST /api/web-vitals 200 in 912ms
+ GET /api/experience 200 in 840ms
+ GET /favicon.ico 200 in 945ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776704698894-3687874332426'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1348,
+  rating: 'good',
+  delta: 1348,
+  id: 'v3-1776704698894-6207863636276'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776704698897-8754957468863'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1348,
+  rating: 'good',
+  delta: 1348,
+  id: 'v3-1776704698897-4676460643667'
+}
+ POST /api/web-vitals 200 in 53ms
+ POST /api/web-vitals 200 in 49ms
+ POST /api/web-vitals 200 in 49ms
+ POST /api/web-vitals 200 in 48ms
+ ✓ Compiled in 976ms (1713 modules)
+ ✓ Compiled /api/web-vitals in 155ms (827 modules)
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776704880815-2583046489927'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776704880817-4105665131067'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 388,
+  rating: 'good',
+  delta: 388,
+  id: 'v3-1776704880859-6539883482386'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 316.2000000178814,
+  rating: 'good',
+  delta: 316.2000000178814,
+  id: 'v3-1776704880860-3721950768871'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 2812628,
+  rating: 'poor',
+  delta: 2812628,
+  id: 'v3-1776704880889-7563424615710'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776704880815-8326039520034'
+}
+ POST /api/web-vitals 200 in 259ms
+ POST /api/web-vitals 200 in 257ms
+ POST /api/web-vitals 200 in 216ms
+ POST /api/web-vitals 200 in 215ms
+ POST /api/web-vitals 200 in 187ms
+ POST /api/web-vitals 200 in 261ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776704880889-3465352357296'
+}
+ POST /api/web-vitals 200 in 10ms
+Web Vitals: {
+  name: 'LCP',
+  value: 1348,
+  rating: 'good',
+  delta: 1348,
+  id: 'v3-1776704880859-4770404826000'
+}
+ POST /api/web-vitals 200 in 22ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.046081494149603434,
+  rating: 'good',
+  delta: 0.046081494149603434,
+  id: 'v3-1776704698894-3687874332426'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776704698894-3963217363702'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.046081494149603434,
+  rating: 'good',
+  delta: 0.046081494149603434,
+  id: 'v3-1776704698897-8754957468863'
+}
+ POST /api/web-vitals 200 in 47ms
+ POST /api/web-vitals 200 in 30ms
+ POST /api/web-vitals 200 in 26ms
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776704698897-4415085111801'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.046081494149603434,
+  rating: 'good',
+  delta: 0.046081494149603434,
+  id: 'v3-1776704880859-1795623375088'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776704880859-3834676070273'
+}
+ POST /api/web-vitals 200 in 32ms
+ POST /api/web-vitals 200 in 30ms
+ POST /api/web-vitals 200 in 28ms
+ GET /experience/thg-cto-global-logistics-finance 200 in 219ms
+ ✓ Compiled /favicon.ico in 273ms (829 modules)
+ ✓ Compiled (860 modules)
+ GET /favicon.ico 200 in 455ms
+Web Vitals: {
+  name: 'FCP',
+  value: 336,
+  rating: 'good',
+  delta: 336,
+  id: 'v3-1776705222680-2057626373552'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 336,
+  rating: 'good',
+  delta: 336,
+  id: 'v3-1776705222682-6529549402262'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 237.39999997615814,
+  rating: 'good',
+  delta: 237.39999997615814,
+  id: 'v3-1776705222680-2584642229650'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 237.39999997615814,
+  rating: 'good',
+  delta: 237.39999997615814,
+  id: 'v3-1776705222682-9713249748751'
+}
+ POST /api/web-vitals 200 in 469ms
+ POST /api/web-vitals 200 in 468ms
+ POST /api/web-vitals 200 in 465ms
+ POST /api/web-vitals 200 in 465ms
+ GET /api/experience 200 in 488ms
+ GET /api/experience 200 in 7ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776705222680-4985311737266'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1176,
+  rating: 'good',
+  delta: 1176,
+  id: 'v3-1776705222680-7546981721195'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776705222682-8593486929802'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 1176,
+  rating: 'good',
+  delta: 1176,
+  id: 'v3-1776705222682-9027787412454'
+}
+ POST /api/web-vitals 200 in 51ms
+ POST /api/web-vitals 200 in 49ms
+ POST /api/web-vitals 200 in 49ms
+ POST /api/web-vitals 200 in 49ms
+ GET /experience/thg-cto-global-logistics-finance 200 in 129ms
+ GET /api/experience 200 in 15ms
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776705232380-5346452510721'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776705232382-2234294646774'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776705232381-5575681167336'
+}
+ POST /api/web-vitals 200 in 21ms
+ POST /api/web-vitals 200 in 21ms
+ POST /api/web-vitals 200 in 15ms
+ GET /favicon.ico 200 in 23ms
+ GET /api/experience 200 in 19ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776705232382-9234657347784'
+}
+ POST /api/web-vitals 200 in 20ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776705232380-8758331683995'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776705232380-1907478839704'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776705232382-5837821548369'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776705232382-2235732522257'
+}
+ POST /api/web-vitals 200 in 61ms
+ POST /api/web-vitals 200 in 55ms
+ POST /api/web-vitals 200 in 54ms
+ POST /api/web-vitals 200 in 53ms
+ ✓ Compiled in 1276ms (1713 modules)
+ ✓ Compiled /api/web-vitals in 188ms (827 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776705493589-7913030968172'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776705493607-2193428197981'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776705493607-6965962606485'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776705493607-5134981753603'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776705493665-8694384597596'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 2812628,
+  rating: 'poor',
+  delta: 2812628,
+  id: 'v3-1776705493588-3786229993378'
+}
+ POST /api/web-vitals 200 in 262ms
+ POST /api/web-vitals 200 in 262ms
+ POST /api/web-vitals 200 in 262ms
+ POST /api/web-vitals 200 in 261ms
+ POST /api/web-vitals 200 in 156ms
+ POST /api/web-vitals 200 in 263ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776705493665-8255776492092'
+}
+ POST /api/web-vitals 200 in 8ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0,
+  rating: 'good',
+  delta: 0,
+  id: 'v3-1776705493664-6404523313322'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776705493665-1917840908611'
+}
+ POST /api/web-vitals 200 in 50ms
+ POST /api/web-vitals 200 in 47ms
+ ✓ Compiled in 966ms (1713 modules)
+ ✓ Compiled /api/web-vitals in 115ms (827 modules)
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776705729500-8181724858331'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776705729500-6937391234554'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 2812628,
+  rating: 'poor',
+  delta: 2812628,
+  id: 'v3-1776705729525-9326631098737'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776705729527-3839895092380'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776705729548-2839877534962'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776705729500-1096582871418'
+}
+ POST /api/web-vitals 200 in 168ms
+ POST /api/web-vitals 200 in 168ms
+ POST /api/web-vitals 200 in 168ms
+ POST /api/web-vitals 200 in 168ms
+ POST /api/web-vitals 200 in 142ms
+ POST /api/web-vitals 200 in 168ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776705729548-8547523452520'
+}
+ POST /api/web-vitals 200 in 5ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.12020671482607126,
+  rating: 'needs-improvement',
+  delta: 0.12020671482607126,
+  id: 'v3-1776705232380-8758331683995'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.12020671482607126,
+  rating: 'needs-improvement',
+  delta: 0.12020671482607126,
+  id: 'v3-1776705232382-5837821548369'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.12020671482607126,
+  rating: 'needs-improvement',
+  delta: 0.12020671482607126,
+  id: 'v3-1776705493664-6404523313322'
+}
+Web Vitals: {
+  name: 'CLS',
+  value: 0.12020671482607126,
+  rating: 'needs-improvement',
+  delta: 0.12020671482607126,
+  id: 'v3-1776705729548-6822158232228'
+}
+ POST /api/web-vitals 200 in 54ms
+ POST /api/web-vitals 200 in 50ms
+ POST /api/web-vitals 200 in 49ms
+ POST /api/web-vitals 200 in 49ms
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776705729548-5416286236416'
+}
+ POST /api/web-vitals 200 in 52ms
+ ✓ Compiled in 997ms (1713 modules)
+ ✓ Compiled /api/web-vitals in 147ms (827 modules)
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776705871692-8444280894896'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776705871692-1396014187258'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776705871731-3059356210555'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776705871731-7285386753854'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 2812628,
+  rating: 'poor',
+  delta: 2812628,
+  id: 'v3-1776705871774-1367049880838'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776705871692-3604784244700'
+}
+ POST /api/web-vitals 200 in 211ms
+ POST /api/web-vitals 200 in 211ms
+ POST /api/web-vitals 200 in 179ms
+ POST /api/web-vitals 200 in 179ms
+ POST /api/web-vitals 200 in 154ms
+ POST /api/web-vitals 200 in 212ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776705871774-9323124487991'
+}
+ POST /api/web-vitals 200 in 6ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.12020671482607126,
+  rating: 'needs-improvement',
+  delta: 0.12020671482607126,
+  id: 'v3-1776705871731-9521041087680'
+}
+ POST /api/web-vitals 200 in 31ms
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776705871731-8212802034657'
+}
+ POST /api/web-vitals 200 in 56ms
+ ✓ Compiled /api/experience in 871ms (1713 modules)
+ ✓ Compiled in 0ms (829 modules)
+ GET /api/experience 200 in 620ms
+ GET /api/experience 200 in 402ms
+ ✓ Compiled /api/web-vitals in 179ms (831 modules)
+ GET /api/experience 200 in 466ms
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776705983416-3670876941607'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 2812628,
+  rating: 'poor',
+  delta: 2812628,
+  id: 'v3-1776705983416-6621998763376'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776705983416-3855192899494'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776705983417-9878325795465'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776705983416-2308753645092'
+}
+ POST /api/web-vitals 200 in 422ms
+ POST /api/web-vitals 200 in 416ms
+ POST /api/web-vitals 200 in 416ms
+ POST /api/web-vitals 200 in 416ms
+ POST /api/web-vitals 200 in 328ms
+ GET /api/experience 200 in 22ms
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776705983584-3912680460650'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776705983584-7551182848512'
+}
+ POST /api/web-vitals 200 in 15ms
+ POST /api/web-vitals 200 in 14ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.12020671482607126,
+  rating: 'needs-improvement',
+  delta: 0.12020671482607126,
+  id: 'v3-1776705983584-9725901305661'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776705983584-6785484975485'
+}
+ POST /api/web-vitals 200 in 56ms
+ POST /api/web-vitals 200 in 44ms
+ ✓ Compiled in 858ms (1745 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776706043364-8732669298508'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776706043364-8589569332834'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776706043365-5568346214775'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776706043387-2138148142030'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776706043387-3215254975764'
+}
+ POST /api/web-vitals 200 in 107ms
+ POST /api/web-vitals 200 in 106ms
+ POST /api/web-vitals 200 in 105ms
+ POST /api/web-vitals 200 in 105ms
+ POST /api/web-vitals 200 in 105ms
+Web Vitals: {
+  name: 'FCP',
+  value: 2812628,
+  rating: 'poor',
+  delta: 2812628,
+  id: 'v3-1776706043550-8183292301267'
+}
+ POST /api/web-vitals 200 in 67ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776706043550-7002973066047'
+}
+ POST /api/web-vitals 200 in 24ms
+Web Vitals: {
+  name: 'CLS',
+  value: 0.12020671482607126,
+  rating: 'needs-improvement',
+  delta: 0.12020671482607126,
+  id: 'v3-1776706043387-9553615295390'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776706043387-5827241029256'
+}
+ POST /api/web-vitals 200 in 25ms
+ POST /api/web-vitals 200 in 22ms
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776705232380-9697591424066'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776705232382-3484811295812'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776705493665-7421771737688'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776705729548-1912883778492'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776705871731-9280643744223'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776705983584-6780917424549'
+}
+ POST /api/web-vitals 200 in 47ms
+ POST /api/web-vitals 200 in 44ms
+ POST /api/web-vitals 200 in 41ms
+ POST /api/web-vitals 200 in 37ms
+ POST /api/web-vitals 200 in 34ms
+ POST /api/web-vitals 200 in 31ms
+Web Vitals: {
+  name: 'INP',
+  value: 40,
+  rating: 'good',
+  delta: 40,
+  id: 'v3-1776706043387-6293574497585'
+}
+ POST /api/web-vitals 200 in 10ms
+ GET /api/experience 200 in 25ms
+ GET /api/experience 200 in 10ms
+ GET /api/experience 200 in 10ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 6ms
+ GET /api/experience 200 in 7ms
+ ✓ Compiled in 667ms (1745 modules)
+ ✓ Compiled in 1ms (831 modules)
+ ✓ Compiled in 0ms (831 modules)
+ ✓ Compiled in 0ms (831 modules)
+ ✓ Compiled in 0ms (831 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 2812628,
+  rating: 'poor',
+  delta: 2812628,
+  id: 'v3-1776706263080-6665607599445'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 361.59999999403954,
+  rating: 'good',
+  delta: 361.59999999403954,
+  id: 'v3-1776706263080-2126355627187'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 1272,
+  rating: 'good',
+  delta: 1272,
+  id: 'v3-1776706263214-8288336132344'
+}
+Web Vitals: {
+  name: 'FID',
+  value: 5.300000011920929,
+  rating: 'good',
+  delta: 5.300000011920929,
+  id: 'v3-1776706263214-4672928723746'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 797.7000000178814,
+  rating: 'good',
+  delta: 797.7000000178814,
+  id: 'v3-1776706263215-1185200471356'
+}
+ POST /api/web-vitals 200 in 211ms
+ POST /api/web-vitals 200 in 210ms
+ POST /api/web-vitals 200 in 82ms
+ POST /api/web-vitals 200 in 81ms
+ POST /api/web-vitals 200 in 81ms
+ GET /api/experience 200 in 14ms
+Web Vitals: {
+  name: 'FCP',
+  value: 232,
+  rating: 'good',
+  delta: 232,
+  id: 'v3-1776706263332-9894371844803'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 141.5,
+  rating: 'good',
+  delta: 141.5,
+  id: 'v3-1776706263333-1382313073029'
+}
+ POST /api/web-vitals 200 in 21ms
+ POST /api/web-vitals 200 in 21ms
+ GET /api/experience 200 in 12ms
+Web Vitals: {
+  name: 'LCP',
+  value: 516,
+  rating: 'good',
+  delta: 516,
+  id: 'v3-1776706263332-7645512828806'
+}
+ POST /api/web-vitals 200 in 18ms
+ ⨯ ./app/experience/[slug]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/chinar.deshpande06/CD-THG/2025/THG-AI/MyCodingJourney/current-projects/chinar-portfolio/app/experience/[slug]/page.tsx[0m:67:1]
+ [2m67[0m |   }
+ [2m68[0m | 
+ [2m69[0m |   return (
+ [2m70[0m |     <div className="min-h-screen bg-gray-50">
+    : [31;1m     ^^^[0m
+ [2m71[0m |       <Navigation />
+ [2m72[0m | 
+ [2m73[0m |       <main className="pt-20">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/experience/[slug]/page.tsx
+ ⨯ ./app/experience/[slug]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/chinar.deshpande06/CD-THG/2025/THG-AI/MyCodingJourney/current-projects/chinar-portfolio/app/experience/[slug]/page.tsx[0m:67:1]
+ [2m67[0m |   }
+ [2m68[0m | 
+ [2m69[0m |   return (
+ [2m70[0m |     <div className="min-h-screen bg-gray-50">
+    : [31;1m     ^^^[0m
+ [2m71[0m |       <Navigation />
+ [2m72[0m | 
+ [2m73[0m |       <main className="pt-20">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/experience/[slug]/page.tsx
+ GET /experience 500 in 42ms
+ GET /experience/thg-cto-global-logistics-finance 500 in 45ms
+ POST /api/web-vitals 500 in 43ms
+ POST /api/web-vitals 500 in 44ms
+ POST /api/web-vitals 500 in 43ms
+ POST /api/web-vitals 500 in 43ms
+ POST /api/web-vitals 500 in 43ms
+ GET /experience/thg-cto-global-logistics-finance 500 in 33ms
+ POST /api/web-vitals 500 in 77ms
+ POST /api/web-vitals 500 in 81ms
+ POST /api/web-vitals 500 in 82ms
+ POST /api/web-vitals 500 in 52ms
+ POST /api/web-vitals 500 in 39ms
+ ○ Compiling /_error ...
+ POST /api/web-vitals 500 in 35ms
+ POST /api/web-vitals 500 in 39ms
+ POST /api/web-vitals 500 in 35ms
+ POST /api/web-vitals 500 in 35ms
+ POST /api/web-vitals 500 in 45ms
+ POST /api/web-vitals 500 in 44ms
+ POST /api/web-vitals 500 in 42ms
+ POST /api/web-vitals 500 in 28ms
+ POST /api/web-vitals 500 in 28ms
+ POST /api/web-vitals 500 in 29ms
+ POST /api/web-vitals 500 in 30ms
+ POST /api/web-vitals 500 in 30ms
+ POST /api/web-vitals 500 in 28ms
+ POST /api/web-vitals 500 in 33ms
+ POST /api/web-vitals 500 in 32ms
+ POST /api/web-vitals 500 in 38ms
+ POST /api/web-vitals 500 in 38ms
+ POST /api/web-vitals 500 in 38ms
+ POST /api/web-vitals 500 in 38ms
+ POST /api/web-vitals 500 in 30ms
+ POST /api/web-vitals 500 in 37ms
+ POST /api/web-vitals 500 in 38ms
+ POST /api/web-vitals 500 in 49ms
+ POST /api/web-vitals 500 in 42ms
+ POST /api/web-vitals 500 in 136ms
+ POST /api/web-vitals 500 in 128ms
+ POST /api/web-vitals 500 in 134ms
+ POST /api/web-vitals 500 in 159ms
+ POST /api/web-vitals 500 in 169ms
+ POST /api/web-vitals 500 in 156ms
+ ✓ Compiled /_not-found in 847ms (1736 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /experience/thg-cto-global-logistics-finance 200 in 266ms
+ GET /experience 200 in 312ms
+ GET /_next/static/webpack/1683c3149f6f2f09.webpack.hot-update.json 404 in 1160ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /experience/thg-cto-global-logistics-finance 200 in 56ms
+ GET /_next/static/webpack/1683c3149f6f2f09.webpack.hot-update.json 404 in 74ms
+ GET /experience/thg-cto-global-logistics-finance 200 in 329ms
+ GET /experience/thg-cto-global-logistics-finance 200 in 669ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706291624-3135577815054'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706291626-7188657117427'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706291639-1400165033782'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706291642-9676265807909'
+}
+ POST /api/web-vitals 200 in 47ms
+ POST /api/web-vitals 200 in 40ms
+ POST /api/web-vitals 200 in 38ms
+ POST /api/web-vitals 200 in 37ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 502ms (862 modules)
+ GET /api/experience 200 in 831ms
+ GET /favicon.ico 200 in 849ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706291765-1517785921770'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706291767-9829517212747'
+}
+ POST /api/web-vitals 200 in 665ms
+ POST /api/web-vitals 200 in 664ms
+ GET /api/experience 200 in 51ms
+ GET /favicon.ico 200 in 36ms
+ GET /api/experience 200 in 38ms
+ GET /favicon.ico 200 in 44ms
+ GET /api/experience 200 in 55ms
+ GET /api/experience 200 in 12ms
+ GET /api/experience 200 in 10ms
+ ✓ Compiled in 663ms (1779 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 6176,
+  rating: 'poor',
+  delta: 6176,
+  id: 'v3-1776706300553-9946679959052'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706300553-9212429594617'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706300591-5558647139915'
+}
+ POST /api/web-vitals 200 in 95ms
+ POST /api/web-vitals 200 in 94ms
+ POST /api/web-vitals 200 in 77ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706300745-5984764242782'
+}
+ POST /api/web-vitals 200 in 17ms
+Web Vitals: {
+  name: 'LCP',
+  value: 6500,
+  rating: 'poor',
+  delta: 6500,
+  id: 'v3-1776706300553-8419858031512'
+}
+ POST /api/web-vitals 200 in 48ms
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706291639-5686244615620'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706291641-7618252603195'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706300553-9448350387589'
+}
+ POST /api/web-vitals 200 in 342ms
+ POST /api/web-vitals 200 in 311ms
+ POST /api/web-vitals 200 in 309ms
+ ✓ Compiled in 657ms (1715 modules)
+ ✓ Compiled /api/web-vitals in 124ms (828 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 6176,
+  rating: 'poor',
+  delta: 6176,
+  id: 'v3-1776706678973-2170184834287'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706678973-3979751616350'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706679026-1829795522898'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706678957-3719001222250'
+}
+ POST /api/web-vitals 200 in 177ms
+ POST /api/web-vitals 200 in 177ms
+ POST /api/web-vitals 200 in 126ms
+ POST /api/web-vitals 200 in 191ms
+ ✓ Compiled in 539ms (1743 modules)
+Web Vitals: {
+  name: 'FCP',
+  value: 6176,
+  rating: 'poor',
+  delta: 6176,
+  id: 'v3-1776706703149-4118332335316'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706703151-7815251865084'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706703151-4824215111129'
+}
+ POST /api/web-vitals 200 in 37ms
+ POST /api/web-vitals 200 in 37ms
+ POST /api/web-vitals 200 in 36ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706703195-3722607338927'
+}
+ POST /api/web-vitals 200 in 16ms
+ ✓ Compiled in 650ms (1743 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706737685-8558156235248'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706737687-6044129730491'
+}
+ POST /api/web-vitals 200 in 25ms
+ POST /api/web-vitals 200 in 25ms
+Web Vitals: {
+  name: 'FCP',
+  value: 6176,
+  rating: 'poor',
+  delta: 6176,
+  id: 'v3-1776706737726-2733155333131'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706737726-1968765040617'
+}
+ POST /api/web-vitals 200 in 14ms
+ POST /api/web-vitals 200 in 14ms
+ ✓ Compiled in 786ms (1743 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706776217-6069808409752'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 6176,
+  rating: 'poor',
+  delta: 6176,
+  id: 'v3-1776706776220-1874656072359'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706776220-8476471711223'
+}
+ POST /api/web-vitals 200 in 45ms
+ POST /api/web-vitals 200 in 43ms
+ POST /api/web-vitals 200 in 43ms
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706776281-5180652656419'
+}
+ POST /api/web-vitals 200 in 9ms
+ ✓ Compiled in 452ms (1743 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776706800583-6047656120862'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776706800583-9226698297404'
+}
+ POST /api/web-vitals 200 in 20ms
+ POST /api/web-vitals 200 in 20ms
+Web Vitals: {
+  name: 'FCP',
+  value: 6176,
+  rating: 'poor',
+  delta: 6176,
+  id: 'v3-1776706800628-4195934036316'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776706800629-7189056627457'
+}
+ POST /api/web-vitals 200 in 17ms
+ POST /api/web-vitals 200 in 16ms
+Web Vitals: {
+  name: 'LCP',
+  value: 6500,
+  rating: 'poor',
+  delta: 6500,
+  id: 'v3-1776706678973-6031304426696'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 6500,
+  rating: 'poor',
+  delta: 6500,
+  id: 'v3-1776706703149-1343581469173'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 6500,
+  rating: 'poor',
+  delta: 6500,
+  id: 'v3-1776706737726-4682206534398'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 6500,
+  rating: 'poor',
+  delta: 6500,
+  id: 'v3-1776706776220-3305679763631'
+}
+Web Vitals: {
+  name: 'LCP',
+  value: 6500,
+  rating: 'poor',
+  delta: 6500,
+  id: 'v3-1776706800628-6518192159770'
+}
+ POST /api/web-vitals 200 in 328ms
+ POST /api/web-vitals 200 in 313ms
+ POST /api/web-vitals 200 in 294ms
+ POST /api/web-vitals 200 in 251ms
+ POST /api/web-vitals 200 in 249ms
+ ✓ Compiled /api/experience in 249ms (832 modules)
+ GET /api/experience 200 in 287ms
+ GET /api/experience 200 in 11ms
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706678973-9945429097365'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706703149-8595236912524'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706737726-5319070362212'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706776220-8820283644530'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776706800628-5907193091203'
+}
+ POST /api/web-vitals 200 in 147ms
+ POST /api/web-vitals 200 in 144ms
+ POST /api/web-vitals 200 in 144ms
+ POST /api/web-vitals 200 in 144ms
+ POST /api/web-vitals 200 in 142ms
+ GET /api/experience 200 in 21ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 147ms
+ GET /api/experience 200 in 22ms
+ GET /api/experience 200 in 27ms
+ GET /api/experience 200 in 17ms
+ ✓ Compiled /api/case-studies in 267ms (834 modules)
+ GET /api/case-studies 200 in 297ms
+ GET /api/case-studies 200 in 7ms
+ GET /api/experience 200 in 57ms
+ GET /api/experience 200 in 58ms
+ GET /api/experience 200 in 155ms
+ GET /api/experience 200 in 23ms
+ GET /api/experience 200 in 20ms
+ GET /api/experience 200 in 7ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 18ms
+ GET /api/experience 200 in 21ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 16ms
+ GET /api/experience 200 in 8ms
+ GET /api/experience 200 in 19ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 9ms
+ GET /api/experience 200 in 22ms
+ ○ Compiling /education ...
+ ✓ Compiled /education in 1134ms (1740 modules)
+ ✓ Compiled /accolades in 249ms (1745 modules)
+ ✓ Compiled /about in 388ms (1770 modules)
+ GET /api/experience 200 in 26ms
+ GET /api/experience 200 in 8ms
+ ✓ Compiled in 822ms (1745 modules)
+ ✓ Compiled /api/web-vitals in 318ms (854 modules)
+Web Vitals: {
+  name: 'TTFB',
+  value: 646.7000000178814,
+  rating: 'good',
+  delta: 646.7000000178814,
+  id: 'v3-1776708232459-1231814509214'
+}
+Web Vitals: {
+  name: 'FCP',
+  value: 6176,
+  rating: 'poor',
+  delta: 6176,
+  id: 'v3-1776708232503-3758990864186'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 159.30000001192093,
+  rating: 'good',
+  delta: 159.30000001192093,
+  id: 'v3-1776708232503-7214803358517'
+}
+Web Vitals: {
+  name: 'TTFB',
+  value: 263.7000000178814,
+  rating: 'good',
+  delta: 263.7000000178814,
+  id: 'v3-1776708232438-4157297818353'
+}
+ POST /api/web-vitals 200 in 391ms
+ POST /api/web-vitals 200 in 313ms
+ POST /api/web-vitals 200 in 312ms
+ POST /api/web-vitals 200 in 404ms
+Web Vitals: {
+  name: 'LCP',
+  value: 6500,
+  rating: 'poor',
+  delta: 6500,
+  id: 'v3-1776708232503-7891409401067'
+}
+Web Vitals: {
+  name: 'INP',
+  value: 48,
+  rating: 'good',
+  delta: 48,
+  id: 'v3-1776708232503-2638985701269'
+}
+ POST /api/web-vitals 200 in 330ms
+ POST /api/web-vitals 200 in 187ms
+ ✓ Compiled in 3.1s (1745 modules)
+ ✓ Compiled in 994ms (1745 modules)
+ ✓ Compiled in 1676ms (1745 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/chinar.deshpande06/CD-THG/2025/THG-AI/MyCodingJourney/current-projects/chinar-portfolio/.next/cache/webpack/client-development/20.pack.gz_' -> '/Users/chinar.deshpande06/CD-THG/2025/THG-AI/MyCodingJourney/current-projects/chinar-portfolio/.next/cache/webpack/client-development/20.pack.gz'
+ ✓ Compiled in 483ms (919 modules)
+   Reload env: .env.local
+[?25h
