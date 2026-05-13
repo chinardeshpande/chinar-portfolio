@@ -12,6 +12,7 @@ export function Navigation() {
     { name: 'Dashboard', href: '/admin' },
     { name: 'Inbox', href: '/admin/inbox' },
     { name: 'Templates', href: '/admin/templates' },
+    { name: 'Settings', href: '/admin/settings' },
   ]
 
   return (

@@ -117,7 +117,7 @@ export default function EnquiryDetailPage() {
         </button>
 
         {/* Enquiry Header */}
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
           <div className="flex items-start justify-between mb-4">
             <div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">{enquiry.name}</h1>
@@ -130,7 +130,7 @@ export default function EnquiryDetailPage() {
               <select
                 value={enquiry.status}
                 onChange={(e) => handleStatusChange(e.target.value)}
-                className="px-3 py-2 border rounded-lg"
+                className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="new">New</option>
                 <option value="in_progress">In Progress</option>
@@ -173,7 +173,7 @@ export default function EnquiryDetailPage() {
             Reply to Enquiry
           </button>
         ) : (
-          <div className="bg-white rounded-lg shadow p-6 mb-6">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
             <h2 className="text-xl font-semibold mb-4">Send Reply</h2>
 
             <div className="mb-4">
@@ -183,7 +183,7 @@ export default function EnquiryDetailPage() {
               <select
                 value={selectedTemplate}
                 onChange={(e) => handleTemplateSelect(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="">-- Select a template --</option>
                 {templates.map((template) => (
@@ -202,7 +202,7 @@ export default function EnquiryDetailPage() {
                   value={replyData.subject}
                   onChange={(e) => setReplyData({ ...replyData, subject: e.target.value })}
                   required
-                  className="w-full px-3 py-2 border rounded-lg"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -212,7 +212,7 @@ export default function EnquiryDetailPage() {
                   onChange={(e) => setReplyData({ ...replyData, body: e.target.value })}
                   required
                   rows={10}
-                  className="w-full px-3 py-2 border rounded-lg"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               <div className="flex gap-2">
@@ -240,7 +240,7 @@ export default function EnquiryDetailPage() {
 
         {/* Reply History */}
         {enquiry.replies && enquiry.replies.length > 0 && (
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 className="text-xl font-semibold mb-4">Reply History</h2>
             <div className="space-y-4">
               {enquiry.replies.map((reply) => (
