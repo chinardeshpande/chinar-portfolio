@@ -35,12 +35,23 @@ export async function GET(request: NextRequest) {
     let analyticsDataClient: BetaAnalyticsDataClient
 
     if (clientId && clientSecret && refreshToken) {
-      // OAuth authentication
+      // OAuth authentication - get access token first
       const oauth2Client = new google.auth.OAuth2(clientId, clientSecret)
       oauth2Client.setCredentials({ refresh_token: refreshToken })
 
+      // Get fresh access token
+      const { credentials } = await oauth2Client.refreshAccessToken()
+      const accessToken = credentials.access_token
+
+      if (!accessToken) {
+        throw new Error('Failed to get access token from refresh token')
+      }
+
+      // Use access token directly with GA4 client
       analyticsDataClient = new BetaAnalyticsDataClient({
-        auth: oauth2Client as any
+        authClient: {
+          getAccessToken: async () => ({ token: accessToken })
+        } as any
       })
     } else if (serviceAccountCreds) {
       // Service account authentication
