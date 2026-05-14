@@ -1,0 +1,232 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+  workflow_dispatch:
+
+jobs:
+  # ==================================
+  # BUILD & TEST
+  # ==================================
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Application
+        env:
+          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          SEARCH_CONSOLE_SITE_URL: ${{ secrets.SEARCH_CONSOLE_SITE_URL }}
+        run: npm run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-build
+          path: |
+            .next/
+            public/
+            package.json
+            package-lock.json
+            next.config.mjs
+          retention-days: 1
+
+  # ==================================
+  # DEPLOY TO PRODUCTION
+  # ==================================
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://chinardeshpande.tech
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: nextjs-build
+          path: .
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PRODUCTION_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.PRODUCTION_SERVER_IP }} >> ~/.ssh/known_hosts
+
+      - name: Create Deployment Archive
+        run: |
+          # Create archive with all necessary files
+          tar -czf portfolio-deploy.tar.gz \
+            .next/ \
+            public/ \
+            package.json \
+            package-lock.json \
+            next.config.mjs \
+            Dockerfile \
+            docker-compose.production.yml \
+            docker/
+
+      - name: Deploy to Server
+        run: |
+          # Copy deployment archive to server
+          scp portfolio-deploy.tar.gz root@${{ secrets.PRODUCTION_SERVER_IP }}:/tmp/
+
+          # Extract and deploy on server
+          ssh root@${{ secrets.PRODUCTION_SERVER_IP }} << 'ENDSSH'
+            set -e
+
+            # Navigate to app directory (create if doesn't exist)
+            mkdir -p /var/www/portfolio
+            cd /var/www/portfolio
+
+            # Backup current version
+            if [ -d "current" ]; then
+              timestamp=$(date +%Y%m%d_%H%M%S)
+              cp -r current "backup_${timestamp}"
+              # Keep only last 3 backups
+              ls -dt backup_* 2>/dev/null | tail -n +4 | xargs rm -rf 2>/dev/null || true
+            fi
+
+            # Extract new version
+            mkdir -p new_deploy
+            cd new_deploy
+            tar -xzf /tmp/portfolio-deploy.tar.gz
+
+            # Create .env file from secrets
+            cat > .env << 'EOF'
+          NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}
+          NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}
+          ADMIN_EMAIL=${{ secrets.ADMIN_EMAIL }}
+          ADMIN_PASSWORD=${{ secrets.ADMIN_PASSWORD }}
+          GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN=${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GA4_PROPERTY_ID=${{ secrets.GA4_PROPERTY_ID }}
+          SEARCH_CONSOLE_SITE_URL=${{ secrets.SEARCH_CONSOLE_SITE_URL }}
+          EOF
+
+            # Stop existing containers (if any)
+            docker-compose -f docker-compose.production.yml down || true
+
+            # Build and start new containers
+            docker-compose -f docker-compose.production.yml build --no-cache
+            docker-compose -f docker-compose.production.yml up -d
+
+            # Move new deploy to current
+            cd /var/www/portfolio
+            rm -rf current
+            mv new_deploy current
+
+            # Cleanup
+            rm /tmp/portfolio-deploy.tar.gz
+
+            # Prune old Docker images (keep space clean)
+            docker image prune -f
+          ENDSSH
+
+      - name: Health Check
+        run: |
+          echo "Waiting 30 seconds for services to start..."
+          sleep 30
+
+          # Check application health
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://chinardeshpande.tech/api/health)
+          if [ $response -ne 200 ]; then
+            echo "❌ Health check failed with status $response"
+            exit 1
+          fi
+
+          echo "✅ Portfolio deployed successfully!"
+          echo "🌐 Live at: https://chinardeshpande.tech"
+
+      - name: Cleanup Old Backups
+        if: success()
+        run: |
+          ssh root@${{ secrets.PRODUCTION_SERVER_IP }} << 'ENDSSH'
+            cd /var/www/portfolio
+            # Keep only last 3 backups
+            ls -dt backup_* 2>/dev/null | tail -n +4 | xargs rm -rf 2>/dev/null || true
+            echo "✅ Cleanup completed"
+          ENDSSH
+
+  # ==================================
+  # ROLLBACK ON FAILURE
+  # ==================================
+  rollback:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: failure()
+
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PRODUCTION_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.PRODUCTION_SERVER_IP }} >> ~/.ssh/known_hosts
+
+      - name: Rollback to Previous Version
+        run: |
+          ssh root@${{ secrets.PRODUCTION_SERVER_IP }} << 'ENDSSH'
+            cd /var/www/portfolio
+
+            # Find latest backup
+            latest_backup=$(ls -dt backup_* 2>/dev/null | head -1)
+
+            if [ ! -z "$latest_backup" ]; then
+              echo "⚠️ Rolling back to: $latest_backup"
+
+              # Stop current containers
+              cd current
+              docker-compose -f docker-compose.production.yml down || true
+
+              # Restore backup
+              cd /var/www/portfolio
+              rm -rf current
+              cp -r "$latest_backup" current
+
+              # Restart containers
+              cd current
+              docker-compose -f docker-compose.production.yml up -d
+
+              echo "✅ Rollback completed"
+            else
+              echo "❌ No backup found to rollback to"
+              exit 1
+            fi
+          ENDSSH
+
+      - name: Notify Rollback
+        if: always()
+        run: |
+          echo "⚠️ Deployment failed and was rolled back"
+          echo "📝 Commit: ${{ github.sha }}"
+          echo "👤 Author: ${{ github.actor }}"
+          echo "🌿 Branch: ${{ github.ref }}"
