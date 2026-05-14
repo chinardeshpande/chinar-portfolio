@@ -41,12 +41,16 @@ export async function GET(request: NextRequest) {
     const oauth2Client = new google.auth.OAuth2(clientId, clientSecret)
     oauth2Client.setCredentials({ refresh_token: refreshToken })
 
+    console.log('OAuth2 client configured')
+    console.log('Property ID:', propertyId)
+
     // Use the Analytics Data API via googleapis
-    const analyticsData = google.analyticsdata('v1beta')
+    const analyticsData = google.analyticsdata({ version: 'v1beta', auth: oauth2Client })
+
+    console.log('Attempting to fetch GA4 data...')
 
     // Fetch overview metrics
     const overviewResponse = await analyticsData.properties.runReport({
-      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -64,7 +68,6 @@ export async function GET(request: NextRequest) {
 
     // Fetch top pages
     const topPagesResponse = await analyticsData.properties.runReport({
-      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -80,7 +83,6 @@ export async function GET(request: NextRequest) {
 
     // Fetch traffic sources
     const trafficSourcesResponse = await analyticsData.properties.runReport({
-      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -96,7 +98,6 @@ export async function GET(request: NextRequest) {
 
     // Fetch device categories
     const deviceResponse = await analyticsData.properties.runReport({
-      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -149,11 +150,16 @@ export async function GET(request: NextRequest) {
 
   } catch (error: any) {
     console.error('GA4 API Error:', error)
+    console.error('Error details:', JSON.stringify(error, null, 2))
+    console.error('Error stack:', error?.stack)
+
     return NextResponse.json(
       {
         error: 'Failed to fetch analytics data',
-        message: error.message || 'Unknown error',
-        details: error.response?.data || error.toString(),
+        message: error?.message || error?.error || 'Unknown error',
+        errorType: error?.constructor?.name || typeof error,
+        details: error?.response?.data || error?.details || error?.toString?.() || String(error),
+        stack: error?.stack?.split('\n').slice(0, 3).join('\n'),
         configured: true
       },
       { status: 500 }
