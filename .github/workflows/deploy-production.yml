@@ -142,24 +142,32 @@ jobs:
           SEARCH_CONSOLE_SITE_URL=${{ secrets.SEARCH_CONSOLE_SITE_URL }}
           EOF
 
-            # Stop any existing portfolio containers
+            # Completely clean up old portfolio deployment
+            echo "🧹 Cleaning up old portfolio deployment..."
             cd /var/www/portfolio
-            if [ -d "current" ]; then
-              cd current
-              docker-compose -f docker-compose.production.yml down || true
-              cd ..
-            fi
 
-            # Free up ports 80/443 (stop any containers using them)
-            echo "Freeing up ports 80 and 443..."
-            docker ps -q --filter "publish=80" | xargs -r docker stop || true
-            docker ps -q --filter "publish=443" | xargs -r docker stop || true
+            # Stop and remove ALL portfolio containers (from any previous deploy)
+            docker stop portfolio-app-prod portfolio-nginx-prod portfolio-certbot 2>/dev/null || true
+            docker rm -f portfolio-app-prod portfolio-nginx-prod portfolio-certbot 2>/dev/null || true
 
+            # Remove old portfolio images
+            docker rmi -f $(docker images -q -f reference=new_deploy_portfolio) 2>/dev/null || true
+
+            # Remove network if exists
+            docker network rm portfolio-production-network 2>/dev/null || true
+
+            # Remove any orphaned volumes
+            docker volume prune -f
+
+            echo "✅ Cleanup complete"
+
+            # Build and start fresh deployment
             cd new_deploy
-
-            # Build and start new containers
+            echo "🏗️  Building Docker images..."
             docker-compose -f docker-compose.production.yml build --no-cache
-            docker-compose -f docker-compose.production.yml up -d
+
+            echo "🚀 Starting containers..."
+            docker-compose -f docker-compose.production.yml up -d --force-recreate --remove-orphans
 
             # Move new deploy to current
             cd /var/www/portfolio
