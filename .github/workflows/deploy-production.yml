@@ -142,8 +142,20 @@ jobs:
           SEARCH_CONSOLE_SITE_URL=${{ secrets.SEARCH_CONSOLE_SITE_URL }}
           EOF
 
-            # Stop existing containers (if any)
-            docker-compose -f docker-compose.production.yml down || true
+            # Stop any existing portfolio containers
+            cd /var/www/portfolio
+            if [ -d "current" ]; then
+              cd current
+              docker-compose -f docker-compose.production.yml down || true
+              cd ..
+            fi
+
+            # Free up ports 80/443 (stop any containers using them)
+            echo "Freeing up ports 80 and 443..."
+            docker ps -q --filter "publish=80" | xargs -r docker stop || true
+            docker ps -q --filter "publish=443" | xargs -r docker stop || true
+
+            cd new_deploy
 
             # Build and start new containers
             docker-compose -f docker-compose.production.yml build --no-cache
