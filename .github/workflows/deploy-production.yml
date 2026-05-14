@@ -41,19 +41,26 @@ jobs:
           SEARCH_CONSOLE_SITE_URL: ${{ secrets.SEARCH_CONSOLE_SITE_URL }}
         run: npm run build
 
+      - name: Create Deployment Package
+        run: |
+          echo "Creating deployment tarball..."
+          tar -czf portfolio-deploy.tar.gz \
+            .next \
+            public \
+            package.json \
+            package-lock.json \
+            next.config.mjs \
+            Dockerfile \
+            docker-compose.production.yml \
+            docker
+          echo "✅ Deployment package created"
+          ls -lh portfolio-deploy.tar.gz
+
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nextjs-build
-          path: |
-            .next
-            public
-            package.json
-            package-lock.json
-            next.config.mjs
-            Dockerfile
-            docker-compose.production.yml
-            docker
+          name: deployment-package
+          path: portfolio-deploy.tar.gz
           retention-days: 1
 
   # ==================================
@@ -67,23 +74,26 @@ jobs:
       url: https://chinardeshpande.tech
 
     steps:
-      - name: Download Build Artifact
+      - name: Download Deployment Package
         uses: actions/download-artifact@v4
         with:
-          name: nextjs-build
+          name: deployment-package
           path: .
 
-      - name: Verify Downloaded Files
+      - name: Extract Deployment Package
         run: |
-          echo "Files in current directory:"
+          echo "Extracting deployment package..."
+          tar -xzf portfolio-deploy.tar.gz
+          echo "✅ Package extracted"
+          echo ""
+          echo "Verifying contents:"
           ls -la
           echo ""
-          echo "Checking for .next directory:"
           if [ -d ".next" ]; then
             echo "✅ .next directory found!"
-            ls -la .next/ | head -20
           else
             echo "❌ .next directory NOT found"
+            exit 1
           fi
 
       - name: Setup SSH
@@ -92,20 +102,6 @@ jobs:
           echo "${{ secrets.PRODUCTION_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.PRODUCTION_SERVER_IP }} >> ~/.ssh/known_hosts
-
-      - name: Create Deployment Archive
-        run: |
-          # Create archive with all necessary files
-          # Use find to ensure all files exist before archiving
-          tar -czf portfolio-deploy.tar.gz \
-            .next \
-            public \
-            package.json \
-            package-lock.json \
-            next.config.mjs \
-            Dockerfile \
-            docker-compose.production.yml \
-            docker
 
       - name: Deploy to Server
         run: |
