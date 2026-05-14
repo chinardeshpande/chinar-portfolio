@@ -71,7 +71,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: nextjs-build
-          path: .
+          path: ./
+
+      - name: Verify Downloaded Files
+        run: |
+          echo "Files in current directory:"
+          ls -la
+          echo "Checking for .next directory:"
+          ls -la .next/ || echo ".next directory not found"
 
       - name: Setup SSH
         run: |
@@ -83,15 +90,16 @@ jobs:
       - name: Create Deployment Archive
         run: |
           # Create archive with all necessary files
+          # Use find to ensure all files exist before archiving
           tar -czf portfolio-deploy.tar.gz \
-            .next/ \
-            public/ \
+            .next \
+            public \
             package.json \
             package-lock.json \
             next.config.mjs \
             Dockerfile \
             docker-compose.production.yml \
-            docker/
+            docker
 
       - name: Deploy to Server
         run: |
