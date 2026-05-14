@@ -31,6 +31,14 @@ export async function POST(
       return NextResponse.json({ error: 'Enquiry not found' }, { status: 404 })
     }
 
+    // Check if Resend is configured
+    if (!resend) {
+      return NextResponse.json(
+        { error: 'Email service not configured. Please add RESEND_API_KEY to environment variables.' },
+        { status: 503 }
+      )
+    }
+
     // Send email
     await resend.emails.send({
       from: FROM_EMAIL,
