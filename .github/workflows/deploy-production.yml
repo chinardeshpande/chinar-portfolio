@@ -146,20 +146,13 @@ jobs:
             echo "🧹 Cleaning up old portfolio deployment..."
             cd /var/www/portfolio
 
-            # Stop ALL nginx containers (portfolio, HRMS, any other) to free ports 80/443
-            echo "Stopping all nginx containers..."
-            docker ps -a --filter "ancestor=nginx" -q | xargs -r docker stop 2>/dev/null || true
-            docker ps -a --filter "ancestor=nginx:alpine" -q | xargs -r docker stop 2>/dev/null || true
+            # REMOVE ALL nginx containers (not just stop) to prevent auto-restart
+            echo "Removing all nginx containers to free ports 80/443..."
+            docker ps -a --filter "ancestor=nginx" -q | xargs -r docker rm -f 2>/dev/null || true
+            docker ps -a --filter "ancestor=nginx:alpine" -q | xargs -r docker rm -f 2>/dev/null || true
+            docker ps -a --filter "name=nginx" -q | xargs -r docker rm -f 2>/dev/null || true
 
-            # Also stop by name pattern
-            docker ps -a --filter "name=nginx" -q | xargs -r docker stop 2>/dev/null || true
-
-            # Stop ALL containers related to portfolio (including hash-prefixed ones)
-            docker ps -a --filter "name=portfolio-app-prod" -q | xargs -r docker stop 2>/dev/null || true
-            docker ps -a --filter "name=portfolio-nginx-prod" -q | xargs -r docker stop 2>/dev/null || true
-            docker ps -a --filter "name=portfolio-certbot" -q | xargs -r docker stop 2>/dev/null || true
-
-            # Remove ALL containers related to portfolio (including stopped ones with hash prefixes)
+            # Remove ALL containers related to portfolio (including hash-prefixed ones)
             docker ps -a --filter "name=portfolio-app-prod" -q | xargs -r docker rm -f 2>/dev/null || true
             docker ps -a --filter "name=portfolio-nginx-prod" -q | xargs -r docker rm -f 2>/dev/null || true
             docker ps -a --filter "name=portfolio-certbot" -q | xargs -r docker rm -f 2>/dev/null || true
