@@ -146,14 +146,13 @@ jobs:
             echo "🧹 Cleaning up old portfolio deployment..."
             cd /var/www/portfolio
 
-            # Find and stop containers using port 80 or 443
-            echo "Stopping containers using ports 80/443..."
-            for container in $(docker ps -q); do
-              if docker port $container 2>/dev/null | grep -E '0.0.0.0:(80|443)' >/dev/null; then
-                echo "Stopping container $container using port 80/443"
-                docker stop $container 2>/dev/null || true
-              fi
-            done
+            # Stop ALL nginx containers (portfolio, HRMS, any other) to free ports 80/443
+            echo "Stopping all nginx containers..."
+            docker ps -a --filter "ancestor=nginx" -q | xargs -r docker stop 2>/dev/null || true
+            docker ps -a --filter "ancestor=nginx:alpine" -q | xargs -r docker stop 2>/dev/null || true
+
+            # Also stop by name pattern
+            docker ps -a --filter "name=nginx" -q | xargs -r docker stop 2>/dev/null || true
 
             # Stop ALL containers related to portfolio (including hash-prefixed ones)
             docker ps -a --filter "name=portfolio-app-prod" -q | xargs -r docker stop 2>/dev/null || true
