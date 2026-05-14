@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
-import { BetaAnalyticsDataClient } from '@google-analytics/data'
 import { google } from 'googleapis'
 
 export async function GET(request: NextRequest) {
@@ -18,7 +17,6 @@ export async function GET(request: NextRequest) {
 
     // Check if GA4 is configured
     const propertyId = process.env.GA4_PROPERTY_ID
-    const serviceAccountCreds = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
     const clientId = process.env.GOOGLE_CLIENT_ID
     const clientSecret = process.env.GOOGLE_CLIENT_SECRET
     const refreshToken = process.env.GOOGLE_REFRESH_TOKEN
@@ -31,87 +29,81 @@ export async function GET(request: NextRequest) {
       }, { status: 200 })
     }
 
-    // Initialize GA4 client with either OAuth or Service Account
-    let analyticsDataClient: BetaAnalyticsDataClient
-
-    if (clientId && clientSecret && refreshToken) {
-      // OAuth authentication using googleapis auth
-      const auth = new google.auth.GoogleAuth({
-        credentials: {
-          client_id: clientId,
-          client_secret: clientSecret,
-          refresh_token: refreshToken,
-          type: 'authorized_user'
-        },
-        scopes: ['https://www.googleapis.com/auth/analytics.readonly']
-      })
-
-      const authClient = await auth.getClient()
-
-      analyticsDataClient = new BetaAnalyticsDataClient({
-        auth: authClient as any
-      })
-    } else if (serviceAccountCreds) {
-      // Service account authentication
-      analyticsDataClient = new BetaAnalyticsDataClient({
-        credentials: JSON.parse(serviceAccountCreds)
-      })
-    } else {
+    if (!clientId || !clientSecret || !refreshToken) {
       return NextResponse.json({
         error: 'Analytics not configured',
-        message: 'Either OAuth credentials (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN) or GOOGLE_APPLICATION_CREDENTIALS_JSON is required',
+        message: 'OAuth credentials required (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN)',
         configured: false
       }, { status: 200 })
     }
 
+    // Initialize OAuth2 client
+    const oauth2Client = new google.auth.OAuth2(clientId, clientSecret)
+    oauth2Client.setCredentials({ refresh_token: refreshToken })
+
+    // Use the Analytics Data API via googleapis
+    const analyticsData = google.analyticsdata('v1beta')
+
     // Fetch overview metrics
-    const [overviewResponse] = await analyticsDataClient.runReport({
+    const overviewResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
-      dateRanges: [{ startDate, endDate }],
-      dimensions: [{ name: 'date' }],
-      metrics: [
-        { name: 'activeUsers' },
-        { name: 'sessions' },
-        { name: 'screenPageViews' },
-        { name: 'averageSessionDuration' },
-        { name: 'bounceRate' }
-      ],
-      orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }]
+      requestBody: {
+        dateRanges: [{ startDate, endDate }],
+        dimensions: [{ name: 'date' }],
+        metrics: [
+          { name: 'activeUsers' },
+          { name: 'sessions' },
+          { name: 'screenPageViews' },
+          { name: 'averageSessionDuration' },
+          { name: 'bounceRate' }
+        ],
+        orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }]
+      }
     })
 
     // Fetch top pages
-    const [topPagesResponse] = await analyticsDataClient.runReport({
+    const topPagesResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
-      dateRanges: [{ startDate, endDate }],
-      dimensions: [{ name: 'pageTitle' }, { name: 'pagePath' }],
-      metrics: [
-        { name: 'screenPageViews' },
-        { name: 'activeUsers' }
-      ],
-      orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-      limit: 10
+      requestBody: {
+        dateRanges: [{ startDate, endDate }],
+        dimensions: [{ name: 'pageTitle' }, { name: 'pagePath' }],
+        metrics: [
+          { name: 'screenPageViews' },
+          { name: 'activeUsers' }
+        ],
+        orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+        limit: '10'
+      }
     })
 
     // Fetch traffic sources
-    const [trafficSourcesResponse] = await analyticsDataClient.runReport({
+    const trafficSourcesResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
-      dateRanges: [{ startDate, endDate }],
-      dimensions: [{ name: 'sessionSource' }],
-      metrics: [
-        { name: 'sessions' },
-        { name: 'activeUsers' }
-      ],
-      orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
-      limit: 10
+      requestBody: {
+        dateRanges: [{ startDate, endDate }],
+        dimensions: [{ name: 'sessionSource' }],
+        metrics: [
+          { name: 'sessions' },
+          { name: 'activeUsers' }
+        ],
+        orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+        limit: '10'
+      }
     })
 
     // Fetch device categories
-    const [deviceResponse] = await analyticsDataClient.runReport({
+    const deviceResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
-      dateRanges: [{ startDate, endDate }],
-      dimensions: [{ name: 'deviceCategory' }],
-      metrics: [{ name: 'activeUsers' }],
-      orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+      requestBody: {
+        dateRanges: [{ startDate, endDate }],
+        dimensions: [{ name: 'deviceCategory' }],
+        metrics: [{ name: 'activeUsers' }],
+        orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+      }
     })
 
     // Format the data
@@ -131,15 +123,16 @@ export async function GET(request: NextRequest) {
       bounceRate: 0
     }
 
-    if (overviewResponse.rows && overviewResponse.rows.length > 0) {
-      overviewResponse.rows.forEach(row => {
+    const overviewRows = (overviewResponse as any).data?.rows || []
+    if (overviewRows.length > 0) {
+      overviewRows.forEach((row: any) => {
         totals.users += parseInt(row.metricValues?.[0]?.value || '0')
         totals.sessions += parseInt(row.metricValues?.[1]?.value || '0')
         totals.pageViews += parseInt(row.metricValues?.[2]?.value || '0')
       })
 
-      // Average duration and bounce rate from last row (summary)
-      const lastRow = overviewResponse.rows[overviewResponse.rows.length - 1]
+      // Average from all rows
+      const lastRow = overviewRows[overviewRows.length - 1]
       totals.avgSessionDuration = parseFloat(lastRow.metricValues?.[3]?.value || '0')
       totals.bounceRate = parseFloat(lastRow.metricValues?.[4]?.value || '0')
     }
@@ -148,10 +141,10 @@ export async function GET(request: NextRequest) {
       configured: true,
       dateRange: { startDate, endDate },
       totals,
-      dailyMetrics: formatRows(overviewResponse.rows || []),
-      topPages: formatRows(topPagesResponse.rows || []),
-      trafficSources: formatRows(trafficSourcesResponse.rows || []),
-      devices: formatRows(deviceResponse.rows || [])
+      dailyMetrics: formatRows(overviewRows),
+      topPages: formatRows((topPagesResponse as any).data?.rows || []),
+      trafficSources: formatRows((trafficSourcesResponse as any).data?.rows || []),
+      devices: formatRows((deviceResponse as any).data?.rows || [])
     })
 
   } catch (error: any) {
@@ -159,7 +152,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to fetch analytics data',
-        message: error.message,
+        message: error.message || 'Unknown error',
+        details: error.response?.data || error.toString(),
         configured: true
       },
       { status: 500 }
