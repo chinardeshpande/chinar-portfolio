@@ -146,9 +146,15 @@ jobs:
             echo "🧹 Cleaning up old portfolio deployment..."
             cd /var/www/portfolio
 
-            # Stop and remove ALL portfolio containers (from any previous deploy)
-            docker stop portfolio-app-prod portfolio-nginx-prod portfolio-certbot 2>/dev/null || true
-            docker rm -f portfolio-app-prod portfolio-nginx-prod portfolio-certbot 2>/dev/null || true
+            # Stop ALL containers related to portfolio (including hash-prefixed ones)
+            docker ps -a --filter "name=portfolio-app-prod" -q | xargs -r docker stop 2>/dev/null || true
+            docker ps -a --filter "name=portfolio-nginx-prod" -q | xargs -r docker stop 2>/dev/null || true
+            docker ps -a --filter "name=portfolio-certbot" -q | xargs -r docker stop 2>/dev/null || true
+
+            # Remove ALL containers related to portfolio (including stopped ones with hash prefixes)
+            docker ps -a --filter "name=portfolio-app-prod" -q | xargs -r docker rm -f 2>/dev/null || true
+            docker ps -a --filter "name=portfolio-nginx-prod" -q | xargs -r docker rm -f 2>/dev/null || true
+            docker ps -a --filter "name=portfolio-certbot" -q | xargs -r docker rm -f 2>/dev/null || true
 
             # Remove old portfolio images
             docker rmi -f $(docker images -q -f reference=new_deploy_portfolio) 2>/dev/null || true
