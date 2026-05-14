@@ -3,7 +3,6 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { google } from 'googleapis'
 
-// GA4 Analytics API Route - Updated 2026-05-14
 export async function GET(request: NextRequest) {
   const session = await getServerSession(authOptions)
 
@@ -42,16 +41,12 @@ export async function GET(request: NextRequest) {
     const oauth2Client = new google.auth.OAuth2(clientId, clientSecret)
     oauth2Client.setCredentials({ refresh_token: refreshToken })
 
-    console.log('OAuth2 client configured')
-    console.log('Property ID:', propertyId)
-
     // Use the Analytics Data API via googleapis
-    const analyticsData = google.analyticsdata({ version: 'v1beta', auth: oauth2Client })
-
-    console.log('Attempting to fetch GA4 data...')
+    const analyticsData = google.analyticsdata('v1beta')
 
     // Fetch overview metrics
     const overviewResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -69,6 +64,7 @@ export async function GET(request: NextRequest) {
 
     // Fetch top pages
     const topPagesResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -78,12 +74,13 @@ export async function GET(request: NextRequest) {
           { name: 'activeUsers' }
         ],
         orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-        limit: '10'
+        limit: 10
       }
     })
 
     // Fetch traffic sources
     const trafficSourcesResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -93,12 +90,13 @@ export async function GET(request: NextRequest) {
           { name: 'activeUsers' }
         ],
         orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
-        limit: '10'
+        limit: 10
       }
     })
 
     // Fetch device categories
     const deviceResponse = await analyticsData.properties.runReport({
+      auth: oauth2Client,
       property: `properties/${propertyId}`,
       requestBody: {
         dateRanges: [{ startDate, endDate }],
@@ -125,7 +123,7 @@ export async function GET(request: NextRequest) {
       bounceRate: 0
     }
 
-    const overviewRows = (overviewResponse as any).data?.rows || []
+    const overviewRows = overviewResponse.data.rows || []
     if (overviewRows.length > 0) {
       overviewRows.forEach((row: any) => {
         totals.users += parseInt(row.metricValues?.[0]?.value || '0')
@@ -144,23 +142,18 @@ export async function GET(request: NextRequest) {
       dateRange: { startDate, endDate },
       totals,
       dailyMetrics: formatRows(overviewRows),
-      topPages: formatRows((topPagesResponse as any).data?.rows || []),
-      trafficSources: formatRows((trafficSourcesResponse as any).data?.rows || []),
-      devices: formatRows((deviceResponse as any).data?.rows || [])
+      topPages: formatRows(topPagesResponse.data.rows || []),
+      trafficSources: formatRows(trafficSourcesResponse.data.rows || []),
+      devices: formatRows(deviceResponse.data.rows || [])
     })
 
   } catch (error: any) {
     console.error('GA4 API Error:', error)
-    console.error('Error details:', JSON.stringify(error, null, 2))
-    console.error('Error stack:', error?.stack)
-
     return NextResponse.json(
       {
         error: 'Failed to fetch analytics data',
-        message: error?.message || error?.error || 'Unknown error',
-        errorType: error?.constructor?.name || typeof error,
-        details: error?.response?.data || error?.details || error?.toString?.() || String(error),
-        stack: error?.stack?.split('\n').slice(0, 3).join('\n'),
+        message: error.message || 'Unknown error',
+        details: error.response?.data || error.toString(),
         configured: true
       },
       { status: 500 }
