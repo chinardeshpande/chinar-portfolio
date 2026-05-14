@@ -7,17 +7,7 @@ services:
   portfolio:
     build:
       context: .
-      dockerfile: Dockerfile
-      args:
-        NEXTAUTH_URL: ${NEXTAUTH_URL}
-        NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
-        ADMIN_EMAIL: ${ADMIN_EMAIL}
-        ADMIN_PASSWORD: ${ADMIN_PASSWORD}
-        GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
-        GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
-        GOOGLE_REFRESH_TOKEN: ${GOOGLE_REFRESH_TOKEN}
-        GA4_PROPERTY_ID: ${GA4_PROPERTY_ID}
-        SEARCH_CONSOLE_SITE_URL: ${SEARCH_CONSOLE_SITE_URL}
+      dockerfile: Dockerfile.production
     container_name: portfolio-app-prod
     restart: unless-stopped
     environment:
