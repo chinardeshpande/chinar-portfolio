@@ -63,27 +63,29 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Send notification email to admin
-    try {
-      await resend.emails.send({
-        from: FROM_EMAIL,
-        to: ADMIN_EMAIL,
-        subject: `New ${validated.inquiry_type} enquiry from ${validated.name}`,
-        html: `
-          <h2>New Enquiry Received</h2>
-          <p><strong>From:</strong> ${validated.name} (${validated.email})</p>
-          <p><strong>Organization:</strong> ${validated.organization || 'Not provided'}</p>
-          <p><strong>Type:</strong> ${validated.inquiry_type}</p>
-          <p><strong>Source:</strong> ${source_page}</p>
-          <p><strong>Message:</strong></p>
-          <p>${validated.message.replace(/\n/g, '<br>')}</p>
-          <hr>
-          <p><a href="https://www.chinardeshpande.tech/admin/inbox/${enquiry.id}">View in Admin Panel</a></p>
-        `
-      })
-    } catch (emailError) {
-      console.error('Email notification error:', emailError)
-      // Don't fail the request if email fails
+    // Send notification email to admin (if email service is configured)
+    if (resend) {
+      try {
+        await resend.emails.send({
+          from: FROM_EMAIL,
+          to: ADMIN_EMAIL,
+          subject: `New ${validated.inquiry_type} enquiry from ${validated.name}`,
+          html: `
+            <h2>New Enquiry Received</h2>
+            <p><strong>From:</strong> ${validated.name} (${validated.email})</p>
+            <p><strong>Organization:</strong> ${validated.organization || 'Not provided'}</p>
+            <p><strong>Type:</strong> ${validated.inquiry_type}</p>
+            <p><strong>Source:</strong> ${source_page}</p>
+            <p><strong>Message:</strong></p>
+            <p>${validated.message.replace(/\n/g, '<br>')}</p>
+            <hr>
+            <p><a href="https://www.chinardeshpande.tech/admin/inbox/${enquiry.id}">View in Admin Panel</a></p>
+          `
+        })
+      } catch (emailError) {
+        console.error('Email notification error:', emailError)
+        // Don't fail the request if email fails
+      }
     }
 
     return NextResponse.json({
