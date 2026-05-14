@@ -46,11 +46,14 @@ jobs:
         with:
           name: nextjs-build
           path: |
-            .next/
-            public/
+            .next
+            public
             package.json
             package-lock.json
             next.config.mjs
+            Dockerfile
+            docker-compose.production.yml
+            docker
           retention-days: 1
 
   # ==================================
@@ -64,28 +67,24 @@ jobs:
       url: https://chinardeshpande.tech
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
         with:
           name: nextjs-build
-          path: build-output
+          path: .
 
       - name: Verify Downloaded Files
         run: |
-          echo "Files in build-output directory:"
-          ls -la build-output/
+          echo "Files in current directory:"
+          ls -la
+          echo ""
           echo "Checking for .next directory:"
-          ls -la build-output/.next/ || echo ".next directory not found in build-output"
-
-      - name: Merge Build Output
-        run: |
-          # Copy built files over the checkout
-          cp -r build-output/.next .next
-          cp -r build-output/public/* public/ || true
-          echo "Merged build output successfully"
+          if [ -d ".next" ]; then
+            echo "✅ .next directory found!"
+            ls -la .next/ | head -20
+          else
+            echo "❌ .next directory NOT found"
+          fi
 
       - name: Setup SSH
         run: |
