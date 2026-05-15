@@ -16,6 +16,24 @@ export const authOptions: NextAuthOptions = {
           throw new Error('Email and password required')
         }
 
+        // Simple environment variable authentication (fallback if Supabase not configured)
+        const adminEmail = process.env.ADMIN_EMAIL
+        const adminPassword = process.env.ADMIN_PASSWORD
+
+        if (adminEmail && adminPassword) {
+          // Check against environment variables
+          if (credentials.email === adminEmail && credentials.password === adminPassword) {
+            return {
+              id: 'admin-1',
+              email: adminEmail,
+              name: 'Admin',
+              role: 'admin'
+            }
+          }
+          throw new Error('Invalid credentials')
+        }
+
+        // Supabase authentication (if configured)
         const supabase = getServiceClient()
         const { data: user, error } = await supabase
           .from('admin_users')
