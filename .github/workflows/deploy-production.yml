@@ -51,8 +51,7 @@ jobs:
             package-lock.json \
             next.config.mjs \
             Dockerfile.production \
-            docker-compose.production.yml \
-            docker
+            docker-compose.production.yml
           echo "✅ Deployment package created"
           ls -lh portfolio-deploy.tar.gz
 
@@ -142,29 +141,18 @@ jobs:
           SEARCH_CONSOLE_SITE_URL=${{ secrets.SEARCH_CONSOLE_SITE_URL }}
           EOF
 
-            # Completely clean up old portfolio deployment
+            # Clean up old portfolio containers
             echo "🧹 Cleaning up old portfolio deployment..."
             cd /var/www/portfolio
 
-            # REMOVE ALL nginx containers (not just stop) to prevent auto-restart
-            echo "Removing all nginx containers to free ports 80/443..."
-            docker ps -a --filter "ancestor=nginx" -q | xargs -r docker rm -f 2>/dev/null || true
-            docker ps -a --filter "ancestor=nginx:alpine" -q | xargs -r docker rm -f 2>/dev/null || true
-            docker ps -a --filter "name=nginx" -q | xargs -r docker rm -f 2>/dev/null || true
-
-            # Remove ALL containers related to portfolio (including hash-prefixed ones)
+            # Stop and remove portfolio app container
             docker ps -a --filter "name=portfolio-app-prod" -q | xargs -r docker rm -f 2>/dev/null || true
-            docker ps -a --filter "name=portfolio-nginx-prod" -q | xargs -r docker rm -f 2>/dev/null || true
-            docker ps -a --filter "name=portfolio-certbot" -q | xargs -r docker rm -f 2>/dev/null || true
 
             # Remove old portfolio images
-            docker rmi -f $(docker images -q -f reference=new_deploy_portfolio) 2>/dev/null || true
+            docker images -q --filter "reference=*portfolio*" | xargs -r docker rmi -f 2>/dev/null || true
 
-            # Remove network if exists
-            docker network rm portfolio-production-network 2>/dev/null || true
-
-            # Remove any orphaned volumes
-            docker volume prune -f
+            # Prune unused resources
+            docker system prune -f
 
             echo "✅ Cleanup complete"
 
@@ -190,29 +178,32 @@ jobs:
 
       - name: Health Check
         run: |
-          echo "Waiting 60 seconds for services to start..."
-          sleep 60
+          echo "Waiting 30 seconds for container to start..."
+          sleep 30
 
-          # Check application health with retries
-          for i in {1..3}; do
-            echo "Health check attempt $i..."
-            response=$(curl -s -o /dev/null -w "%{http_code}" https://chinardeshpande.tech/api/health)
-            echo "Response: $response"
+          # Check application health on localhost:3001
+          ssh root@${{ secrets.PRODUCTION_SERVER_IP }} << 'ENDSSH'
+            for i in {1..3}; do
+              echo "Health check attempt $i..."
+              response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:3001/api/health)
+              echo "Response: $response"
 
-            if [ $response -eq 200 ]; then
-              echo "✅ Portfolio deployed successfully!"
-              echo "🌐 Live at: https://chinardeshpande.tech"
-              exit 0
-            fi
+              if [ $response -eq 200 ]; then
+                echo "✅ Portfolio container deployed successfully!"
+                echo "📝 Container is running on localhost:3001"
+                echo "⚠️  Configure system nginx to proxy chinardeshpande.tech to localhost:3001"
+                exit 0
+              fi
 
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 10 seconds..."
-              sleep 10
-            fi
-          done
+              if [ $i -lt 3 ]; then
+                echo "Retrying in 10 seconds..."
+                sleep 10
+              fi
+            done
 
-          echo "❌ Health check failed after 3 attempts with final status $response"
-          exit 1
+            echo "❌ Health check failed after 3 attempts with final status $response"
+            exit 1
+          ENDSSH
 
       - name: Cleanup Old Backups
         if: success()
