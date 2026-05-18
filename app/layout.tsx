@@ -33,8 +33,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Chinar Deshpande | INED | Strategy Consultant | Interim CTO | Board Advisor | Investment Advisory",
-  description: "Independent Non-Executive Director (INED) and senior strategy consultant with 30+ years technology leadership. Available for board positions, strategy consulting, interim CTO roles, investment advisory, and C-suite advisory across UK, India, UAE, United States, and globally. Expert in digital transformation, AI governance, M&A integration, and organizational effectiveness.",
+  title: "Chinar Deshpande | Board-Level AI & Enterprise Transformation Strategist | INED | GCC Strategy | Fractional CTO",
+  description: "Board-Level AI & Enterprise Transformation Strategist helping global enterprises, PE-backed firms, and growth-stage companies accelerate AI adoption beyond pilot stage, scale Global Capability Centers (GCCs), and modernize operations. 30+ years across 14 countries. CTO at THG Ingenuity. Available for board advisory, strategic consulting, and fractional CTO roles.",
   keywords: [
     // Primary Roles - Global Coverage (UK, India, UAE, US)
     "Independent Non-Executive Director",
@@ -73,17 +73,25 @@ export const metadata: Metadata = {
     "Technology Consultant",
     "CIO Advisor",
     "Fractional CTO",
+    "Fractional CTO India",
+    "Fractional Strategic CTO",
 
     // Specializations
     "Digital Transformation",
     "Digital Transformation Consulting UK",
+    "Digital Transformation Strategist",
     "ERP Implementation",
     "SAP Implementation",
     "Oracle ERP",
     "Robotics Automation",
     "AI Strategy",
     "AI Governance",
+    "AI Governance Advisor",
     "Artificial Intelligence Consulting",
+    "AI Transformation Advisor",
+    "Enterprise AI Consultant",
+    "AI Adoption Strategy",
+    "AI Beyond Pilot",
     "Warehouse Automation",
     "Autostore",
     "Geek+ Robotics",
@@ -98,7 +106,13 @@ export const metadata: Metadata = {
     "Startup Technology Advisor",
     "Scale-up Advisor",
     "GCC Setup India",
+    "GCC Strategy Consultant",
     "Global Capability Center",
+    "India GCC Strategy",
+    "PE Operating Advisor",
+    "PE Portfolio Operating Partner",
+    "Private Equity Technology Advisor",
+    "Board Advisor India",
     "Government Technology Advisory",
 
     // Strategy Consulting
