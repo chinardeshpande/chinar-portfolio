@@ -9,7 +9,6 @@ const navigationLinks = [
   { href: '/about', label: 'About' },
   { href: '/experience', label: 'Experience' },
   { href: '/education', label: 'Education' },
-  { href: '/accolades', label: 'Accolades' },
   { href: '/case-studies', label: 'Success Stories' },
   { href: '/contact', label: 'Contact' },
 ];
