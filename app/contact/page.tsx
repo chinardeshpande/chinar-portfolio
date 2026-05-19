@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Navigation, Footer } from '@/components/sections';
 
-export default function ContactPage() {
+function ContactFormWrapper() {
   const searchParams = useSearchParams();
   const roleParam = searchParams.get('role');
 
@@ -361,5 +361,20 @@ export default function ContactPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading contact form...</p>
+        </div>
+      </div>
+    }>
+      <ContactFormWrapper />
+    </Suspense>
   );
 }
