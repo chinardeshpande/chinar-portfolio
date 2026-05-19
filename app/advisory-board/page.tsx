@@ -4,116 +4,115 @@ import { Navigation, Footer } from '@/components/sections';
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function StartupMentorPage() {
+export default function AdvisoryBoardPage() {
   const [activeTab, setActiveTab] = useState<'why-me' | 'impact' | 'credentials'>('why-me');
 
   const roleDefinition = {
-    title: "Startup Mentor",
-    tagline: "Built. Scaled. Exited. Now mentoring the next generation.",
-    essence: "I mentor founders navigating the messy, non-linear path from zero to scale--because I have lived it. Co-founded Millennium Sports (INR 1B business), scaled THG India GCC from 0 to 200+ engineers, led digital transformation across 8 industries and 14 countries. I do not offer generic startup advice from blog posts. I bring operational scars: fundraising realities, product-market fit pivots, talent acquisition trade-offs, burn rate discipline, scaling culture without breaking velocity. My mentorship is grounded in execution experience, not theoretical frameworks."
+    title: "Advisory Board Member",
+    tagline: "Strategic technology counsel anchored in clarity, ethics, and measurable outcomes.",
+    essence: "I join advisory boards where my operational scars add value--not to collect logos, but because three decades building and scaling technology platforms across 14 countries gives me pattern recognition most advisors lack. I have deployed AI in production, built GCCs from zero, led digital transformations with real P&L accountability, and navigated regulatory complexity across jurisdictions. My counsel is grounded in execution discipline, not consultant theory."
   };
 
   const infographics = [
     {
-      section: 'FOUNDER EXPERIENCE',
+      section: 'TRANSFORMATION DEPTH',
       stats: [
-        { number: 'INR 1B', label: 'BUSINESS', sublabel: 'CO-FOUNDER' },
-        { number: '6', label: 'PRODUCT', sublabel: 'PILLARS' },
+        { number: '30+', label: 'YEARS', sublabel: 'OPERATIONAL' },
+        { number: '8', label: 'INDUSTRIES', sublabel: '14 COUNTRIES' },
       ],
-      description: 'Co-founded Millennium Sports with full P&L responsibility. Built 6 product pillars from ground up. Navigated fundraising, product-market fit, talent acquisition, scaling challenges. Exit achieved through strategic partnership.'
+      description: 'Three decades driving technology transformation across retail, FMCG, financial services, manufacturing, logistics, fashion, sports, e-commerce. Not consulting advice--lived execution experience.'
     },
     {
-      section: 'SCALING EXPERTISE',
-      stats: [
-        { number: '0→200+', label: 'ENGINEERS', sublabel: 'GCC BUILT' },
-        { number: '2,500+', label: 'PROFESSIONALS', sublabel: 'LED' },
-      ],
-      description: 'Built THG India GCC from zero to 200+ engineers running 24x7 operations. Led teams of 2,500+ professionals across geographies. Lived the scaling journey: hiring velocity, culture preservation, process discipline, operational rigor.'
-    },
-    {
-      section: 'PRODUCT & TECHNOLOGY DEPTH',
+      section: 'AI & INNOVATION CREDENTIALS',
       stats: [
         { number: '18', label: 'WAREHOUSES', sublabel: 'AI DEPLOYED' },
         { number: 'CIO 100', label: 'AWARD', sublabel: '2006' },
       ],
-      description: 'Built production-grade platforms serving 300+ brands across 198 countries. AI deployment at scale: computer vision, predictive analytics, ML optimization. Robotics integration (Autostore, Geek+). CMMI Level 3 appraisal.'
+      description: 'Production AI deployment at scale: computer vision for quality, predictive analytics for demand, ML-based inventory optimization. Robotics integration (Autostore, Geek+). CMMI Level 3 appraisal through KPMG.'
     },
     {
-      section: 'FUNDRAISING & INVESTOR RELATIONS',
+      section: 'GCC STRATEGY EXPERTISE',
       stats: [
-        { number: 'PE', label: 'PORTFOLIO', sublabel: 'WARBURG PINCUS' },
+        { number: '0→200+', label: 'GCC BUILT', sublabel: 'THG INDIA' },
+      ],
+      description: 'Built THG India GCC from ground up, scaling to 200+ engineers running 24x7 operations. Managed Global IT Delivery Centres at CITI (150 professionals) and Unilever (120 countries).'
+    },
+    {
+      section: 'ENTERPRISE SYSTEMS MASTERY',
+      stats: [
+        { number: '6', label: 'ERP', sublabel: 'IMPLEMENTATIONS' },
+        { number: 'INR 3B', label: 'BUDGET', sublabel: 'MANAGED' },
+      ],
+      description: 'SAP IS Retail (Future Group: featured in SAP Annual Report). PeopleSoft HRMS (Unilever: 120 countries). Oracle Fusion, Infor WMS, ZingHR, Microsoft Navision. Full lifecycle ownership.'
+    },
+    {
+      section: 'DUAL OPERATING MODELS',
+      stats: [
         { number: 'FTSE 250', label: 'PUBLIC', sublabel: 'CTO THG' },
+        { number: 'INR 1B', label: 'STARTUP', sublabel: 'CO-FOUNDER' },
       ],
-      description: 'Operated in PE-backed environment (Stellar with Warburg Pincus). Public company governance (THG FTSE 250). Board reporting, investor communication, M&A due diligence, value realization frameworks.'
-    },
-    {
-      section: 'GLOBAL EXPANSION TRACK RECORD',
-      stats: [
-        { number: '14', label: 'COUNTRIES', sublabel: 'OPERATED' },
-        { number: '8', label: 'INDUSTRIES', sublabel: 'TRANSFORMED' },
-      ],
-      description: 'Led international expansion across India, US, UK, Europe, Middle East, APAC. Navigated regulatory complexity (GDPR, cross-border compliance). Built teams in diverse cultural contexts. Site selection, talent strategies, compliance frameworks.'
+      description: 'Public company governance (THG), PE portfolio experience (Stellar with Warburg Pincus), co-founder experience (Millennium Sports: full P&L responsibility). Translate between startup velocity and institutional rigor.'
     },
   ];
 
   const whyMe = [
     {
-      title: 'Lived the Zero-to-Scale Journey',
-      description: 'When I mentor founders on scaling challenges, I am not reciting Y Combinator essays. I co-founded Millennium Sports and built it to INR 1B with full P&L responsibility across 6 product pillars. I know the visceral reality of fundraising rejections, product pivots that burn cash, hiring mistakes that cost momentum, burn rate anxiety, scaling culture without losing startup DNA. Built THG India GCC from zero to 200+ engineers running 24x7 operations--lived the hiring velocity pressure, process discipline trade-offs, talent retention challenges. My mentorship is grounded in operational scars, not startup blog theory.'
+      title: 'Technology Strategy Grounded in P&L Reality',
+      description: 'When I advise on technology investments, I bring three decades of P&L accountability--not PowerPoint frameworks. Built platforms that delivered £15M annualized savings at THG. Drove 33% faster client onboarding (12 weeks → 8 weeks). Created new revenue streams (Fulfillment-as-a-Service platform generating high-margin business). I evaluate technology decisions through the lens of measurable business outcomes: cost reduction with specific timelines, productivity improvements with clear KPIs, revenue expansion with defensible moats. Strategy informed by execution discipline, not consultant theater.'
     },
     {
-      title: 'Product-Market Fit with Technical Depth',
-      description: 'Most mentors advise on product strategy from frameworks. I built production-grade platforms serving 300+ brands across 198 countries. Deployed AI systems across 18 warehouses (computer vision for quality, predictive analytics for demand, ML-based inventory optimization). Implemented robotics integration (Autostore, Geek+, T-sorter). Received CIO 100 Award. When mentoring on product decisions, I bring technical depth to evaluate build vs. buy trade-offs, technology debt risks, scalability constraints, vendor lock-in dangers. Product strategy informed by engineering reality, not MBA case studies.'
+      title: 'AI Governance with Production Scars',
+      description: 'I do not advise on AI strategy from blog posts and whitepapers. I deployed production AI systems across 18 warehouses serving 300+ brands in 198 countries. Built AI-driven Warehouse Control Systems managing 24x7 operations. Implemented computer vision for quality control, predictive analytics for demand forecasting, ML-based inventory optimization. I know what breaks when models drift, when data pipelines fail, when regulatory requirements shift. My counsel on AI governance--pilot-to-production gate criteria, model performance monitoring, bias detection protocols, explainability frameworks--is grounded in operational reality, not theoretical ideals.'
     },
     {
-      title: 'Fundraising & Investor Management Realities',
-      description: 'Operated in PE-backed environment (Stellar with Warburg Pincus) and public company setting (THG FTSE 250). Managed board reporting, investor communication, M&A technology due diligence, value realization frameworks. When mentoring on fundraising, I bring lived experience in pitch deck construction, investor objection handling, valuation negotiation, term sheet trade-offs, board governance setup. I know the difference between investor theater and genuine value-add investors. My counsel is grounded in fundraising reality, not sanitized startup media narratives.'
+      title: 'Global Scaling Expertise Across Geographies & Regulations',
+      description: 'Led technology operations across 14 countries spanning India, US, UK, Europe, Middle East, APAC. Navigated regulatory complexity (GDPR, UK data protection, cross-border data transfer requirements). Built teams in diverse cultural contexts (India GCC, US/UK corporate, PE portfolio). Designed operating models for global delivery (captive centers, hybrid models, vendor-managed transitions). When advising on international expansion, I bring lived experience in site selection trade-offs, talent acquisition strategies, compliance frameworks, and cultural integration--not generic consulting playbooks.'
     },
     {
-      title: 'International Expansion Without Losing Focus',
-      description: 'Led technology operations across 14 countries spanning India, US, UK, Europe, Middle East, APAC. Built GCCs from ground up (THG India, CITI Global IT Delivery Centre, Unilever 120-country rollout). When mentoring on international expansion, I bring pattern recognition on timing decisions (when to expand vs. consolidate), site selection frameworks (cost vs. talent density vs. regulatory environment), operating model design (captive vs. hybrid vs. vendor-managed), cultural integration strategies. Expansion counsel grounded in execution discipline, not generic consulting playbooks.'
+      title: 'Dual Lens: Startup Velocity + Institutional Rigor',
+      description: 'Co-founded Millennium Sports (INR 1B business, 6 product pillars, full P&L responsibility) and operated in institutional settings (THG FTSE 250, Future Group, HUL). I translate between founder-led velocity and institutional governance--establishing compliance discipline without killing execution momentum. When advising startups, I bring scaling playbooks from public company experience. When advising corporates, I bring innovation velocity from startup DNA. This dual operating model informs strategic counsel that balances agility with accountability.'
     },
   ];
 
   const businessImpact = [
     {
-      category: 'Product Strategy & Roadmap',
+      category: 'Strategic Technology Investment',
       impacts: [
-        'Product-market fit validation frameworks (metrics that matter vs. vanity metrics)',
-        'Build vs. buy vs. partner decision criteria grounded in technical trade-offs',
-        'Technology debt assessment and remediation prioritization',
-        'Scalability evaluation (when current architecture breaks, what to rebuild)',
-        'Feature prioritization frameworks aligned with revenue impact and retention'
+        'ROI frameworks with clear success metrics (cost reduction, productivity, revenue expansion)',
+        'Build vs. buy vs. partner decision frameworks grounded in operational trade-offs',
+        'Technology debt assessment with remediation cost estimates',
+        'Innovation portfolio management (horizon 1/2/3 allocation, kill criteria)',
+        'Board-level reporting dashboards translating technical complexity to business outcomes'
       ]
     },
     {
-      category: 'Fundraising & Financial Discipline',
+      category: 'AI Strategy & Governance',
       impacts: [
-        'Pitch deck construction grounded in investor psychology and objection handling',
-        'Valuation negotiation strategies and term sheet trade-off analysis',
-        'Burn rate discipline and runway extension tactics',
-        'Investor relations and board reporting frameworks',
-        'M&A preparation: due diligence readiness, integration planning, exit strategies'
+        'Pilot-to-production gate criteria with clear ROI thresholds',
+        'Model performance monitoring and retraining protocols',
+        'Data privacy compliance (GDPR, regulatory adherence)',
+        'Bias detection, model explainability, ethical AI frameworks',
+        'Organizational readiness assessment (talent, infrastructure, culture)'
       ]
     },
     {
-      category: 'Talent & Organizational Scaling',
+      category: 'Global Expansion & GCC Strategy',
       impacts: [
-        'Hiring velocity without sacrificing quality (sourcing strategies, interview rigor)',
-        'Talent retention frameworks in competitive markets',
-        'Culture preservation during scaling (values translation, onboarding discipline)',
-        'Organizational structure evolution (when to add layers, when to stay flat)',
-        'Performance management systems that balance accountability and innovation'
+        'Site selection frameworks (cost, talent density, regulatory environment, infrastructure)',
+        'Operating model design (captive vs. vendor-managed, hybrid transitions)',
+        'Productivity metrics beyond cost-per-FTE (innovation contribution, knowledge transfer)',
+        'Talent retention strategies and career progression frameworks',
+        'Cultural integration and change management across geographies'
       ]
     },
     {
-      category: 'Go-to-Market & Growth',
+      category: 'Digital Transformation Value Realization',
       impacts: [
-        'International expansion timing and site selection frameworks',
-        'GTM strategy aligned with product maturity and market readiness',
-        'Customer acquisition cost optimization and retention economics',
-        'Partnership evaluation criteria (strategic vs. tactical, revenue vs. capability)',
-        'Regulatory compliance in new markets (GDPR, data protection, cross-border operations)'
+        'Transformation roadmaps with specific value capture milestones',
+        'Execution discipline protocols (stage-gate rigor, dependency management)',
+        'Change management strategies grounded in organizational psychology',
+        'Vendor evaluation frameworks and negotiation strategies',
+        'Post-implementation value tracking with accountability structures'
       ]
     },
   ];
@@ -138,7 +137,7 @@ export default function StartupMentorPage() {
                   Back to About
                 </Link>
                 <Link
-                  href="/ai-strategist"
+                  href="/startup-mentor"
                   className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +147,7 @@ export default function StartupMentorPage() {
                 </Link>
               </div>
               <Link
-                href="/contact?role=startup-mentor"
+                href="/contact?role=advisory-board"
                 className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
               >
                 Schedule Conversation
@@ -161,12 +160,12 @@ export default function StartupMentorPage() {
         </div>
 
         {/* Compact Hero */}
-        <section className="bg-gradient-to-r from-green-50 to-emerald-50 border-b border-gray-200">
+        <section className="bg-gradient-to-r from-purple-50 to-blue-50 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg shadow-md flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg shadow-md flex items-center justify-center flex-shrink-0">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
               <div className="flex-1">

@@ -4,6 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+interface HeroCarouselProps {
+  onStartJourney?: () => void;
+}
+
 const photos = [
   '/images/profile/photo-1.jpg',
   '/images/profile/photo-2.jpg',
@@ -13,7 +17,7 @@ const photos = [
   '/images/profile/photo-8.jpg',
 ];
 
-export function HeroCarousel() {
+export function HeroCarousel({ onStartJourney }: HeroCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -49,11 +53,8 @@ export function HeroCarousel() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 leading-tight">
                 Chinar Deshpande
               </h1>
-              <p className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+              <p className="text-lg sm:text-xl text-gray-700 font-semibold mb-3 sm:mb-4">
                 Board-Level AI & Enterprise Transformation Strategist
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-3 sm:mb-4">
-                Helping global enterprises, PE-backed firms, and growth-stage organizations accelerate AI adoption beyond pilot stage, scale intelligent capability centers, and build resilient digital operating models.
               </p>
               {/* Hero Punchlines */}
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
@@ -91,28 +92,16 @@ export function HeroCarousel() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3">
-                <Link
-                  href="/strategic-advisory"
-                  className="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base w-full sm:w-auto"
+              <div>
+                <button
+                  onClick={onStartJourney}
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl text-base sm:text-lg"
                 >
-                  Strategic Advisory
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  Start Transformation Conversations
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </Link>
-                <Link
-                  href="/board-advisory"
-                  className="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-50 transition-colors border border-gray-300 text-sm sm:text-base w-full sm:w-auto"
-                >
-                  Board & PE Advisory
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-50 transition-colors border border-gray-300 text-sm sm:text-base w-full sm:w-auto"
-                >
-                  Transformation Conversations
-                </Link>
+                </button>
               </div>
             </div>
           </div>

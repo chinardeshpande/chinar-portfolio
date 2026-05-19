@@ -4,116 +4,116 @@ import { Navigation, Footer } from '@/components/sections';
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function StartupMentorPage() {
+export default function AIStrategistPage() {
   const [activeTab, setActiveTab] = useState<'why-me' | 'impact' | 'credentials'>('why-me');
 
   const roleDefinition = {
-    title: "Startup Mentor",
-    tagline: "Built. Scaled. Exited. Now mentoring the next generation.",
-    essence: "I mentor founders navigating the messy, non-linear path from zero to scale--because I have lived it. Co-founded Millennium Sports (INR 1B business), scaled THG India GCC from 0 to 200+ engineers, led digital transformation across 8 industries and 14 countries. I do not offer generic startup advice from blog posts. I bring operational scars: fundraising realities, product-market fit pivots, talent acquisition trade-offs, burn rate discipline, scaling culture without breaking velocity. My mentorship is grounded in execution experience, not theoretical frameworks."
+    title: "AI Transformation Strategist",
+    tagline: "Building intelligent, ethical, scalable organizations.",
+    essence: "I guide organizations through AI transformation--not by selling hype, but by deploying production systems that deliver measurable value. Built AI-driven Warehouse Control Systems across 18 facilities serving 300+ brands in 198 countries. Implemented computer vision for quality, predictive analytics for demand, ML-based inventory optimization. Navigated GDPR compliance, model governance, regulatory adherence. My AI strategy is grounded in operational discipline: clear ROI thresholds, pilot-to-production gate criteria, bias detection protocols, explainability frameworks. I build intelligent systems that scale, not science experiments that collapse under load."
   };
 
   const infographics = [
     {
-      section: 'FOUNDER EXPERIENCE',
-      stats: [
-        { number: 'INR 1B', label: 'BUSINESS', sublabel: 'CO-FOUNDER' },
-        { number: '6', label: 'PRODUCT', sublabel: 'PILLARS' },
-      ],
-      description: 'Co-founded Millennium Sports with full P&L responsibility. Built 6 product pillars from ground up. Navigated fundraising, product-market fit, talent acquisition, scaling challenges. Exit achieved through strategic partnership.'
-    },
-    {
-      section: 'SCALING EXPERTISE',
-      stats: [
-        { number: '0→200+', label: 'ENGINEERS', sublabel: 'GCC BUILT' },
-        { number: '2,500+', label: 'PROFESSIONALS', sublabel: 'LED' },
-      ],
-      description: 'Built THG India GCC from zero to 200+ engineers running 24x7 operations. Led teams of 2,500+ professionals across geographies. Lived the scaling journey: hiring velocity, culture preservation, process discipline, operational rigor.'
-    },
-    {
-      section: 'PRODUCT & TECHNOLOGY DEPTH',
+      section: 'PRODUCTION AI DEPLOYMENT',
       stats: [
         { number: '18', label: 'WAREHOUSES', sublabel: 'AI DEPLOYED' },
-        { number: 'CIO 100', label: 'AWARD', sublabel: '2006' },
+        { number: '300+', label: 'BRANDS', sublabel: '198 COUNTRIES' },
       ],
-      description: 'Built production-grade platforms serving 300+ brands across 198 countries. AI deployment at scale: computer vision, predictive analytics, ML optimization. Robotics integration (Autostore, Geek+). CMMI Level 3 appraisal.'
+      description: 'Production AI systems at scale: AI-driven Warehouse Control System managing 24x7 operations. Computer vision for quality control, predictive analytics for demand forecasting, ML-based inventory optimization. Real operational scars, not pilot theater.'
     },
     {
-      section: 'FUNDRAISING & INVESTOR RELATIONS',
+      section: 'AI GOVERNANCE & COMPLIANCE',
       stats: [
-        { number: 'PE', label: 'PORTFOLIO', sublabel: 'WARBURG PINCUS' },
-        { number: 'FTSE 250', label: 'PUBLIC', sublabel: 'CTO THG' },
+        { number: 'GDPR', label: 'COMPLIANT', sublabel: 'MULTI-REGION' },
+        { number: 'CMMI L3', label: 'APPRAISAL', sublabel: 'KPMG' },
       ],
-      description: 'Operated in PE-backed environment (Stellar with Warburg Pincus). Public company governance (THG FTSE 250). Board reporting, investor communication, M&A due diligence, value realization frameworks.'
+      description: 'Navigated regulatory complexity across jurisdictions. Data privacy compliance (GDPR, UK data protection). Model governance frameworks. Bias detection and explainability protocols. Audit-ready AI systems, not research prototypes.'
     },
     {
-      section: 'GLOBAL EXPANSION TRACK RECORD',
+      section: 'TECHNOLOGY TRANSFORMATION DEPTH',
       stats: [
-        { number: '14', label: 'COUNTRIES', sublabel: 'OPERATED' },
-        { number: '8', label: 'INDUSTRIES', sublabel: 'TRANSFORMED' },
+        { number: '30+', label: 'YEARS', sublabel: '14 COUNTRIES' },
+        { number: '6', label: 'ERP', sublabel: 'IMPLEMENTATIONS' },
       ],
-      description: 'Led international expansion across India, US, UK, Europe, Middle East, APAC. Navigated regulatory complexity (GDPR, cross-border compliance). Built teams in diverse cultural contexts. Site selection, talent strategies, compliance frameworks.'
+      description: 'Three decades driving enterprise technology transformation across 8 industries. SAP IS Retail (featured in SAP Annual Report), PeopleSoft HRMS (120 countries), Oracle Fusion, robotics integration (Autostore, Geek+). AI integrated into enterprise systems, not isolated pilots.'
+    },
+    {
+      section: 'ORGANIZATIONAL SCALING',
+      stats: [
+        { number: '0→200+', label: 'GCC BUILT', sublabel: '24x7 OPS' },
+        { number: '2,500+', label: 'PROFESSIONALS', sublabel: 'LED' },
+      ],
+      description: 'Built GCCs from ground up (THG India: 200+ engineers). Led teams of 2,500+ professionals. AI transformation requires organizational readiness: talent acquisition, capability building, cultural change. I build AI-ready organizations, not just AI models.'
+    },
+    {
+      section: 'BUSINESS VALUE REALIZATION',
+      stats: [
+        { number: '£15M', label: 'SAVINGS', sublabel: 'ANNUALIZED' },
+        { number: '33%', label: 'FASTER', sublabel: 'ONBOARDING' },
+      ],
+      description: 'AI strategy grounded in P&L impact. £15M annualized cost reduction at THG. 33% faster client onboarding (12 weeks → 8 weeks). Revenue expansion through Fulfillment-as-a-Service platform. Measurable ROI, not vanity metrics.'
     },
   ];
 
   const whyMe = [
     {
-      title: 'Lived the Zero-to-Scale Journey',
-      description: 'When I mentor founders on scaling challenges, I am not reciting Y Combinator essays. I co-founded Millennium Sports and built it to INR 1B with full P&L responsibility across 6 product pillars. I know the visceral reality of fundraising rejections, product pivots that burn cash, hiring mistakes that cost momentum, burn rate anxiety, scaling culture without losing startup DNA. Built THG India GCC from zero to 200+ engineers running 24x7 operations--lived the hiring velocity pressure, process discipline trade-offs, talent retention challenges. My mentorship is grounded in operational scars, not startup blog theory.'
+      title: 'Production AI at Scale, Not Pilot Theater',
+      description: 'When I discuss AI strategy, I am not citing OpenAI blog posts or Gartner reports. I deployed production AI systems across 18 warehouses serving 300+ brands in 198 countries. Built AI-driven Warehouse Control Systems managing 24x7 operations with real P&L accountability. Implemented computer vision for quality control (detecting defects in real-time at scale), predictive analytics for demand forecasting (inventory optimization reducing waste and stockouts), ML-based routing optimization (maximizing throughput in automated fulfillment centers). I know what breaks when models drift, when data pipelines fail at 3 AM, when regulatory audits scrutinize bias in algorithmic decisions. My AI strategy is informed by production scars, not consultant theory.'
     },
     {
-      title: 'Product-Market Fit with Technical Depth',
-      description: 'Most mentors advise on product strategy from frameworks. I built production-grade platforms serving 300+ brands across 198 countries. Deployed AI systems across 18 warehouses (computer vision for quality, predictive analytics for demand, ML-based inventory optimization). Implemented robotics integration (Autostore, Geek+, T-sorter). Received CIO 100 Award. When mentoring on product decisions, I bring technical depth to evaluate build vs. buy trade-offs, technology debt risks, scalability constraints, vendor lock-in dangers. Product strategy informed by engineering reality, not MBA case studies.'
+      title: 'AI Governance Frameworks That Pass Regulatory Scrutiny',
+      description: 'AI governance is not about writing policy documents--it is about building systems that survive GDPR audits, regulatory inquiries, and public scrutiny. Navigated data privacy compliance across jurisdictions (UK, EU, US). Designed model governance frameworks with clear accountability: who owns model performance, who monitors for bias, who decides when to retrain vs. retire. Implemented explainability protocols for high-stakes decisions (credit scoring, fraud detection, inventory allocation). Built audit trails that satisfy legal and compliance teams. When I advise on AI governance, I bring frameworks that have been stress-tested in production, not theoretical ideals that collapse under regulatory pressure.'
     },
     {
-      title: 'Fundraising & Investor Management Realities',
-      description: 'Operated in PE-backed environment (Stellar with Warburg Pincus) and public company setting (THG FTSE 250). Managed board reporting, investor communication, M&A technology due diligence, value realization frameworks. When mentoring on fundraising, I bring lived experience in pitch deck construction, investor objection handling, valuation negotiation, term sheet trade-offs, board governance setup. I know the difference between investor theater and genuine value-add investors. My counsel is grounded in fundraising reality, not sanitized startup media narratives.'
+      title: 'AI Integrated into Enterprise Systems, Not Isolated Experiments',
+      description: 'Most AI initiatives fail because they exist in silos--disconnected from ERP systems, data warehouses, operational workflows, organizational incentives. I have implemented 6 world-class ERPs across 8 industries (SAP IS Retail featured in SAP Annual Report, PeopleSoft HRMS across 120 countries, Oracle Fusion, Infor WMS). Integrated AI capabilities into enterprise platforms: demand forecasting feeding procurement systems, computer vision triggering quality workflows, ML-based inventory optimization driving replenishment decisions. My AI strategy is grounded in systems thinking--how AI fits into existing technology architecture, data infrastructure, business processes, organizational structures.'
     },
     {
-      title: 'International Expansion Without Losing Focus',
-      description: 'Led technology operations across 14 countries spanning India, US, UK, Europe, Middle East, APAC. Built GCCs from ground up (THG India, CITI Global IT Delivery Centre, Unilever 120-country rollout). When mentoring on international expansion, I bring pattern recognition on timing decisions (when to expand vs. consolidate), site selection frameworks (cost vs. talent density vs. regulatory environment), operating model design (captive vs. hybrid vs. vendor-managed), cultural integration strategies. Expansion counsel grounded in execution discipline, not generic consulting playbooks.'
+      title: 'Building AI-Ready Organizations, Not Just AI Models',
+      description: 'AI transformation fails when organizations lack readiness: talent density to build and maintain models, data infrastructure to feed systems, cultural acceptance of algorithmic decision-making, governance frameworks to manage risk. Built THG India GCC from zero to 200+ engineers running 24x7 AI-driven operations--lived the talent acquisition challenges (hiring ML engineers in competitive markets), capability building requirements (upskilling teams on new tools), cultural change management (shifting from intuition-driven to data-driven decisions). When I advise on AI strategy, I address the full organizational stack: technology, talent, process, culture, governance. AI strategy informed by scaling discipline, not PowerPoint slides.'
     },
   ];
 
   const businessImpact = [
     {
-      category: 'Product Strategy & Roadmap',
+      category: 'AI Investment ROI & Value Realization',
       impacts: [
-        'Product-market fit validation frameworks (metrics that matter vs. vanity metrics)',
-        'Build vs. buy vs. partner decision criteria grounded in technical trade-offs',
-        'Technology debt assessment and remediation prioritization',
-        'Scalability evaluation (when current architecture breaks, what to rebuild)',
-        'Feature prioritization frameworks aligned with revenue impact and retention'
+        'Pilot-to-production gate criteria with clear ROI thresholds (cost reduction, productivity, revenue)',
+        'Model performance monitoring and retraining protocols',
+        'Business case validation frameworks (metrics that matter vs. vanity metrics)',
+        'Value capture mechanisms integrated into P&L reporting',
+        'Risk-adjusted ROI models accounting for implementation complexity and organizational readiness'
       ]
     },
     {
-      category: 'Fundraising & Financial Discipline',
+      category: 'AI Governance & Risk Management',
       impacts: [
-        'Pitch deck construction grounded in investor psychology and objection handling',
-        'Valuation negotiation strategies and term sheet trade-off analysis',
-        'Burn rate discipline and runway extension tactics',
-        'Investor relations and board reporting frameworks',
-        'M&A preparation: due diligence readiness, integration planning, exit strategies'
+        'Data privacy compliance frameworks (GDPR, cross-border data transfer, consent management)',
+        'Bias detection and mitigation protocols (fairness metrics, algorithmic audits)',
+        'Model explainability and interpretability frameworks for high-stakes decisions',
+        'Governance accountability structures (who owns model performance, retraining, retirement)',
+        'Regulatory adherence and audit readiness (documentation, decision trails, compliance dashboards)'
       ]
     },
     {
-      category: 'Talent & Organizational Scaling',
+      category: 'AI Technology Integration',
       impacts: [
-        'Hiring velocity without sacrificing quality (sourcing strategies, interview rigor)',
-        'Talent retention frameworks in competitive markets',
-        'Culture preservation during scaling (values translation, onboarding discipline)',
-        'Organizational structure evolution (when to add layers, when to stay flat)',
-        'Performance management systems that balance accountability and innovation'
+        'Enterprise AI architecture design (how AI integrates with ERP, data warehouses, workflows)',
+        'Data infrastructure readiness assessment (quality, volume, latency, governance)',
+        'Build vs. buy vs. partner frameworks for AI capabilities',
+        'Technology debt evaluation and remediation in AI systems',
+        'Scalability planning (when current AI architecture breaks, what to rebuild)'
       ]
     },
     {
-      category: 'Go-to-Market & Growth',
+      category: 'AI Organizational Readiness',
       impacts: [
-        'International expansion timing and site selection frameworks',
-        'GTM strategy aligned with product maturity and market readiness',
-        'Customer acquisition cost optimization and retention economics',
-        'Partnership evaluation criteria (strategic vs. tactical, revenue vs. capability)',
-        'Regulatory compliance in new markets (GDPR, data protection, cross-border operations)'
+        'Talent acquisition strategies for AI roles (ML engineers, data scientists, MLOps)',
+        'Capability building and upskilling programs for existing teams',
+        'Cultural change management (data-driven decision-making, algorithmic trust)',
+        'Operating model design for AI teams (centralized vs. embedded, agile vs. waterfall)',
+        'Performance incentives aligned with AI value realization (not pilot completion)'
       ]
     },
   ];
@@ -138,7 +138,7 @@ export default function StartupMentorPage() {
                   Back to About
                 </Link>
                 <Link
-                  href="/ai-strategist"
+                  href="/independent-director"
                   className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +148,7 @@ export default function StartupMentorPage() {
                 </Link>
               </div>
               <Link
-                href="/contact?role=startup-mentor"
+                href="/contact?role=ai-strategist"
                 className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-sm"
               >
                 Schedule Conversation
@@ -161,12 +161,12 @@ export default function StartupMentorPage() {
         </div>
 
         {/* Compact Hero */}
-        <section className="bg-gradient-to-r from-green-50 to-emerald-50 border-b border-gray-200">
+        <section className="bg-gradient-to-r from-orange-50 to-pink-50 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg shadow-md flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-pink-600 rounded-lg shadow-md flex items-center justify-center flex-shrink-0">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
               <div className="flex-1">

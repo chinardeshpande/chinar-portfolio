@@ -1,9 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Navigation, Footer } from '@/components/sections';
 
 export default function ContactPage() {
+  const searchParams = useSearchParams();
+  const roleParam = searchParams.get('role');
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,10 +16,29 @@ export default function ContactPage() {
     message: '',
   });
 
+  // Auto-select inquiry type based on role parameter
+  useEffect(() => {
+    if (roleParam) {
+      const roleMapping: Record<string, string> = {
+        'independent-director': 'board',
+        'advisory-board': 'advisory',
+        'startup-mentor': 'advisory',
+        'ai-strategist': 'advisory'
+      };
+
+      const inquiryType = roleMapping[roleParam] || '';
+      if (inquiryType) {
+        setFormData(prev => ({ ...prev, inquiry_type: inquiryType }));
+      }
+    }
+  }, [roleParam]);
+
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submission started', formData);
     setFormStatus('submitting');
 
     try {
@@ -25,13 +48,20 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response status:', response.status);
       const result = await response.json();
+      console.log('Response data:', result);
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to send message');
+        const errorMsg = result.message || result.error || 'Failed to send message';
+        setErrorMessage(errorMsg);
+        throw new Error(errorMsg);
       }
 
       setFormStatus('success');
+      setErrorMessage('');
+      console.log('Form submitted successfully');
+
       setTimeout(() => {
         setFormData({
           name: '',
@@ -44,9 +74,9 @@ export default function ContactPage() {
       }, 3000);
 
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Form submission error:', error);
       setFormStatus('error');
-      setTimeout(() => setFormStatus('idle'), 3000);
+      setTimeout(() => setFormStatus('idle'), 5000);
     }
   };
 
@@ -224,10 +254,10 @@ export default function ContactPage() {
                         className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
                       >
                         <option value="">Select</option>
-                        <option value="board">Board</option>
-                        <option value="speaking">Speaking</option>
-                        <option value="advisory">Advisory</option>
-                        <option value="media">Media</option>
+                        <option value="board">Independent Director</option>
+                        <option value="advisory">Advisory Board / Mentorship / AI Strategy</option>
+                        <option value="speaking">Speaking Engagement</option>
+                        <option value="media">Media / Press</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -236,18 +266,24 @@ export default function ContactPage() {
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-xs font-medium text-gray-700 mb-1">
-                      Message *
+                      Message * <span className="text-gray-500 font-normal">(minimum 10 characters)</span>
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       required
+                      minLength={10}
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                      placeholder="Tell me about your opportunity..."
+                      placeholder="Tell me about your opportunity... (minimum 10 characters)"
                     ></textarea>
+                    {formData.message.length > 0 && formData.message.length < 10 && (
+                      <p className="text-xs text-red-600 mt-1">
+                        {10 - formData.message.length} more character{10 - formData.message.length !== 1 ? 's' : ''} required
+                      </p>
+                    )}
                   </div>
 
                   {/* Submit Button */}
@@ -281,6 +317,34 @@ export default function ContactPage() {
                       'Send Message →'
                     )}
                   </button>
+
+                  {/* Success/Error Messages */}
+                  {formStatus === 'success' && (
+                    <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+                      <div className="flex items-center gap-3">
+                        <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <p className="text-sm font-medium text-green-800">
+                          Thank you! Your message has been sent successfully. I'll respond within 48 hours.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {formStatus === 'error' && (
+                    <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+                      <div className="flex items-start gap-3">
+                        <svg className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                        </svg>
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold text-red-800 mb-1">Error submitting form</p>
+                          <p className="text-sm text-red-700">{errorMessage || 'Please check the form and try again.'}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Privacy & Response */}
                   <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">

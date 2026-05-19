@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const roleIcons: Record<string, any> = {
   briefcase: (
@@ -26,6 +27,7 @@ interface RoleCarouselProps {
     icon: string;
     tagline: string;
     value: string;
+    link?: string;
   }>;
 }
 
@@ -106,11 +108,8 @@ export function RoleCarousel({ roles }: RoleCarouselProps) {
               ];
               const color = colors[index];
 
-              return (
-                <div
-                  key={index}
-                  className={`group bg-gradient-to-br ${color.bg} to-white/95 backdrop-blur-sm rounded-xl p-5 border ${color.border} shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-80 flex-shrink-0`}
-                >
+              const CardContent = (
+                <>
                   {/* Icon */}
                   <div className={`w-12 h-12 bg-gradient-to-br ${color.from} ${color.to} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-md`}>
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,6 +131,25 @@ export function RoleCarousel({ roles }: RoleCarouselProps) {
                   <p className="text-sm text-slate-700 leading-relaxed">
                     {role.value}
                   </p>
+                </>
+              );
+
+              const cardClassName = `group bg-gradient-to-br ${color.bg} to-white/95 backdrop-blur-sm rounded-xl p-5 border ${color.border} shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-80 flex-shrink-0 block`;
+
+              return role.link ? (
+                <Link
+                  key={index}
+                  href={role.link}
+                  className={cardClassName}
+                >
+                  {CardContent}
+                </Link>
+              ) : (
+                <div
+                  key={index}
+                  className={cardClassName}
+                >
+                  {CardContent}
                 </div>
               );
             })}

@@ -1,5 +1,5 @@
 # About Page Content - Compact & Visual
-# Positioning for 5 key roles: INED, Advisory Board, Startup Mentor, Strategic Advisor, AI Evangelist
+# Positioning for 4 key roles: INED, Advisory Board, Startup Mentor, AI Transformation Strategist
 
 # Introduction
 introduction:
@@ -24,32 +24,31 @@ board_positioning:
     Global technology leader with 30+ years driving large-scale digital transformation across logistics, e-commerce, and enterprise technology.
     Strategic technology leadership for boards navigating digital disruption and AI-driven change—where technology, governance, and human insight create lasting value.
 
-# 5 Key Role Positions
+# 4 Key Role Positions
 role_positions:
   - role: "Independent Non-Executive Director"
     icon: "briefcase"
     tagline: "Board Governance • Digital Growth • Automation Oversight"
     value: "Bring strategic foresight, digital fluency, and operational depth to boards navigating disruption. Expert in technology governance, AI ethics, cybersecurity oversight, and M&A tech due diligence. Champion responsible AI adoption and value creation through technology with purpose."
+    link: "/independent-director"
 
   - role: "Advisory Board Member"
     icon: "users"
     tagline: "Strategic Technology Counsel for Growth"
     value: "Work with global boards and investors to accelerate intelligent transformation—anchored in clarity, ethics, and measurable outcomes. Bridge technology and strategy with innovation, governance, and execution discipline across e-commerce, logistics, and enterprise tech."
+    link: "/advisory-board"
 
   - role: "Startup Mentor"
     icon: "rocket"
     tagline: "Tech-Led Enterprises & Scale-Up Strategy"
     value: "Mentor entrepreneurs on technology-driven growth, AI-first product development, and building scalable engineering teams. Guide tech founders through intelligent transformation with hands-on expertise in automation, AI tools (ChatGPT, Claude, Gemini), and global operations."
-
-  - role: "Strategic Advisor"
-    icon: "compass"
-    tagline: "AI Transformation Partnerships"
-    value: "Available for strategic AI transformation partnerships and advisory mandates. Translate emerging technologies into sustainable business impact through scalable solutions for productivity, research, analytics, and enterprise automation."
+    link: "/startup-mentor"
 
   - role: "AI Transformation Strategist"
     icon: "brain"
     tagline: "Building Intelligent, Ethical, Scalable Organizations"
     value: "Deep hands-on expertise in AI, automation, and intelligent systems. Extensively use ChatGPT, Codex, Claude Code, Claude Cowork, Google Gemini (AI Studio), VS Code, n8n, NotebookLM, and more to design and deploy enterprise-grade AI solutions with ethical governance frameworks."
+    link: "/ai-strategist"
 
 # AI & Technology Expertise - Hands-On Tools & Platforms
 ai_expertise:
